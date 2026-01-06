@@ -1,0 +1,278 @@
+/* 页面标题区域 */
+.page-hero {
+    padding: 100px 0 60px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 历史版本页面样式 */
+.history-main-section {
+    padding: 60px 0 100px;
+    background-color: #f5f7fa;
+}
+
+.history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-filter {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.history-filter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.history-filter h3 i {
+    color: var(--primary-color);
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #f0f4f9;
+    border: none;
+    border-radius: 30px;
+    color: var(--gray-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background-color: #e4edf5;
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.history-table-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.history-table th {
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+}
+
+.history-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.history-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.version-tag {
+    display: inline-block;
+    background-color: #eef5ff;
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.platform-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.platform-tag.windows {
+    background-color: #e8f5e8;
+    color: var(--secondary-color);
+}
+
+.platform-tag.mac {
+    background-color: #f5f0e8;
+    color: #d35400;
+}
+
+.platform-tag.android {
+    background-color: #e8f5f5;
+    color: #00a8a8;
+}
+
+.version-updates {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.version-updates li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+}
+
+.version-updates li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.download-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background-color: #f0f7ff;
+    border-radius: 6px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.download-link:hover {
+    background-color: #e1eeff;
+    transform: translateY(-2px);
+}
+
+.version-notes {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.version-notes h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.version-notes h3 i {
+    color: var(--primary-color);
+}
+
+.notes-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.note h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.note p {
+    color: var(--gray-color);
+    line-height: 1.7;
+}
+
+/* 历史版本页面响应式设计 */
+@media (max-width: 992px) {
+    .page-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .notes-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    .history-main-section {
+        padding: 70px 0;
+    }
+
+    .history-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .history-filter,
+    .history-table-container,
+    .version-notes {
+        padding: 30px 20px;
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: 15px 10px;
+    }
+}

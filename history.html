@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史版本 - 新闻助手</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-newspaper"></i>
+                    新闻助手
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="features.html">功能特性</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="history.html" class="active">历史版本</a></li>
+                </ul>
+
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main>
+        <!-- 页面标题区域 -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>历史版本</h1>
+                <p>下载新闻助手的历史版本，适用于特定需求或兼容性要求</p>
+            </div>
+        </section>
+
+        <!-- 历史版本区域 -->
+        <section class="history-main-section">
+            <div class="container">
+                <div class="history-container">
+                    <div class="history-filter">
+                        <h3><i class="fas fa-filter"></i> 筛选版本</h3>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-filter="all">全部版本</button>
+                            <button class="filter-btn" data-filter="major">主要版本</button>
+                            <button class="filter-btn" data-filter="windows">Windows</button>
+                            <button class="filter-btn" data-filter="mac">macOS</button>
+                            <button class="filter-btn" data-filter="android">Android</button>
+                        </div>
+                    </div>
+
+                    <div class="history-table-container">
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>版本号</th>
+                                    <th>发布日期</th>
+                                    <th>更新内容</th>
+                                    <th>下载</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="version-item" data-version="major" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.4.3</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2024年5月10日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>修复新闻加载问题，提升性能</li>
+                                            <li>优化内存使用，减少资源占用</li>
+                                            <li>修复同步时的网络错误</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="major" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.4.0</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2024年4月1日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>新增新闻分类标签</li>
+                                            <li>优化用户界面设计</li>
+                                            <li>增加阅读时间统计</li>
+                                            <li>修复已知bug</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="minor" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.3.2</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2024年3月15日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>修复同步错误</li>
+                                            <li>优化离线阅读体验</li>
+                                            <li>提升应用启动速度</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="major" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.3.0</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2024年2月20日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>新增新闻搜索功能</li>
+                                            <li>改进收藏管理界面</li>
+                                            <li>增加批量操作支持</li>
+                                            <li>优化新闻加载算法</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="minor" data-platform="windows">
+                                    <td>
+                                        <span class="version-tag">v2.2.1</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                    </td>
+                                    <td>2024年1月25日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>修复Windows兼容性问题</li>
+                                            <li>优化内存使用</li>
+                                            <li>修复高DPI显示问题</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="major" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.2.0</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2024年1月10日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>新增离线阅读模式</li>
+                                            <li>改进新闻推荐算法</li>
+                                            <li>增加阅读历史记录</li>
+                                            <li>优化用户界面</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="minor" data-platform="mac">
+                                    <td>
+                                        <span class="version-tag">v2.1.3</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                    </td>
+                                    <td>2023年12月15日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>修复macOS特定崩溃问题</li>
+                                            <li>优化macOS通知系统</li>
+                                            <li>改进深色模式支持</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="version-item" data-version="major" data-platform="all">
+                                    <td>
+                                        <span class="version-tag">v2.1.0</span>
+                                        <span class="platform-tag windows">Windows</span>
+                                        <span class="platform-tag mac">macOS</span>
+                                        <span class="platform-tag android">Android</span>
+                                    </td>
+                                    <td>2023年11月20日</td>
+                                    <td>
+                                        <ul class="version-updates">
+                                            <li>新增多平台同步功能</li>
+                                            <li>改进新闻分类系统</li>
+                                            <li>增加自定义新闻源</li>
+                                            <li>优化性能表现</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div class="download-actions">
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-windows"></i> Windows
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-apple"></i> macOS
+                                            </a>
+                                            <a href="#" class="download-link">
+                                                <i class="fab fa-android"></i> Android
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="version-notes">
+                        <h3><i class="fas fa-exclamation-circle"></i> 版本说明</h3>
+                        <div class="notes-content">
+                            <div class="note">
+                                <h4>版本命名规则</h4>
+                                <p>我们使用语义化版本控制：主版本号.次版本号.修订号。主版本号变化表示不兼容的API修改，次版本号变化表示向下兼容的功能性新增，修订号变化表示向下兼容的问题修正。</p>
+                            </div>
+                            <div class="note">
+                                <h4>支持政策</h4>
+                                <p>我们为主版本提供至少12个月的支持，期间会发布安全更新和关键bug修复。建议用户尽可能使用最新版本以获得最佳体验和安全保障。</p>
+                            </div>
+                            <div class="note">
+                                <h4>下载建议</h4>
+                                <p>除非有特殊兼容性需求，否则建议下载最新版本。如果您遇到问题，可以尝试使用上一个稳定版本。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>新闻助手</h3>
+                    <p>智能新闻阅读与管理工具，让您随时随地掌握最新资讯。</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="features.html">功能特性</a></li>
+                        <li><a href="download.html">下载</a></li>
+                        <li><a href="history.html">历史版本</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">帮助文档</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <p>如有问题或建议，请通过邮箱联系我们：</p>
+                    <p class="contact-email">support@news-assistant.com</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 新闻助手. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/common.js"></script>
+    <script src="js/history.js"></script>
+</body>
+
+</html>

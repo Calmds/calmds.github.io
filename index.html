@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新闻助手 - 智能新闻阅读与管理工具</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -14,17 +16,16 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <i class="fas fa-newspaper"></i>
                     新闻助手
                 </a>
 
                 <ul class="nav-links">
-                    <li><a href="#" class="active">首页</a></li>
-                    <li><a href="#features">功能特性</a></li>
-                    <li><a href="#download">立即下载</a></li>
-                    <li><a href="#history">历史版本</a></li>
-                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="features.html">功能特性</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="history.html">历史版本</a></li>
                 </ul>
 
                 <div class="mobile-toggle">
@@ -43,250 +44,73 @@
                 <p>新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。</p>
 
                 <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary">
+                    <a href="download.html" class="btn btn-primary">
                         <i class="fas fa-download"></i> 免费下载
                     </a>
-                    <a href="#features" class="btn btn-secondary">
+                    <a href="features.html" class="btn btn-secondary">
                         <i class="fas fa-info-circle"></i> 了解更多
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 功能特性区域 -->
-        <section id="features" class="features">
+        <!-- 功能预览区域 -->
+        <section class="preview-section">
             <div class="container">
                 <div class="section-title">
-                    <h2>功能特性</h2>
-                    <p>新闻助手集成了多种实用功能，为您提供卓越的新闻阅读体验</p>
+                    <h2>核心功能预览</h2>
+                    <p>探索新闻助手的强大功能，提升您的新闻阅读体验</p>
                 </div>
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                <div class="preview-grid">
+                    <div class="preview-card">
+                        <div class="preview-icon">
                             <i class="fas fa-brain"></i>
                         </div>
                         <h3>智能推荐</h3>
-                        <p>基于您的阅读习惯和兴趣，智能算法为您推荐最相关的新闻内容，节省查找时间。</p>
+                        <p>基于AI算法的个性化新闻推荐，为您筛选最相关的内容。</p>
+                        <a href="features.html#smart-recommendation" class="preview-link">了解更多 →</a>
                     </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="preview-card">
+                        <div class="preview-icon">
                             <i class="fas fa-cloud-download-alt"></i>
                         </div>
                         <h3>离线阅读</h3>
-                        <p>支持新闻离线下载，无需网络连接也能随时阅读，适合通勤或旅行时使用。</p>
+                        <p>随时随地下载新闻，无需网络也能畅快阅读。</p>
+                        <a href="features.html#offline-reading" class="preview-link">了解更多 →</a>
                     </div>
 
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                        <h3>收藏管理</h3>
-                        <p>轻松收藏重要新闻，分类管理收藏内容，方便以后查阅和参考。</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
+                    <div class="preview-card">
+                        <div class="preview-icon">
                             <i class="fas fa-sync-alt"></i>
                         </div>
-                        <h3>多平台同步</h3>
-                        <p>支持手机、平板、电脑多设备同步，您的阅读进度和收藏内容始终最新。</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>阅读模式</h3>
-                        <p>提供纯净阅读模式，去除广告和杂乱元素，让您专注于新闻内容本身。</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>隐私保护</h3>
-                        <p>严格保护用户隐私，所有数据本地加密，不收集不必要的个人信息。</p>
+                        <h3>多端同步</h3>
+                        <p>手机、平板、电脑无缝同步，阅读进度不丢失。</p>
+                        <a href="features.html#multi-sync" class="preview-link">了解更多 →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 下载区域 -->
-        <section id="download" class="download-section">
+        <!-- 下载引导区域 -->
+        <section class="download-guide">
             <div class="container">
-                <div class="download-container">
-                    <div class="section-title">
-                        <h2>立即下载</h2>
-                        <p>获取最新版本的新闻助手，开启智能新闻阅读体验</p>
-                    </div>
-
-                    <div class="download-card">
-                        <div class="version-info">
-                            <div class="version-details">
-                                <h3>新闻助手 v2.5.0</h3>
-                                <div class="version">版本: 2.5.0.2024</div>
-                                <div class="release-date">发布日期: 2024年6月15日</div>
-                            </div>
-                            <div class="version-badge">最新版本</div>
-                        </div>
-
-                        <div class="update-details">
-                            <h4>更新内容:</h4>
-                            <ul>
-                                <li>新增暗黑模式，支持自动切换</li>
-                                <li>优化新闻推荐算法，提高准确性30%</li>
-                                <li>修复已知的同步问题，提升稳定性</li>
-                                <li>新增新闻分享到社交媒体功能</li>
-                                <li>界面优化，提升用户体验</li>
-                            </ul>
-                        </div>
-
-                        <div class="download-buttons">
-                            <a href="#" class="os-btn">
-                                <div class="os-icon">
-                                    <i class="fab fa-windows"></i>
-                                </div>
-                                <div class="os-info">
-                                    <h4>Windows 版</h4>
-                                    <p>适用于 Windows 10/11</p>
-                                </div>
+                <div class="guide-content">
+                    <div class="guide-text">
+                        <h2>立即体验新闻助手</h2>
+                        <p>新闻助手现已支持Windows、macOS和Android平台，点击下方按钮获取最新版本。</p>
+                        <div class="guide-buttons">
+                            <a href="download.html" class="btn btn-primary">
+                                <i class="fas fa-download"></i> 前往下载
                             </a>
-
-                            <a href="#" class="os-btn">
-                                <div class="os-icon">
-                                    <i class="fab fa-apple"></i>
-                                </div>
-                                <div class="os-info">
-                                    <h4>macOS 版</h4>
-                                    <p>适用于 macOS 10.14+</p>
-                                </div>
-                            </a>
-
-                            <a href="#" class="os-btn">
-                                <div class="os-icon">
-                                    <i class="fab fa-android"></i>
-                                </div>
-                                <div class="os-info">
-                                    <h4>Android 版</h4>
-                                    <p>适用于 Android 8.0+</p>
-                                </div>
+                            <a href="history.html" class="btn btn-secondary">
+                                <i class="fas fa-history"></i> 查看历史版本
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 历史版本区域 -->
-        <section id="history" class="history-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>历史版本</h2>
-                    <p>如果您需要旧版本，可以在此下载历史版本</p>
-                </div>
-
-                <div class="table-container">
-                    <table class="history-table">
-                        <thead>
-                            <tr>
-                                <th>版本号</th>
-                                <th>发布日期</th>
-                                <th>更新内容</th>
-                                <th>下载</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="version-tag">v2.4.3</span></td>
-                                <td>2024年5月10日</td>
-                                <td>修复新闻加载问题，提升性能</td>
-                                <td>
-                                    <a href="#" class="download-link">
-                                        <i class="fas fa-download"></i> 下载
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="version-tag">v2.4.0</span></td>
-                                <td>2024年4月1日</td>
-                                <td>新增新闻分类标签，优化用户界面</td>
-                                <td>
-                                    <a href="#" class="download-link">
-                                        <i class="fas fa-download"></i> 下载
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="version-tag">v2.3.2</span></td>
-                                <td>2024年3月15日</td>
-                                <td>修复同步错误，优化离线阅读体验</td>
-                                <td>
-                                    <a href="#" class="download-link">
-                                        <i class="fas fa-download"></i> 下载
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="version-tag">v2.3.0</span></td>
-                                <td>2024年2月20日</td>
-                                <td>新增新闻搜索功能，改进收藏管理</td>
-                                <td>
-                                    <a href="#" class="download-link">
-                                        <i class="fas fa-download"></i> 下载
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="version-tag">v2.2.1</span></td>
-                                <td>2024年1月25日</td>
-                                <td>修复兼容性问题，优化内存使用</td>
-                                <td>
-                                    <a href="#" class="download-link">
-                                        <i class="fas fa-download"></i> 下载
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 关于我们区域 -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>关于我们</h2>
-                    <p>我们的使命是让新闻阅读更智能、更便捷</p>
-                </div>
-
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>新闻助手开发团队</h3>
-                        <p>我们是一支专注于新闻阅读体验的技术团队，致力于通过技术创新提升新闻获取效率。自2020年成立以来，我们已经帮助超过100万用户更好地管理他们的新闻阅读。</p>
-                        <p>我们的应用持续更新，始终关注用户反馈，努力提供最优质的新闻阅读体验。如果您有任何建议或问题，欢迎通过以下方式联系我们。</p>
-
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>support@news-assistant.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>400-123-4567</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>北京市海淀区中关村科技园</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="新闻助手团队">
+                    <div class="guide-image">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
                 </div>
             </div>
@@ -304,17 +128,16 @@
                         <a href="#"><i class="fab fa-weibo"></i></a>
                         <a href="#"><i class="fab fa-weixin"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#features">功能特性</a></li>
-                        <li><a href="#download">立即下载</a></li>
-                        <li><a href="#history">历史版本</a></li>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="features.html">功能特性</a></li>
+                        <li><a href="download.html">下载</a></li>
+                        <li><a href="history.html">历史版本</a></li>
                     </ul>
                 </div>
 
@@ -329,12 +152,9 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3>订阅更新</h3>
-                    <p>订阅我们的新闻通讯，获取最新版本和功能更新通知。</p>
-                    <div class="newsletter">
-                        <input type="email" placeholder="输入您的邮箱">
-                        <button class="btn btn-primary">订阅</button>
-                    </div>
+                    <h3>联系我们</h3>
+                    <p>如有问题或建议，请通过邮箱联系我们：</p>
+                    <p class="contact-email">support@news-assistant.com</p>
                 </div>
             </div>
 
@@ -345,7 +165,8 @@
     </footer>
 
     <!-- 引入JavaScript文件 -->
-    <script src="js/script.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

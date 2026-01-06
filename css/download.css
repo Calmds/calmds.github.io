@@ -1,0 +1,348 @@
+/* 页面标题区域 */
+.page-hero {
+    padding: 100px 0 60px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 下载页面样式 */
+.download-main-section {
+    padding: 60px 0 100px;
+    background-color: #f5f7fa;
+}
+
+.download-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.download-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 50px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 50px;
+}
+
+.version-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.version-details h3 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.version-details .version {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.release-date,
+.file-size {
+    color: var(--gray-color);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.version-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.update-details {
+    margin-top: 20px;
+}
+
+.update-details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.update-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--gray-color);
+}
+
+.update-details li {
+    margin-bottom: 8px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.os-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: var(--transition);
+    flex: 1;
+    min-width: 220px;
+    border: 2px solid transparent;
+}
+
+.os-btn:hover {
+    border-color: var(--primary-color);
+    background-color: #f0f7ff;
+    transform: translateY(-5px);
+}
+
+.os-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.os-info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.os-info p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.os-details {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+}
+
+.os-arch,
+.os-size {
+    background-color: #eef5ff;
+    color: var(--primary-color);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.system-requirements {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.system-requirements h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.requirement {
+    background-color: #f9fbfd;
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.requirement h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.requirement h5 i {
+    color: var(--primary-color);
+}
+
+.requirement p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.download-guide {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+}
+
+.download-guide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-guide h3 i {
+    color: var(--primary-color);
+}
+
+.guide-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+.step-content p {
+    color: var(--gray-color);
+}
+
+.other-versions {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.other-versions h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.other-versions h3 i {
+    color: var(--primary-color);
+}
+
+.other-versions p {
+    color: var(--gray-color);
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.other-versions a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 下载页面响应式设计 */
+@media (max-width: 992px) {
+    .page-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .download-card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    .download-main-section {
+        padding: 70px 0;
+    }
+
+    .version-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .os-btn {
+        min-width: 100%;
+    }
+
+    .step {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .download-card,
+    .download-guide,
+    .other-versions {
+        padding: 30px 20px;
+    }
+}

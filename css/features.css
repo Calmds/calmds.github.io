@@ -1,0 +1,148 @@
+/* 页面标题区域 */
+.page-hero {
+    padding: 100px 0 60px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 功能特性详情页样式 */
+.features-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.features-section.alt-section {
+    background-color: #f9fbfd;
+}
+
+.feature-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.feature-detail.reverse {
+    direction: rtl;
+}
+
+.feature-detail.reverse .feature-detail-text {
+    direction: ltr;
+}
+
+.feature-detail.reverse .feature-detail-image {
+    direction: ltr;
+}
+
+.feature-detail-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-detail-text h2 i {
+    color: var(--primary-color);
+}
+
+.feature-detail-text p {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    margin-bottom: 25px;
+}
+
+.feature-detail-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-detail-text li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.feature-detail-text li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.feature-detail-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-detail-image i {
+    font-size: 12rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+/* 功能特性页面响应式设计 */
+@media (max-width: 992px) {
+    .page-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .feature-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .feature-detail-image i {
+        font-size: 10rem;
+    }
+
+    .feature-detail.reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    .features-section {
+        padding: 70px 0;
+    }
+
+    .feature-detail-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-detail-image i {
+        font-size: 8rem;
+    }
+}
