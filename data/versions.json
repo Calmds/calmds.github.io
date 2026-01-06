@@ -236,7 +236,7 @@
         },
         "IOS": {
             "display_name": "IOS",
-            "icon": "fab fa-itunes",
+            "icon": "fab fa-app-store-ios",
             "color": "#3ddc84"
         }
     }
