@@ -80,18 +80,18 @@ class HomePage {
 
     showScreenshot(imageNum) {
         const viewerImage = document.getElementById('viewerImage');
-        const imagePath = `assets/images/screenshots/screenshot${imageNum}.png`;
+        const imagePath = `assets/images/screenshots/${imageNum}.png`;
 
         // 加载图片
         const img = new Image();
         img.onload = () => {
             viewerImage.src = imagePath;
-            viewerImage.alt = `Screenshot ${imageNum}`;
+            viewerImage.alt = `screenshot-${imageNum} `;
         };
         img.onerror = () => {
             // 如果图片加载失败，使用占位符
-            const colors = ['#4a6fa5', '#6b5b95', '#88b04b'];
-            const texts = ['主界面', '阅读模式', '收藏管理'];
+            const colors = ['#4a6fa5', '#6b5b95', '#88b04b', '#b748dcff'];
+            const texts = ['时政新闻', '军事新闻', '社交媒体', '金融新闻'];
             const svg = `data:image/svg+xml;base64,${btoa(`
                 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="${colors[imageNum - 1]}"/>
