@@ -9,7 +9,7 @@
 │   ├── icon.png
 │   ├── languages/    # 多语言资源
 │   │   ├── zh-CN.json
-│   │   ├── zh-TW.json
+│   │   ├── zh-MO.json
 │   │   └── ...
 │   ├── flags/        # 国旗图片目录
 │   │   ├── ar.jpg    # 阿拉伯

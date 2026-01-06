@@ -66,7 +66,7 @@ class LanguageManager {
         // 预加载用户浏览器语言和其他常用语言
         const languagesToPreload = [
             'en',
-            'zh-TW',
+            'zh-MO',
             'ja',
             'ko'
         ].filter(lang => lang !== this.currentLang);
