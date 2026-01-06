@@ -5,40 +5,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="app_name">新闻助手 - 功能特性</title>
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/features.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- 头部导航栏 -->
     <header>
-        <!-- 导航栏与首页相同 -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-newspaper"></i>
+                    <span data-i18n="app_name">新闻助手</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="features.html" class="active" data-i18n="nav.features">功能特性</a></li>
+                    <li><a href="download.html" data-i18n="nav.download">下载</a></li>
+                    <li><a href="history.html" data-i18n="nav.history">历史版本</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <!-- 语言选择器 -->
+                    <div class="language-selector">
+                        <button class="language-btn glass-btn" id="languageBtn">
+                            <img src="assets/flags/cn.jpg" alt="中文" class="language-flag">
+                            <span id="currentLang" data-i18n="nav.language_chinese">中文</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <div class="language-search">
+                                <input type="text" id="languageSearch"
+                                    data-i18n-placeholder="language.search_placeholder" placeholder="搜索语言...">
+                            </div>
+                            <div class="language-list" id="languageList">
+                                <!-- 语言选项将通过JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- 功能特性介绍 -->
         <section class="features-hero">
             <div class="container">
-                <h1 class="text-gradient" data-i18n="features.title">强大功能，卓越体验</h1>
-                <p data-i18n="features.subtitle">新闻助手为您提供全方位的新闻阅读与管理解决方案</p>
+                <div class="hero-content fade-in">
+                    <h1 class="text-gradient" data-i18n="features.title">强大功能，卓越体验</h1>
+                    <p data-i18n="features.subtitle">新闻助手为您提供全方位的新闻阅读与管理解决方案</p>
+                </div>
             </div>
         </section>
 
+        <!-- 核心功能 -->
         <section class="core-features">
             <div class="container">
-                <h2 data-i18n="features.core_features_title">核心功能</h2>
+                <div class="section-title">
+                    <h2 data-i18n="features.core_features_title">核心功能</h2>
+                    <p data-i18n="features.core_features_subtitle">探索新闻助手的强大功能</p>
+                </div>
+
                 <div class="features-grid">
-                    <!-- 功能卡片 -->
+                    <!-- 功能卡片 1 -->
+                    <div class="feature-card glass-card" id="smart-recommendation">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 data-i18n="features.feature1.title">智能推荐</h3>
+                        <p data-i18n="features.feature1.description">
+                            基于AI算法的个性化新闻推荐，为您筛选最相关的内容。通过机器学习不断优化推荐准确性，确保您看到的都是感兴趣的内容。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature1.list_item1">个性化推荐算法</li>
+                            <li data-i18n="features.feature1.list_item2">实时兴趣分析</li>
+                            <li data-i18n="features.feature1.list_item3">多维度内容匹配</li>
+                        </ul>
+                    </div>
+
+                    <!-- 功能卡片 2 -->
+                    <div class="feature-card glass-card" id="offline-reading">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </div>
+                        <h3 data-i18n="features.feature2.title">离线阅读</h3>
+                        <p data-i18n="features.feature2.description">
+                            随时随地下载新闻，无需网络也能畅快阅读。智能缓存管理，节省流量，提供无缝的阅读体验。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature2.list_item1">智能缓存管理</li>
+                            <li data-i18n="features.feature2.list_item2">自动下载更新</li>
+                            <li data-i18n="features.feature2.list_item3">多种下载选项</li>
+                        </ul>
+                    </div>
+
+                    <!-- 功能卡片 3 -->
+                    <div class="feature-card glass-card" id="multi-sync">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 data-i18n="features.feature3.title">多端同步</h3>
+                        <p data-i18n="features.feature3.description">
+                            手机、平板、电脑无缝同步，阅读进度、收藏内容实时更新，让您在不同设备间自由切换。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature3.list_item1">跨平台同步</li>
+                            <li data-i18n="features.feature3.list_item2">实时进度更新</li>
+                            <li data-i18n="features.feature3.list_item3">安全数据加密</li>
+                        </ul>
+                    </div>
+
+                    <!-- 功能卡片 4 -->
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 data-i18n="features.feature4.title">多种阅读模式</h3>
+                        <p data-i18n="features.feature4.description">
+                            提供日间、夜间、护眼等多种阅读模式，支持自定义字体、字号和间距，满足不同用户的阅读习惯。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature4.list_item1">多种主题模式</li>
+                            <li data-i18n="features.feature4.list_item2">自定义阅读设置</li>
+                            <li data-i18n="features.feature4.list_item3">自动主题切换</li>
+                        </ul>
+                    </div>
+
+                    <!-- 功能卡片 5 -->
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3 data-i18n="features.feature5.title">智能过滤</h3>
+                        <p data-i18n="features.feature5.description">
+                            强大的内容过滤系统，支持关键词过滤、来源过滤、分类过滤等多种方式，打造纯净的阅读环境。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature5.list_item1">自定义过滤规则</li>
+                            <li data-i18n="features.feature5.list_item2">多维度内容筛选</li>
+                            <li data-i18n="features.feature5.list_item3">实时过滤效果预览</li>
+                        </ul>
+                    </div>
+
+                    <!-- 功能卡片 6 -->
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 data-i18n="features.feature6.title">阅读统计</h3>
+                        <p data-i18n="features.feature6.description">
+                            详细的阅读统计报告，了解您的阅读习惯、时间分布、兴趣偏好，帮助您更好地管理阅读时间。
+                        </p>
+                        <ul class="feature-list">
+                            <li data-i18n="features.feature6.list_item1">阅读时长统计</li>
+                            <li data-i18n="features.feature6.list_item2">兴趣偏好分析</li>
+                            <li data-i18n="features.feature6.list_item3">数据可视化报告</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术特点 -->
+        <section class="technical-features">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="features.technical_title">技术特点</h2>
+                    <p data-i18n="features.technical_subtitle">先进的技术架构，卓越的性能表现</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-item glass-card">
+                        <h3 data-i18n="features.tech1.title">高效性能</h3>
+                        <p data-i18n="features.tech1.description">
+                            采用现代化的技术架构，确保应用运行流畅，响应迅速，即使在低配设备上也能提供良好的使用体验。
+                        </p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label" data-i18n="features.tech1.stat1">稳定性</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0.3s</span>
+                                <span class="stat-label" data-i18n="features.tech1.stat2">加载速度</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-item glass-card">
+                        <h3 data-i18n="features.tech2.title">数据安全</h3>
+                        <p data-i18n="features.tech2.description">
+                            采用端到端加密技术，确保用户数据安全。所有同步数据均经过加密处理，保护您的隐私。
+                        </p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">AES-256</span>
+                                <span class="stat-label" data-i18n="features.tech2.stat1">加密标准</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label" data-i18n="features.tech2.stat2">数据安全</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-item glass-card">
+                        <h3 data-i18n="features.tech3.title">跨平台支持</h3>
+                        <p data-i18n="features.tech3.description">
+                            支持 Windows、macOS、Android 等多平台，使用统一的技术栈确保一致的用户体验。
+                        </p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">5+</span>
+                                <span class="stat-label" data-i18n="features.tech3.stat1">平台支持</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1M+</span>
+                                <span class="stat-label" data-i18n="features.tech3.stat2">用户覆盖</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- 页脚 -->
     <footer>
-        <!-- 页脚与首页相同 -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-i18n="app_name">新闻助手</h3>
+                    <p data-i18n="footer.app_description">智能新闻阅读与管理工具，让您随时随地掌握最新资讯。</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Weibo"><i class="fab fa-weibo"></i></a>
+                        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 data-i18n="footer.quick_links">快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="features.html" data-i18n="nav.features">功能特性</a></li>
+                        <li><a href="download.html" data-i18n="nav.download">下载</a></li>
+                        <li><a href="history.html" data-i18n="nav.history">历史版本</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 data-i18n="footer.support">支持</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.help_docs">帮助文档</a></li>
+                        <li><a href="#" data-i18n="footer.faq">常见问题</a></li>
+                        <li><a href="#" data-i18n="footer.terms">用户协议</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">隐私政策</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 data-i18n="footer.contact">联系我们</h3>
+                    <p data-i18n="footer.contact_desc">如有问题或建议，请通过邮箱联系我们：</p>
+                    <p class="contact-email">support@news-assistant.com</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p data-i18n="footer.copyright">© 2024 新闻助手. 保留所有权利.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/common.js"></script>
+    <!-- JavaScript 文件 -->
+    <script src="js/language-config.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/features.js"></script>
+
+    <script>
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.feature-card, .tech-item');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('fade-in');
+            });
+        });
+    </script>
 </body>
 
 </html>
