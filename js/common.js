@@ -33,7 +33,6 @@ class Common {
     initLanguageSelector() {
         const languageBtn = document.querySelector('.language-btn');
         const dropdown = document.querySelector('.language-dropdown');
-        const searchInput = document.querySelector('#languageSearch');
 
         if (languageBtn && dropdown) {
             languageBtn.addEventListener('click', (e) => {
@@ -47,19 +46,6 @@ class Common {
                     dropdown.classList.remove('show');
                 }
             });
-
-            // 搜索功能
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    const searchTerm = e.target.value.toLowerCase();
-                    const items = dropdown.querySelectorAll('.language-item');
-
-                    items.forEach(item => {
-                        const text = item.textContent.toLowerCase();
-                        item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
-                    });
-                });
-            }
 
             // 防止下拉框点击关闭
             dropdown.addEventListener('click', (e) => {
