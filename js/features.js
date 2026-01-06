@@ -1,60 +1,122 @@
-// 功能特性页面特定脚本
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('功能特性页面加载完成');
+// 功能页面功能
+class FeaturesPage {
+    constructor() {
+        this.init();
+    }
 
-    // 平滑滚动到锚点
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    init() {
+        this.initAnimations();
+        this.initScrollSpy();
+        this.initHoverEffects();
+    }
 
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
+    initAnimations() {
+        // 观察器配置
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-            // 如果是页面内锚点链接
-            if (href.startsWith('#') && href.length > 1) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+        // 观察所有功能卡片和技术特点卡片
+        document.querySelectorAll('.feature-card, .tech-item').forEach(card => {
+            observer.observe(card);
+        });
+
+        // 为卡片添加延迟动画
+        const cards = document.querySelectorAll('.feature-card, .tech-item');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.classList.add('fade-in');
+        });
+    }
+
+    initScrollSpy() {
+        // 监听滚动，高亮当前滚动到的功能部分
+        const sections = document.querySelectorAll('.feature-card[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        const observerOptions = {
+            threshold: 0.6,
+            rootMargin: '-100px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
                     });
                 }
-            }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
         });
-    });
+    }
 
-    // 添加功能区域的滚动动画
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    initHoverEffects() {
+        // 为功能图标添加旋转效果
+        const featureIcons = document.querySelectorAll('.feature-icon');
 
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
+        featureIcons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.transform = 'rotateY(180deg)';
+            });
 
-    // 观察所有功能区域
-    const featureSections = document.querySelectorAll('.features-section');
-    featureSections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // 添加功能卡片悬停效果
-    const featureDetails = document.querySelectorAll('.feature-detail');
-
-    featureDetails.forEach(detail => {
-        detail.addEventListener('mouseenter', function () {
-            this.style.transform = 'translateY(-5px)';
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'rotateY(0deg)';
+            });
         });
 
-        detail.addEventListener('mouseleave', function () {
-            this.style.transform = 'translateY(0)';
+        // 为卡片添加悬停效果
+        const cards = document.querySelectorAll('.feature-card, .tech-item');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
         });
-    });
+    }
+
+    // 滚动到指定功能
+    scrollToFeature(featureId) {
+        const element = document.getElementById(featureId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+// 初始化功能页面
+document.addEventListener('DOMContentLoaded', () => {
+    window.featuresPage = new FeaturesPage();
+
+    // 处理哈希链接（如果URL中有#）
+    if (window.location.hash) {
+        const featureId = window.location.hash.substring(1);
+        setTimeout(() => {
+            window.featuresPage.scrollToFeature(featureId);
+        }, 100);
+    }
 });

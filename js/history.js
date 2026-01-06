@@ -31,10 +31,14 @@ class HistoryManager {
     }
 
     renderVersions() {
-        const versionsList = document.querySelector('.versions-list');
+        const versionsList = document.getElementById('versionsList');
         if (!versionsList || !this.versionsData) return;
 
-        versionsList.innerHTML = '';
+        // 移除加载占位符
+        const loadingPlaceholder = versionsList.querySelector('.loading-placeholder');
+        if (loadingPlaceholder) {
+            loadingPlaceholder.remove();
+        }
 
         const startIndex = 0;
         const endIndex = this.currentPage * this.itemsPerPage;
@@ -64,7 +68,7 @@ class HistoryManager {
                 <div class="version-info">
                     <div class="version-title">
                         <h3>${version.version}</h3>
-                        ${version.latest ? '<span class="version-badge latest">最新版本</span>' : ''}
+                        ${version.latest ? '<span class="version-badge latest" data-i18n="history.latest">最新版本</span>' : ''}
                     </div>
                     <div class="version-date">${version.release_date}</div>
                 </div>
@@ -75,14 +79,14 @@ class HistoryManager {
             
             <div class="version-content">
                 <div class="changelog-section">
-                    <h4>更新日志</h4>
+                    <h4 data-i18n="history.changelog">更新日志</h4>
                     <ul class="changelog-list">
                         ${version.changelog.map(item => `<li>${item}</li>`).join('')}
                     </ul>
                 </div>
                 
                 <div class="downloads-section">
-                    <h4>下载链接</h4>
+                    <h4 data-i18n="history.downloads">下载链接</h4>
                     <div class="downloads-grid">
                         ${this.createDownloadLinks(version)}
                     </div>
@@ -116,7 +120,8 @@ class HistoryManager {
                     </div>
                     <a href="assets/bin/${downloadInfo.filename}" 
                        class="download-link"
-                       download="${downloadInfo.filename}">
+                       download="${downloadInfo.filename}"
+                       data-i18n="history.download_link">
                         <span>下载</span>
                         <i class="fas fa-download"></i>
                     </a>
@@ -136,12 +141,12 @@ class HistoryManager {
                 const content = versionItem.querySelector('.version-content');
                 const icon = toggleBtn.querySelector('i');
 
-                const isOpen = content.classList.contains('open');
+                const isOpen = content.style.maxHeight;
 
                 // 关闭所有其他版本
-                document.querySelectorAll('.version-content.open').forEach(otherContent => {
-                    if (otherContent !== content) {
-                        otherContent.classList.remove('open');
+                document.querySelectorAll('.version-content').forEach(otherContent => {
+                    if (otherContent !== content && otherContent.style.maxHeight) {
+                        otherContent.style.maxHeight = null;
                         otherContent.closest('.version-item')
                             .querySelector('.version-toggle i')
                             .style.transform = 'rotate(0deg)';
@@ -150,10 +155,10 @@ class HistoryManager {
 
                 // 切换当前版本
                 if (isOpen) {
-                    content.classList.remove('open');
+                    content.style.maxHeight = null;
                     icon.style.transform = 'rotate(0deg)';
                 } else {
-                    content.classList.add('open');
+                    content.style.maxHeight = content.scrollHeight + 'px';
                     icon.style.transform = 'rotate(180deg)';
                 }
             }
@@ -172,30 +177,30 @@ class HistoryManager {
         });
 
         // 加载更多
-        const loadMoreBtn = document.querySelector('.load-more-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => this.loadMore());
         }
     }
 
     loadMore() {
-        const loadMoreBtn = document.querySelector('.load-more-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (!loadMoreBtn) return;
 
         loadMoreBtn.disabled = true;
-        loadMoreBtn.innerHTML = '<span class="loading-spinner"></span>加载中...';
+        loadMoreBtn.innerHTML = '<span><i class="fas fa-spinner fa-spin"></i> 加载中...</span>';
 
         setTimeout(() => {
             this.currentPage++;
             this.renderVersions();
 
             loadMoreBtn.disabled = false;
-            loadMoreBtn.innerHTML = '<span>加载更多</span>';
+            loadMoreBtn.innerHTML = '<span data-i18n="history.load_more">加载更多</span>';
         }, 500);
     }
 
     updateLoadMoreButton() {
-        const loadMoreBtn = document.querySelector('.load-more-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (!loadMoreBtn) return;
 
         const totalItems = this.versionsData?.versions?.length || 0;
@@ -221,15 +226,15 @@ class HistoryManager {
     }
 
     showError() {
-        const versionsList = document.querySelector('.versions-list');
+        const versionsList = document.getElementById('versionsList');
         if (versionsList) {
             versionsList.innerHTML = `
                 <div class="error-message glass-card">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <h3>加载失败</h3>
-                    <p>无法加载版本信息，请刷新页面重试。</p>
+                    <h3 data-i18n="history.error_title">加载失败</h3>
+                    <p data-i18n="history.error_desc">无法加载版本信息，请刷新页面重试。</p>
                     <button class="glass-btn primary" onclick="location.reload()">
-                        刷新页面
+                        <span data-i18n="history.refresh_btn">刷新页面</span>
                     </button>
                 </div>
             `;
@@ -237,13 +242,13 @@ class HistoryManager {
     }
 
     showEmptyState() {
-        const versionsList = document.querySelector('.versions-list');
+        const versionsList = document.getElementById('versionsList');
         if (versionsList) {
             versionsList.innerHTML = `
                 <div class="empty-state glass-card">
                     <i class="fas fa-inbox"></i>
-                    <h3>暂无版本信息</h3>
-                    <p>当前没有可用的版本记录。</p>
+                    <h3 data-i18n="history.no_versions">暂无版本信息</h3>
+                    <p data-i18n="history.no_versions_desc">当前没有可用的版本记录。</p>
                 </div>
             `;
         }
