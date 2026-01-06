@@ -1,148 +1,217 @@
-/* 页面标题区域 */
-.page-hero {
-    padding: 100px 0 60px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+/* 功能特性页面样式 */
+
+.features-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg,
+            rgba(74, 111, 165, 0.1) 0%,
+            rgba(107, 91, 149, 0.1) 50%,
+            rgba(136, 176, 75, 0.1) 100%);
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.page-hero h1 {
-    font-size: 3.2rem;
-    margin-bottom: 20px;
-    color: var(--dark-color);
+.features-hero::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 111, 165, 0.1) 0%, transparent 70%);
+    top: -150px;
+    left: -150px;
 }
 
-.page-hero p {
-    font-size: 1.3rem;
-    color: var(--gray-color);
-    max-width: 700px;
+.features-hero::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(136, 176, 75, 0.1) 0%, transparent 70%);
+    bottom: -200px;
+    right: -200px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-/* 功能特性详情页样式 */
-.features-section {
-    padding: 80px 0;
-    background-color: white;
-}
-
-.features-section.alt-section {
-    background-color: #f9fbfd;
-}
-
-.feature-detail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.feature-detail.reverse {
-    direction: rtl;
-}
-
-.feature-detail.reverse .feature-detail-text {
-    direction: ltr;
-}
-
-.feature-detail.reverse .feature-detail-image {
-    direction: ltr;
-}
-
-.feature-detail-text h2 {
-    font-size: 2.2rem;
+.hero-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    color: var(--dark-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+/* 核心功能区域 */
+.core-features {
+    padding: 80px 0;
+    background-color: rgba(248, 249, 250, 0.5);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: white;
 }
 
-.feature-detail-text h2 i {
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: var(--primary-color);
 }
 
-.feature-detail-text p {
-    font-size: 1.2rem;
-    color: var(--gray-color);
-    margin-bottom: 25px;
+.feature-card p {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-.feature-detail-text ul {
-    list-style-type: none;
-    padding-left: 0;
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-.feature-detail-text li {
-    margin-bottom: 12px;
-    padding-left: 30px;
+.feature-list li {
+    padding: 8px 0;
+    padding-left: 25px;
     position: relative;
-    color: var(--gray-color);
-    font-size: 1.1rem;
+    color: var(--light-text);
 }
 
-.feature-detail-text li:before {
+.feature-list li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--secondary-color);
+    color: var(--accent-color);
     font-weight: bold;
 }
 
-.feature-detail-image {
+/* 技术特点区域 */
+.technical-features {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-item {
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.tech-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.tech-item p {
+    color: var(--light-text);
+    margin-bottom: 25px;
+}
+
+.tech-stats {
     display: flex;
     justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.feature-detail-image i {
-    font-size: 12rem;
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--primary-color);
-    opacity: 0.8;
+    margin-bottom: 5px;
 }
 
-/* 功能特性页面响应式设计 */
-@media (max-width: 992px) {
-    .page-hero h1 {
-        font-size: 2.7rem;
-    }
-
-    .feature-detail {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .feature-detail-image i {
-        font-size: 10rem;
-    }
-
-    .feature-detail.reverse {
-        direction: ltr;
-    }
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--light-text);
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
-    .page-hero {
+    .features-hero {
         padding: 80px 0 60px;
     }
 
-    .page-hero h1 {
-        font-size: 2.3rem;
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    .page-hero p {
-        font-size: 1.1rem;
+    .features-grid {
+        grid-template-columns: 1fr;
     }
 
-    .features-section {
-        padding: 70px 0;
+    .tech-grid {
+        grid-template-columns: 1fr;
     }
 
-    .feature-detail-text h2 {
-        font-size: 1.8rem;
+    .tech-stats {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
-@media (max-width: 480px) {
-    .feature-detail-image i {
-        font-size: 8rem;
-    }
+/* 悬停效果增强 */
+.feature-card:hover .feature-icon {
+    transform: rotateY(180deg);
+    transition: transform 0.6s ease;
+}
+
+.feature-card:hover h3 {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
 }
