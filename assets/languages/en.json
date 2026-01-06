@@ -10,7 +10,172 @@
         "title": "Smart News Reading & Management Tool",
         "description": "News Assistant is a powerful news aggregation and reading application that provides personalized news recommendations through intelligent algorithms. It supports offline reading, news bookmarking, multi-platform synchronization, and more, keeping you informed anytime, anywhere.",
         "download_btn": "Free Download",
-        "learn_more_btn": "Learn More"
+        "learn_more_btn": "Learn More",
+        "screenshots_title": "Screenshots",
+        "screenshots_subtitle": "See what News Assistant looks like",
+        "screenshot1_title": "Main Interface",
+        "screenshot1_desc": "Clean and simple news reading interface",
+        "screenshot2_title": "Reading Mode",
+        "screenshot2_desc": "Pure reading experience without distractions",
+        "screenshot3_title": "Bookmark Management",
+        "screenshot3_desc": "Easily manage your favorite news",
+        "videos_title": "Video Introduction",
+        "videos_subtitle": "Watch demos of News Assistant features",
+        "video_not_supported": "Your browser does not support video playback.",
+        "demo_video_title": "Feature Demo",
+        "demo_video_desc": "Learn about the main features and workflow",
+        "tutorial_video_title": "Tutorial",
+        "tutorial_video_desc": "Get started quickly with News Assistant",
+        "view_more_videos": "View More Videos",
+        "features_title": "Core Features Preview",
+        "features_subtitle": "Explore the powerful features of News Assistant to enhance your news reading experience",
+        "feature1": {
+            "title": "Smart Recommendations",
+            "description": "AI-based personalized news recommendations filter the most relevant content for you."
+        },
+        "feature2": {
+            "title": "Offline Reading",
+            "description": "Download news anytime, anywhere, and enjoy reading without an internet connection."
+        },
+        "feature3": {
+            "title": "Multi-Device Sync",
+            "description": "Seamless synchronization between phone, tablet, and computer ensures reading progress is never lost."
+        },
+        "learn_more": "Learn More",
+        "download_section_title": "Experience News Assistant Now",
+        "download_section_desc": "News Assistant now supports Windows, macOS, and Android platforms. Click the button below to get the latest version.",
+        "download_section_btn1": "Go to Download",
+        "download_section_btn2": "View History Versions"
+    },
+    "features": {
+        "title": "Powerful Features, Excellent Experience",
+        "subtitle": "News Assistant provides a comprehensive news reading and management solution",
+        "core_features_title": "Core Features",
+        "core_features_subtitle": "Explore the powerful features of News Assistant",
+        "feature1": {
+            "title": "Smart Recommendations",
+            "description": "AI-based personalized news recommendations filter the most relevant content. Machine learning continuously optimizes recommendation accuracy to ensure you see only what interests you.",
+            "list_item1": "Personalized recommendation algorithm",
+            "list_item2": "Real-time interest analysis",
+            "list_item3": "Multi-dimensional content matching"
+        },
+        "feature2": {
+            "title": "Offline Reading",
+            "description": "Download news anytime, anywhere, and enjoy reading without an internet connection. Smart cache management saves data and provides a seamless reading experience.",
+            "list_item1": "Smart cache management",
+            "list_item2": "Automatic download updates",
+            "list_item3": "Multiple download options"
+        },
+        "feature3": {
+            "title": "Multi-Device Sync",
+            "description": "Seamless synchronization between phone, tablet, and computer ensures reading progress and bookmarks are updated in real-time, allowing you to switch freely between devices.",
+            "list_item1": "Cross-platform synchronization",
+            "list_item2": "Real-time progress updates",
+            "list_item3": "Secure data encryption"
+        },
+        "feature4": {
+            "title": "Multiple Reading Modes",
+            "description": "Provides day, night, eye protection, and other reading modes, supporting custom fonts, font sizes, and spacing to meet different users' reading habits.",
+            "list_item1": "Multiple theme modes",
+            "list_item2": "Custom reading settings",
+            "list_item3": "Automatic theme switching"
+        },
+        "feature5": {
+            "title": "Smart Filtering",
+            "description": "Powerful content filtering system supports keyword filtering, source filtering, category filtering, and more, creating a clean reading environment.",
+            "list_item1": "Custom filter rules",
+            "list_item2": "Multi-dimensional content filtering",
+            "list_item3": "Real-time filter effect preview"
+        },
+        "feature6": {
+            "title": "Reading Statistics",
+            "description": "Detailed reading statistics reports help you understand your reading habits, time distribution, and interests to better manage your reading time.",
+            "list_item1": "Reading duration statistics",
+            "list_item2": "Interest preference analysis",
+            "list_item3": "Data visualization reports"
+        },
+        "technical_title": "Technical Features",
+        "technical_subtitle": "Advanced technical architecture, excellent performance",
+        "tech1": {
+            "title": "High Performance",
+            "description": "Modern technical architecture ensures smooth operation, fast response, and good user experience even on low-end devices.",
+            "stat1": "Stability",
+            "stat2": "Loading Speed"
+        },
+        "tech2": {
+            "title": "Data Security",
+            "description": "End-to-end encryption technology ensures user data security. All synchronized data is encrypted to protect your privacy.",
+            "stat1": "Encryption Standard",
+            "stat2": "Data Security"
+        },
+        "tech3": {
+            "title": "Cross-Platform Support",
+            "description": "Supports multiple platforms including Windows, macOS, and Android, using a unified technology stack to ensure consistent user experience.",
+            "stat1": "Platform Support",
+            "stat2": "User Coverage"
+        }
+    },
+    "download": {
+        "title": "Download News Assistant",
+        "subtitle": "Choose your platform and start using News Assistant",
+        "latest_version": "Latest Version",
+        "choose_platform": "Choose Platform",
+        "choose_platform_desc": "News Assistant supports multiple operating systems",
+        "system_requirements": "System Requirements",
+        "installation_guide": "Installation Guide",
+        "installation_guide_desc": "Follow these steps to install News Assistant",
+        "step1_title": "Download Installation File",
+        "step1_desc": "Click the download button for your platform to get the installation file",
+        "step2_title": "Run Installer",
+        "step2_desc": "Open the downloaded file and follow the prompts to complete installation",
+        "step3_title": "Launch Application",
+        "step3_desc": "After installation, launch from Start Menu or Applications folder",
+        "step4_title": "Start Using",
+        "step4_desc": "Complete initial setup wizard and start enjoying News Assistant",
+        "faq_title": "Frequently Asked Questions",
+        "faq_desc": "Common issues during download and installation",
+        "faq1_q": "What if download speed is slow?",
+        "faq1_a": "Try changing network environment or using a download manager. We also provide multiple mirror download sources.",
+        "faq2_q": "Blocked by security software during installation?",
+        "faq2_a": "Add News Assistant to your security software's trusted list, or temporarily disable security software during installation.",
+        "faq3_q": "How to uninstall News Assistant?",
+        "faq3_a": "On Windows, use Control Panel's Programs and Features. On macOS, simply drag the app to Trash.",
+        "faq4_q": "What languages are supported?",
+        "faq4_a": "News Assistant supports Simplified Chinese, English, Japanese, Korean and more languages. Switch in settings.",
+        "download_btn": "Download {version}",
+        "download_for": "Download for {platform}",
+        "file_size": "File Size",
+        "architecture": "Supported Architecture",
+        "requirements": "System Requirements",
+        "download_count": "Downloads",
+        "download_now": "Download Now",
+        "release_notes": "Release Notes"
+    },
+    "history": {
+        "title": "Version History",
+        "subtitle": "View version update records of News Assistant",
+        "latest": "Latest Version",
+        "version": "Version",
+        "release_date": "Release Date",
+        "changelog": "Changelog",
+        "downloads": "Download Links",
+        "no_versions": "No version history available",
+        "loading": "Loading...",
+        "load_more": "Load More",
+        "show_details": "Show Details",
+        "hide_details": "Hide Details"
+    },
+    "footer": {
+        "app_description": "Smart news reading and management tool, keeping you informed anytime, anywhere.",
+        "quick_links": "Quick Links",
+        "support": "Support",
+        "help_docs": "Help Documentation",
+        "faq": "FAQ",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "contact": "Contact Us",
+        "contact_desc": "If you have questions or suggestions, please contact us via email:",
+        "copyright": "© 2024 News Assistant. All rights reserved."
     },
     "language": {
         "search_placeholder": "Search languages...",

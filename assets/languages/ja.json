@@ -1,0 +1,67 @@
+{
+    "app_name": "ニュースアシスタント",
+    "nav": {
+        "home": "ホーム",
+        "features": "機能",
+        "download": "ダウンロード",
+        "history": "履歴"
+    },
+    "home": {
+        "title": "スマートニュースリーディング＆マネジメントツール",
+        "description": "ニュースアシスタントは、インテリジェントなアルゴリズムを通じて個別化されたニュース推奨を提供する強力なニュース収集・閲覧アプリケーションです。オフラインでの閲覧、ニュースのブックマーク、複数プラットフォーム同期などをサポートし、いつでもどこでも最新情報を入手できます。",
+        "download_btn": "無料ダウンロード",
+        "learn_more_btn": "詳細を見る",
+        "screenshots_title": "スクリーンショット",
+        "screenshots_subtitle": "ニュースアシスタントの様子をご覧ください",
+        "screenshot1_title": "メイン画面",
+        "screenshot1_desc": "クリーンでシンプルなニュース閲覧インターフェース",
+        "screenshot2_title": "リーディングモード",
+        "screenshot2_desc": "邪魔のない純粋な読書体験",
+        "screenshot3_title": "ブックマーク管理",
+        "screenshot3_desc": "お気に入りのニュースを簡単に管理",
+        "videos_title": "ビデオ紹介",
+        "videos_subtitle": "ニュースアシスタントの機能デモをご覧ください",
+        "video_not_supported": "お使いのブラウザはビデオ再生をサポートしていません。",
+        "demo_video_title": "機能デモ",
+        "demo_video_desc": "主な機能とワークフローについて学ぶ",
+        "tutorial_video_title": "チュートリアル",
+        "tutorial_video_desc": "ニュースアシスタントを素早く使い始める",
+        "view_more_videos": "さらにビデオを見る",
+        "features_title": "主要機能プレビュー",
+        "features_subtitle": "ニュースアシスタントの強力な機能を探索し、ニュース閲覧体験を向上させましょう",
+        "feature1": {
+            "title": "スマート推奨",
+            "description": "AIベースの個別化されたニュース推奨が、最も関連性の高いコンテンツをフィルタリングします。"
+        },
+        "feature2": {
+            "title": "オフライン閲覧",
+            "description": "いつでもどこでもニュースをダウンロードし、インターネット接続なしで読書を楽しめます。"
+        },
+        "feature3": {
+            "title": "マルチデバイス同期",
+            "description": "スマートフォン、タブレット、コンピューター間のシームレスな同期により、読書の進行状況が失われることはありません。"
+        },
+        "learn_more": "詳細を見る",
+        "download_section_title": "今すぐニュースアシスタントを体験",
+        "download_section_desc": "ニュースアシスタントはWindows、macOS、Androidプラットフォームをサポートしています。下のボタンをクリックして最新バージョンを入手してください。",
+        "download_section_btn1": "ダウンロードへ",
+        "download_section_btn2": "履歴バージョンを表示"
+    },
+    "footer": {
+        "app_description": "スマートなニュース読み込み・管理ツールで、いつでもどこでも最新情報を入手できます。",
+        "quick_links": "クイックリンク",
+        "support": "サポート",
+        "help_docs": "ヘルプドキュメント",
+        "faq": "よくある質問",
+        "terms": "利用規約",
+        "privacy": "プライバシーポリシー",
+        "contact": "お問い合わせ",
+        "contact_desc": "ご質問やご提案がございましたら、メールでお問い合わせください：",
+        "copyright": "© 2024 ニュースアシスタント. 全著作権所有."
+    },
+    "language": {
+        "search_placeholder": "言語を検索...",
+        "changed": "言語が変更されました",
+        "change_failed": "言語の変更に失敗しました"
+    }
+}

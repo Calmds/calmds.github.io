@@ -1,0 +1,68 @@
+{
+    "app_name": "Pembantu Berita",
+    "nav": {
+        "home": "Laman Utama",
+        "features": "Ciri-ciri",
+        "download": "Muat turun",
+        "history": "Sejarah"
+    },
+    "home": {
+        "title": "Alat Bacaan dan Pengurusan Berita Pintar",
+        "description": "Pembantu Berita ialah aplikasi agregasi dan bacaan berita berkuasa yang menyediakan cadangan berita peribadi melalui algoritma pintar. Menyokong bacaan luar talian, penanda buku berita, penyegerakan pelbagai platform dan banyak lagi, memastikan anda sentiasa dikemas kini pada bila-bila masa dan di mana sahaja.",
+        "download_btn": "Muat turun Percuma",
+        "learn_more_btn": "Ketahui Lebih Lanjut",
+        "screenshots_title": "Tangkapan Skrin",
+        "screenshots_subtitle": "Lihat rupa Pembantu Berita",
+        "screenshot1_title": "Antara Muka Utama",
+        "screenshot1_desc": "Antara muka bacaan berita yang bersih dan ringkas",
+        "screenshot2_title": "Mod Bacaan",
+        "screenshot2_desc": "Pengalaman bacaan tulen tanpa gangguan",
+        "screenshot3_title": "Pengurusan Penanda Buku",
+        "screenshot3_desc": "Urus berita kegemaran anda dengan mudah",
+        "features_title": "Pratonton Ciri Utama",
+        "features_subtitle": "Terokai ciri-ciri berkuasa Pembantu Berita untuk meningkatkan pengalaman bacaan berita anda",
+        "feature1": {
+            "title": "Cadangan Pintar",
+            "description": "Cadangan berita peribadi berasaskan AI menapis kandungan yang paling relevan untuk anda."
+        },
+        "feature2": {
+            "title": "Bacaan Luar Talian",
+            "description": "Muat turun berita pada bila-bila masa dan nikmati bacaan tanpa sambungan internet."
+        },
+        "feature3": {
+            "title": "Segerakan Pelbagai Peranti",
+            "description": "Penyegerakan lancar antara telefon, tablet dan komputer memastikan kemajuan bacaan tidak pernah hilang."
+        },
+        "learn_more": "Ketahui Lebih Lanjut",
+        "download_section_title": "Alami Pembantu Berita Sekarang",
+        "download_section_desc": "Pembantu Berita kini menyokong Windows, macOS dan Android. Klik butang di bawah untuk mendapatkan versi terkini.",
+        "download_section_btn1": "Pergi ke Muat Turun",
+        "download_section_btn2": "Lihat Sejarah Versi"
+    },
+    "download": {
+        "title": "Muat turun Pembantu Berita",
+        "subtitle": "Pilih platform anda dan mula menggunakan Pembantu Berita",
+        "latest_version": "Versi Terkini",
+        "choose_platform": "Pilih Platform",
+        "choose_platform_desc": "Pembantu Berita menyokong pelbagai sistem pengendalian",
+        "download_btn": "Muat turun {version}",
+        "download_now": "Muat turun Sekarang"
+    },
+    "footer": {
+        "app_description": "Alat bacaan dan pengurusan berita pintar yang memastikan anda sentiasa dikemas kini pada bila-bila masa dan di mana sahaja.",
+        "quick_links": "Pautan Pantas",
+        "support": "Sokongan",
+        "help_docs": "Dokumen Bantuan",
+        "faq": "Soalan Lazim",
+        "terms": "Terma Perkhidmatan",
+        "privacy": "Dasar Privasi",
+        "contact": "Hubungi Kami",
+        "contact_desc": "Jika anda mempunyai soalan atau cadangan, sila hubungi kami melalui e-mel:",
+        "copyright": "© 2024 Pembantu Berita. Hak cipta terpelihara."
+    },
+    "language": {
+        "search_placeholder": "Cari bahasa...",
+        "changed": "Bahasa telah ditukar",
+        "change_failed": "Gagal menukar bahasa"
+    }
+}

@@ -1,199 +1,59 @@
-// 翻译数据 - 存储在单独的文件中便于维护
-// 实际使用时，每种语言会有对应的JSON文件
-// 这里只提供中文翻译作为示例
-
-const TRANSLATIONS_ZH_CN = {
-    app_name: "新闻助手",
-
-    nav: {
-        home: "首页",
-        features: "功能特性",
-        download: "下载",
-        history: "历史版本"
-    },
-
-    home: {
-        title: "智能新闻阅读与管理工具",
-        description: "新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。",
-        download_btn: "免费下载",
-        learn_more_btn: "了解更多",
-        screenshots_title: "软件截图",
-        screenshots_subtitle: "看看新闻助手的样子",
-        screenshot1_title: "主界面",
-        screenshot1_desc: "清晰简洁的新闻阅读界面",
-        screenshot2_title: "阅读模式",
-        screenshot2_desc: "纯净的阅读体验，无干扰",
-        screenshot3_title: "收藏管理",
-        screenshot3_desc: "轻松管理您喜欢的新闻",
-        videos_title: "视频介绍",
-        videos_subtitle: "观看新闻助手的功能演示",
-        video_not_supported: "您的浏览器不支持视频播放。",
-        demo_video_title: "功能演示",
-        demo_video_desc: "了解新闻助手的主要功能和工作流程",
-        tutorial_video_title: "使用教程",
-        tutorial_video_desc: "快速上手新闻助手",
-        view_more_videos: "查看更多视频",
-        features_title: "核心功能预览",
-        features_subtitle: "探索新闻助手的强大功能，提升您的新闻阅读体验",
-        feature1: {
-            title: "智能推荐",
-            description: "基于AI算法的个性化新闻推荐，为您筛选最相关的内容。"
-        },
-        feature2: {
-            title: "离线阅读",
-            description: "随时随地下载新闻，无需网络也能畅快阅读。"
-        },
-        feature3: {
-            title: "多端同步",
-            description: "手机、平板、电脑无缝同步，阅读进度不丢失。"
-        },
-        learn_more: "了解更多",
-        download_section_title: "立即体验新闻助手",
-        download_section_desc: "新闻助手现已支持Windows、macOS和Android平台，点击下方按钮获取最新版本。",
-        download_section_btn1: "前往下载",
-        download_section_btn2: "查看历史版本"
-    },
-
-    features: {
-        title: "强大功能，卓越体验",
-        subtitle: "新闻助手为您提供全方位的新闻阅读与管理解决方案",
-        core_features_title: "核心功能",
-        core_features_subtitle: "探索新闻助手的强大功能",
-        feature1: {
-            title: "智能推荐",
-            description: "基于AI算法的个性化新闻推荐，为您筛选最相关的内容。通过机器学习不断优化推荐准确性，确保您看到的都是感兴趣的内容。",
-            list_item1: "个性化推荐算法",
-            list_item2: "实时兴趣分析",
-            list_item3: "多维度内容匹配"
-        },
-        feature2: {
-            title: "离线阅读",
-            description: "随时随地下载新闻，无需网络也能畅快阅读。智能缓存管理，节省流量，提供无缝的阅读体验。",
-            list_item1: "智能缓存管理",
-            list_item2: "自动下载更新",
-            list_item3: "多种下载选项"
-        },
-        feature3: {
-            title: "多端同步",
-            description: "手机、平板、电脑无缝同步，阅读进度、收藏内容实时更新，让您在不同设备间自由切换。",
-            list_item1: "跨平台同步",
-            list_item2: "实时进度更新",
-            list_item3: "安全数据加密"
-        },
-        feature4: {
-            title: "多种阅读模式",
-            description: "提供日间、夜间、护眼等多种阅读模式，支持自定义字体、字号和间距，满足不同用户的阅读习惯。",
-            list_item1: "多种主题模式",
-            list_item2: "自定义阅读设置",
-            list_item3: "自动主题切换"
-        },
-        feature5: {
-            title: "智能过滤",
-            description: "强大的内容过滤系统，支持关键词过滤、来源过滤、分类过滤等多种方式，打造纯净的阅读环境。",
-            list_item1: "自定义过滤规则",
-            list_item2: "多维度内容筛选",
-            list_item3: "实时过滤效果预览"
-        },
-        feature6: {
-            title: "阅读统计",
-            description: "详细的阅读统计报告，了解您的阅读习惯、时间分布、兴趣偏好，帮助您更好地管理阅读时间。",
-            list_item1: "阅读时长统计",
-            list_item2: "兴趣偏好分析",
-            list_item3: "数据可视化报告"
-        },
-        technical_title: "技术特点",
-        technical_subtitle: "先进的技术架构，卓越的性能表现",
-        tech1: {
-            title: "高效性能",
-            description: "采用现代化的技术架构，确保应用运行流畅，响应迅速，即使在低配设备上也能提供良好的使用体验。",
-            stat1: "稳定性",
-            stat2: "加载速度"
-        },
-        tech2: {
-            title: "数据安全",
-            description: "采用端到端加密技术，确保用户数据安全。所有同步数据均经过加密处理，保护您的隐私。",
-            stat1: "加密标准",
-            stat2: "数据安全"
-        },
-        tech3: {
-            title: "跨平台支持",
-            description: "支持 Windows、macOS、Android 等多平台，使用统一的技术栈确保一致的用户体验。",
-            stat1: "平台支持",
-            stat2: "用户覆盖"
-        }
-    },
-
-    download: {
-        title: "下载新闻助手",
-        subtitle: "选择您的平台，开始使用新闻助手",
-        latest_version: "最新版本",
-        choose_platform: "选择平台",
-        choose_platform_desc: "新闻助手支持多种操作系统",
-        system_requirements: "系统要求",
-        installation_guide: "安装指南",
-        installation_guide_desc: "按照以下步骤安装新闻助手",
-        step1_title: "下载安装文件",
-        step1_desc: "点击上方平台对应的下载按钮，获取安装文件",
-        step2_title: "运行安装程序",
-        step2_desc: "打开下载的文件，按照提示完成安装",
-        step3_title: "启动应用",
-        step3_desc: "安装完成后，从开始菜单或应用程序文件夹启动",
-        step4_title: "开始使用",
-        step4_desc: "按照引导完成初始设置，开始享受新闻助手",
-        faq_title: "常见问题",
-        faq_desc: "下载和安装过程中可能遇到的问题",
-        faq1_q: "下载速度很慢怎么办？",
-        faq1_a: "可以尝试更换网络环境，或者使用下载工具进行下载。我们也提供了多个镜像下载源。",
-        faq2_q: "安装过程中被安全软件拦截？",
-        faq2_a: "请将新闻助手添加到安全软件的信任列表，或暂时关闭安全软件进行安装。",
-        faq3_q: "如何卸载新闻助手？",
-        faq3_a: "在Windows系统中，可以通过控制面板的程序和功能进行卸载；在macOS中，直接将应用拖到废纸篓即可。",
-        faq4_q: "支持哪些语言？",
-        faq4_a: "新闻助手支持简体中文、英文、日文、韩文等多种语言，可在设置中切换。",
-        download_btn: "下载 {version}",
-        download_for: "下载 {platform} 版本",
-        file_size: "文件大小",
-        architecture: "支持架构",
-        requirements: "系统要求",
-        download_count: "下载次数",
-        download_now: "立即下载",
-        release_notes: "更新日志"
-    },
-
-    history: {
-        title: "历史版本",
-        subtitle: "查看新闻助手的版本更新记录",
-        latest: "最新版本",
-        version: "版本",
-        release_date: "发布日期",
-        changelog: "更新日志",
-        downloads: "下载链接",
-        no_versions: "暂无历史版本信息",
-        loading: "加载中...",
-        load_more: "加载更多",
-        show_details: "查看详情",
-        hide_details: "收起详情"
-    },
-
-    footer: {
-        app_description: "智能新闻阅读与管理工具，让您随时随地掌握最新资讯。",
-        quick_links: "快速链接",
-        support: "支持",
-        help_docs: "帮助文档",
-        faq: "常见问题",
-        terms: "用户协议",
-        privacy: "隐私政策",
-        contact: "联系我们",
-        contact_desc: "如有问题或建议，请通过邮箱联系我们：",
-        copyright: "© 2024 新闻助手. 保留所有权利."
-    },
-
-    language: {
-        search_placeholder: "搜索语言...",
-        changed: "语言已切换",
-        change_failed: "语言切换失败"
+// 翻译工具函数
+class TranslationHelper {
+    constructor() {
+        this.fallbackTranslations = {
+            'zh': {
+                'app_name': '新闻助手',
+                'nav.home': '首页',
+                'nav.features': '功能特性',
+                'nav.download': '下载',
+                'nav.history': '历史版本'
+            },
+            'en': {
+                'app_name': 'News Assistant',
+                'nav.home': 'Home',
+                'nav.features': 'Features',
+                'nav.download': 'Download',
+                'nav.history': 'History'
+            }
+        };
     }
-};
 
-// 为其他语言创建对应的JSON文件
-// assets/languages/zh-CN.json, en.json, ja.json 等
+    // 提供后备翻译，防止网络错误
+    getFallbackTranslation(langCode, key) {
+        const fallback = this.fallbackTranslations[langCode];
+        if (fallback && fallback[key]) {
+            return fallback[key];
+        }
+
+        // 如果特定语言没有，尝试英语
+        if (langCode !== 'en') {
+            const englishFallback = this.fallbackTranslations['en'];
+            if (englishFallback && englishFallback[key]) {
+                return englishFallback[key];
+            }
+        }
+
+        return key;
+    }
+
+    // 格式化翻译键
+    formatKey(keys) {
+        if (Array.isArray(keys)) {
+            return keys.join('.');
+        }
+        return keys;
+    }
+
+    // 批量翻译
+    batchTranslate(keys, langCode) {
+        const translations = {};
+        keys.forEach(key => {
+            translations[key] = this.getFallbackTranslation(langCode, key);
+        });
+        return translations;
+    }
+}
+
+// 导出工具类
+window.TranslationHelper = TranslationHelper;

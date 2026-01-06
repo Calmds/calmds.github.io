@@ -1,0 +1,68 @@
+{
+    "app_name": "Trợ lý Tin tức",
+    "nav": {
+        "home": "Trang chủ",
+        "features": "Tính năng",
+        "download": "Tải xuống",
+        "history": "Lịch sử"
+    },
+    "home": {
+        "title": "Công cụ Đọc và Quản lý Tin tức Thông minh",
+        "description": "Trợ lý Tin tức là ứng dụng tổng hợp và đọc tin tức mạnh mẽ cung cấp đề xuất tin tức cá nhân hóa thông qua thuật toán thông minh. Hỗ trợ đọc ngoại tuyến, đánh dấu tin tức, đồng bộ hóa đa nền tảng và hơn thế nữa, giúp bạn luôn cập nhật mọi lúc mọi nơi.",
+        "download_btn": "Tải xuống Miễn phí",
+        "learn_more_btn": "Tìm hiểu thêm",
+        "screenshots_title": "Ảnh chụp màn hình",
+        "screenshots_subtitle": "Xem Trợ lý Tin tức trông như thế nào",
+        "screenshot1_title": "Giao diện Chính",
+        "screenshot1_desc": "Giao diện đọc tin tức sạch sẽ và đơn giản",
+        "screenshot2_title": "Chế độ Đọc",
+        "screenshot2_desc": "Trải nghiệm đọc thuần túy không bị phân tâm",
+        "screenshot3_title": "Quản lý Đánh dấu",
+        "screenshot3_desc": "Dễ dàng quản lý tin tức yêu thích của bạn",
+        "features_title": "Xem trước Tính năng Chính",
+        "features_subtitle": "Khám phá các tính năng mạnh mẽ của Trợ lý Tin tức để nâng cao trải nghiệm đọc tin tức của bạn",
+        "feature1": {
+            "title": "Đề xuất Thông minh",
+            "description": "Đề xuất tin tức cá nhân hóa dựa trên AI lọc nội dung phù hợp nhất cho bạn."
+        },
+        "feature2": {
+            "title": "Đọc Ngoại tuyến",
+            "description": "Tải tin tức mọi lúc và tận hưởng đọc mà không cần kết nối internet."
+        },
+        "feature3": {
+            "title": "Đồng bộ Đa Thiết bị",
+            "description": "Đồng bộ hóa liền mạch giữa điện thoại, máy tính bảng và máy tính đảm bảo tiến trình đọc không bao giờ bị mất."
+        },
+        "learn_more": "Tìm hiểu thêm",
+        "download_section_title": "Trải nghiệm Trợ lý Tin tức ngay bây giờ",
+        "download_section_desc": "Trợ lý Tin tức hiện hỗ trợ Windows, macOS và Android. Nhấp vào nút bên dưới để nhận phiên bản mới nhất.",
+        "download_section_btn1": "Đến trang Tải xuống",
+        "download_section_btn2": "Xem lịch sử Phiên bản"
+    },
+    "download": {
+        "title": "Tải xuống Trợ lý Tin tức",
+        "subtitle": "Chọn nền tảng của bạn và bắt đầu sử dụng Trợ lý Tin tức",
+        "latest_version": "Phiên bản Mới nhất",
+        "choose_platform": "Chọn Nền tảng",
+        "choose_platform_desc": "Trợ lý Tin tức hỗ trợ nhiều hệ điều hành",
+        "download_btn": "Tải xuống {version}",
+        "download_now": "Tải xuống Ngay"
+    },
+    "footer": {
+        "app_description": "Công cụ đọc và quản lý tin tức thông minh giúp bạn luôn cập nhật mọi lúc mọi nơi.",
+        "quick_links": "Liên kết Nhanh",
+        "support": "Hỗ trợ",
+        "help_docs": "Tài liệu Trợ giúp",
+        "faq": "Câu hỏi Thường gặp",
+        "terms": "Điều khoản Dịch vụ",
+        "privacy": "Chính sách Quyền riêng tư",
+        "contact": "Liên hệ Chúng tôi",
+        "contact_desc": "Nếu bạn có câu hỏi hoặc đề xuất, vui lòng liên hệ với chúng tôi qua email:",
+        "copyright": "© 2024 Trợ lý Tin tức. Mọi quyền được bảo lưu."
+    },
+    "language": {
+        "search_placeholder": "Tìm kiếm ngôn ngữ...",
+        "changed": "Đã đổi ngôn ngữ",
+        "change_failed": "Đổi ngôn ngữ thất bại"
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "app_name": "News Assistent",
+    "nav": {
+        "home": "Startseite",
+        "features": "Funktionen",
+        "download": "Herunterladen",
+        "history": "Verlauf"
+    },
+    "home": {
+        "title": "Intelligentes Nachrichtenlese- und Management-Tool",
+        "description": "News Assistent ist eine leistungsstarke Nachrichtenaggregations- und Leseanwendung, die personalisierte Nachrichtenempfehlungen durch intelligente Algorithmen bereitstellt. Unterstützt Offline-Lesen, Nachrichten-Lesezeichen, Multiplattform-Synchronisierung und mehr, um Sie jederzeit und überall auf dem Laufenden zu halten.",
+        "download_btn": "Kostenlos herunterladen",
+        "learn_more_btn": "Mehr erfahren",
+        "screenshots_title": "Screenshots",
+        "screenshots_subtitle": "Sehen Sie, wie der News Assistent aussieht",
+        "screenshot1_title": "Hauptoberfläche",
+        "screenshot1_desc": "Saubere und einfache Nachrichtenleseoberfläche",
+        "screenshot2_title": "Lesemodus",
+        "screenshot2_desc": "Reines Lesevergnügen ohne Ablenkungen",
+        "screenshot3_title": "Lesezeichenverwaltung",
+        "screenshot3_desc": "Verwalten Sie einfach Ihre Lieblingsnachrichten",
+        "features_title": "Kernfunktionen Vorschau",
+        "features_subtitle": "Entdecken Sie die leistungsstarken Funktionen des News Assistenten, um Ihr Nachrichtenleseerlebnis zu verbessern",
+        "feature1": {
+            "title": "Intelligente Empfehlungen",
+            "description": "KI-basierte personalisierte Nachrichtenempfehlungen filtern die relevantesten Inhalte für Sie heraus."
+        },
+        "feature2": {
+            "title": "Offline-Lesen",
+            "description": "Laden Sie Nachrichten jederzeit herunter und genießen Sie das Lesen ohne Internetverbindung."
+        },
+        "feature3": {
+            "title": "Geräteübergreifende Synchronisierung",
+            "description": "Nahtlose Synchronisierung zwischen Telefon, Tablet und Computer stellt sicher, dass der Lesefortschritt nie verloren geht."
+        },
+        "learn_more": "Mehr erfahren",
+        "download_section_title": "Erleben Sie den News Assistenten jetzt",
+        "download_section_desc": "News Assistent unterstützt jetzt Windows, macOS und Android. Klicken Sie auf die Schaltfläche unten, um die neueste Version zu erhalten.",
+        "download_section_btn1": "Zum Download",
+        "download_section_btn2": "Versionsverlauf anzeigen"
+    },
+    "download": {
+        "title": "News Assistent herunterladen",
+        "subtitle": "Wählen Sie Ihre Plattform und beginnen Sie mit der Verwendung des News Assistenten",
+        "latest_version": "Neueste Version",
+        "choose_platform": "Plattform wählen",
+        "choose_platform_desc": "News Assistent unterstützt mehrere Betriebssysteme",
+        "download_btn": "{version} herunterladen",
+        "download_now": "Jetzt herunterladen"
+    },
+    "footer": {
+        "app_description": "Intelligentes Nachrichtenlese- und Management-Tool, das Sie jederzeit und überall auf dem Laufenden hält.",
+        "quick_links": "Schnelllinks",
+        "support": "Support",
+        "help_docs": "Hilfedokumentation",
+        "faq": "Häufig gestellte Fragen",
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzrichtlinie",
+        "contact": "Kontaktieren Sie uns",
+        "contact_desc": "Wenn Sie Fragen oder Vorschläge haben, kontaktieren Sie uns bitte per E-Mail:",
+        "copyright": "© 2024 News Assistent. Alle Rechte vorbehalten."
+    },
+    "language": {
+        "search_placeholder": "Sprachen suchen...",
+        "changed": "Sprache geändert",
+        "change_failed": "Sprachänderung fehlgeschlagen"
+    }
+}

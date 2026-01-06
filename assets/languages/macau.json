@@ -1,0 +1,68 @@
+{
+    "app_name": "新聞助手",
+    "nav": {
+        "home": "首頁",
+        "features": "功能特性",
+        "download": "下載",
+        "history": "歷史版本"
+    },
+    "home": {
+        "title": "智能新聞閱讀與管理工具",
+        "description": "新聞助手係一款功能強大嘅新聞聚合與閱讀應用，透過智能算法為您推薦個性化新聞內容，支援離線閱讀、新聞收藏、多平台同步等功能，讓您隨時隨地掌握最新資訊。",
+        "download_btn": "免費下載",
+        "learn_more_btn": "了解更多",
+        "screenshots_title": "軟件截圖",
+        "screenshots_subtitle": "睇睇新聞助手嘅樣",
+        "screenshot1_title": "主界面",
+        "screenshot1_desc": "清晰簡潔嘅新聞閱讀界面",
+        "screenshot2_title": "閱讀模式",
+        "screenshot2_desc": "純淨嘅閱讀體驗，無干擾",
+        "screenshot3_title": "收藏管理",
+        "screenshot3_desc": "輕鬆管理您鍾意嘅新聞",
+        "features_title": "核心功能預覽",
+        "features_subtitle": "探索新聞助手嘅強大功能，提升您嘅新聞閱讀體驗",
+        "feature1": {
+            "title": "智能推薦",
+            "description": "基於AI算法嘅個性化新聞推薦，為您篩選最相關嘅內容。"
+        },
+        "feature2": {
+            "title": "離線閱讀",
+            "description": "隨時隨地下載新聞，無需網絡都能暢快閱讀。"
+        },
+        "feature3": {
+            "title": "多端同步",
+            "description": "手機、平板、電腦無縫同步，閱讀進度唔會丟失。"
+        },
+        "learn_more": "了解更多",
+        "download_section_title": "立即體驗新聞助手",
+        "download_section_desc": "新聞助手現已支援Windows、macOS同Android平台，點擊下方按鈕獲取最新版本。",
+        "download_section_btn1": "前往下載",
+        "download_section_btn2": "查看歷史版本"
+    },
+    "download": {
+        "title": "下載新聞助手",
+        "subtitle": "選擇您嘅平台，開始使用新聞助手",
+        "latest_version": "最新版本",
+        "choose_platform": "選擇平台",
+        "choose_platform_desc": "新聞助手支援多種操作系統",
+        "download_btn": "下載 {version}",
+        "download_now": "立即下載"
+    },
+    "footer": {
+        "app_description": "智能新聞閱讀與管理工具，讓您隨時隨地掌握最新資訊。",
+        "quick_links": "快速連結",
+        "support": "支援",
+        "help_docs": "幫助文檔",
+        "faq": "常見問題",
+        "terms": "用戶協議",
+        "privacy": "隱私政策",
+        "contact": "聯絡我哋",
+        "contact_desc": "如有問題或建議，請透過郵箱聯絡我哋：",
+        "copyright": "© 2024 新聞助手. 保留所有權利."
+    },
+    "language": {
+        "search_placeholder": "搜索語言...",
+        "changed": "語言已切換",
+        "change_failed": "語言切換失敗"
+    }
+}
