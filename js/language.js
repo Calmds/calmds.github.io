@@ -64,13 +64,7 @@ class LanguageManager {
 
     async preloadLikelyLanguages() {
         // 预加载用户浏览器语言和其他常用语言
-        const languagesToPreload = [
-            'en',
-            'zh-MO',
-            'ja',
-            'ko'
-        ].filter(lang => lang !== this.currentLang);
-
+        const languagesToPreload = ['zh-CN', 'zh-MO', 'en', 'ja', 'ko'].filter(lang => lang !== this.currentLang);
         languagesToPreload.forEach(lang => {
             this.loadLanguage(lang).catch(() => {
                 // 静默失败，不影响用户体验
