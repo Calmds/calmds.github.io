@@ -143,6 +143,20 @@
     white-space: nowrap;
 }
 
+/* 加载占位符 */
+.loading-placeholder {
+    padding: 3rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.loading-placeholder i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
 /* 系统要求 */
 .platform-requirements {
     margin-top: 4rem;
@@ -176,6 +190,7 @@
 .requirement-card h4 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .requirement-card ul {
@@ -234,11 +249,13 @@
 .step-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
+    color: var(--text-primary);
 }
 
 .step-card p {
     color: var(--text-secondary);
     font-size: 0.875rem;
+    line-height: 1.6;
 }
 
 /* FAQ区域 */
@@ -273,10 +290,12 @@
     font-size: 1.125rem;
     font-weight: 600;
     margin: 0;
+    color: var(--text-primary);
 }
 
 .faq-question i {
     transition: transform 0.3s ease;
+    color: var(--text-secondary);
 }
 
 .faq-answer {
@@ -286,37 +305,11 @@
     transition: max-height 0.3s ease;
 }
 
-.faq-answer.open {
-    max-height: 500px;
-    padding-bottom: 1.5rem;
-}
-
 .faq-answer p {
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
-}
-
-/* 错误消息 */
-.error-message {
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.error-message i {
-    font-size: 3rem;
-    color: var(--danger);
-    margin-bottom: 1.5rem;
-}
-
-.error-message h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.error-message p {
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 /* 响应式设计 */
@@ -336,5 +329,9 @@
 
     .guide-steps {
         grid-template-columns: 1fr;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
     }
 }
