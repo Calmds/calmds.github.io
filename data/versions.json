@@ -14,34 +14,61 @@
             "downloads": {
                 "windows": {
                     "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "md5": "60299c6d9f43a1182e51152791d1de70",
                     "size": "11.8 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "Windows 10/11",
                     "download_count": 15000
                 },
                 "macos": {
                     "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "md5": "60299c6d9f43a1182e51152791d1de70",
                     "size": "11.8 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "macOS 10.14+",
                     "download_count": 8000
                 },
                 "android": {
                     "filename": "News-Assistant_0.0.3_x64.dmg",
-                    "size": "48.3 MB",
+                    "md5": "60299c6d9f43a1182e51152791d1de70",
+                    "size": "10.3 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 25000
+                },
+                "ios": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "60299c6d9f43a1182e51152791d1de70",
+                    "size": "10.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+",
+                    "download_count": 18000
+                },
+                "HarmonyOS": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "60299c6d9f43a1182e51152791d1de70",
+                    "size": "10.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+",
+                    "download_count": 18000
                 }
             }
         },
@@ -57,55 +84,60 @@
             "downloads": {
                 "windows": {
                     "filename": "News-Assistant_0.0.2_x64.dmg",
+                    "md5": "d5fe0108169cc0fe46ddcbb5ddc85ec7",
                     "size": "11.6 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "Windows 10/11",
                     "download_count": 12000
                 },
                 "macos": {
                     "filename": "News-Assistant_0.0.2_x64.dmg",
+                    "md5": "d5fe0108169cc0fe46ddcbb5ddc85ec7",
                     "size": "91.5 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "macOS 10.14+",
                     "download_count": 6500
                 },
                 "android": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "d5fe0108169cc0fe46ddcbb5ddc85ec7",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 },
                 "ios": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "d5fe0108169cc0fe46ddcbb5ddc85ec7",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 },
                 "HarmonyOS": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "d5fe0108169cc0fe46ddcbb5ddc85ec7",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 }
             }
@@ -122,55 +154,60 @@
             "downloads": {
                 "windows": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "850a00fe141229d6c898542d93a45c08",
                     "size": "11.8 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "Windows 10/11",
                     "download_count": 12000
                 },
                 "macos": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "850a00fe141229d6c898542d93a45c08",
                     "size": "91.5 MB",
                     "arch": [
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "requirements": "macOS 10.14+",
                     "download_count": 6500
                 },
                 "android": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "850a00fe141229d6c898542d93a45c08",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 },
                 "ios": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "850a00fe141229d6c898542d93a45c08",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 },
                 "HarmonyOS": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "md5": "850a00fe141229d6c898542d93a45c08",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "requirements": "Android 8.0+",
                     "download_count": 18000
                 }
             }
@@ -190,6 +227,16 @@
         "android": {
             "display_name": "Android",
             "icon": "fab fa-android",
+            "color": "#3ddc84"
+        },
+        "HarmonyOS": {
+            "display_name": "HarmonyOS",
+            "icon": "fab fa-android",
+            "color": "#3ddc84"
+        },
+        "IOS": {
+            "display_name": "IOS",
+            "icon": "fab fa-itunes",
             "color": "#3ddc84"
         }
     }
