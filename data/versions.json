@@ -1,8 +1,8 @@
 {
     "versions": [
         {
-            "version": "2.5.0",
-            "release_date": "2024-06-15",
+            "version": "0.0.3",
+            "release_date": "2026-01-02",
             "latest": true,
             "changelog": [
                 "新增暗黑模式，支持自动切换",
@@ -13,8 +13,8 @@
             ],
             "downloads": {
                 "windows": {
-                    "filename": "news-assistant-windows-2.5.0.exe",
-                    "size": "85.4 MB",
+                    "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "size": "11.8 MB",
                     "arch": [
                         "x64",
                         "arm64"
@@ -23,8 +23,8 @@
                     "download_count": 15000
                 },
                 "macos": {
-                    "filename": "news-assistant-macos-2.5.0.dmg",
-                    "size": "92.7 MB",
+                    "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "size": "11.8 MB",
                     "arch": [
                         "x64",
                         "arm64"
@@ -33,7 +33,7 @@
                     "download_count": 8000
                 },
                 "android": {
-                    "filename": "news-assistant-android-2.5.0.apk",
+                    "filename": "News-Assistant_0.0.3_x64.dmg",
                     "size": "48.3 MB",
                     "arch": [
                         "arm64-v8a",
@@ -46,8 +46,8 @@
             }
         },
         {
-            "version": "2.4.3",
-            "release_date": "2024-05-10",
+            "version": "0.0.2",
+            "release_date": "2025-12-10",
             "latest": false,
             "changelog": [
                 "修复新闻加载问题，提升性能",
@@ -56,8 +56,8 @@
             ],
             "downloads": {
                 "windows": {
-                    "filename": "news-assistant-windows-2.4.3.exe",
-                    "size": "84.2 MB",
+                    "filename": "News-Assistant_0.0.2_x64.dmg",
+                    "size": "11.6 MB",
                     "arch": [
                         "x64",
                         "arm64"
@@ -66,7 +66,7 @@
                     "download_count": 12000
                 },
                 "macos": {
-                    "filename": "news-assistant-macos-2.4.3.dmg",
+                    "filename": "News-Assistant_0.0.2_x64.dmg",
                     "size": "91.5 MB",
                     "arch": [
                         "x64",
@@ -76,7 +76,94 @@
                     "download_count": 6500
                 },
                 "android": {
-                    "filename": "news-assistant-android-2.4.3.apk",
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "47.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
+                },
+                "ios": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "47.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
+                },
+                "HarmonyOS": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "47.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
+                }
+            }
+        },
+        {
+            "version": "0.0.1",
+            "release_date": "2025-12-09",
+            "latest": false,
+            "changelog": [
+                "修复新闻加载问题，提升性能",
+                "优化内存使用，减少资源占用",
+                "修复同步时的网络错误"
+            ],
+            "downloads": {
+                "windows": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "11.8 MB",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ],
+                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 12000
+                },
+                "macos": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "91.5 MB",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ],
+                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 6500
+                },
+                "android": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "47.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
+                },
+                "ios": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "size": "47.8 MB",
+                    "arch": [
+                        "arm64-v8a",
+                        "armeabi-v7a",
+                        "x86_64"
+                    ],
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
+                },
+                "HarmonyOS": {
+                    "filename": "News-Assistant_0.0.1_x64.dmg",
                     "size": "47.8 MB",
                     "arch": [
                         "arm64-v8a",
