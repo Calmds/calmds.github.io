@@ -32,9 +32,10 @@ class DownloadManager {
     }
 
     renderPlatforms() {
-        const platformsGrid = document.querySelector('.platforms-grid');
+        const platformsGrid = document.getElementById('platformsGrid');
         if (!platformsGrid || !this.currentVersion) return;
 
+        // 清空加载占位符
         platformsGrid.innerHTML = '';
 
         const platforms = this.versionsData.platforms;
@@ -63,22 +64,22 @@ class DownloadManager {
                 <div class="platform-info">
                     <h3>${platform.display_name}</h3>
                     <div class="platform-badges">
-                        <span class="badge latest">最新版本</span>
+                        <span class="badge latest" data-i18n="download.latest_version">最新版本</span>
                     </div>
                 </div>
             </div>
             
             <div class="platform-details">
                 <div class="detail-item">
-                    <span class="detail-label">文件大小</span>
+                    <span class="detail-label" data-i18n="download.file_size">文件大小</span>
                     <span class="detail-value">${downloadInfo.size}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">支持架构</span>
+                    <span class="detail-label" data-i18n="download.architecture">支持架构</span>
                     <span class="detail-value">${downloadInfo.arch.join(', ')}</span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-label">系统要求</span>
+                    <span class="detail-label" data-i18n="download.requirements">系统要求</span>
                     <span class="detail-value">${downloadInfo.requirements}</span>
                 </div>
             </div>
@@ -88,11 +89,7 @@ class DownloadManager {
                         data-platform="${platform.display_name.toLowerCase()}"
                         data-filename="${downloadInfo.filename}">
                     <i class="fas fa-download"></i>
-                    <span>下载 ${this.currentVersion.version}</span>
-                </button>
-                <button class="glass-btn secondary info-btn">
-                    <i class="fas fa-info-circle"></i>
-                    <span>详情</span>
+                    <span data-i18n="download.download_now">立即下载</span>
                 </button>
             </div>
         `;
@@ -131,46 +128,6 @@ class DownloadManager {
                 await this.handleDownload(platform, filename);
             }
         });
-
-        // FAQ折叠
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-
-            if (question && answer) {
-                question.addEventListener('click', () => {
-                    const isOpen = answer.style.maxHeight;
-
-                    // 关闭所有其他FAQ
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            const otherAnswer = otherItem.querySelector('.faq-answer');
-                            const otherIcon = otherItem.querySelector('.faq-question i');
-
-                            if (otherAnswer) {
-                                otherAnswer.style.maxHeight = null;
-                                otherAnswer.classList.remove('open');
-                            }
-                            if (otherIcon) {
-                                otherIcon.style.transform = 'rotate(0deg)';
-                            }
-                        }
-                    });
-
-                    // 切换当前FAQ
-                    if (isOpen) {
-                        answer.style.maxHeight = null;
-                        answer.classList.remove('open');
-                        question.querySelector('i').style.transform = 'rotate(0deg)';
-                    } else {
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
-                        answer.classList.add('open');
-                        question.querySelector('i').style.transform = 'rotate(180deg)';
-                    }
-                });
-            }
-        });
     }
 
     async handleDownload(platform, filename) {
@@ -193,7 +150,7 @@ class DownloadManager {
                 window.common.showToast('开始下载，请稍候...', 'success');
             }
 
-            // 记录下载统计（可以集成Google Analytics或自定义统计）
+            // 记录下载统计
             this.trackDownload(platform, filename);
 
         } catch (error) {
@@ -219,15 +176,15 @@ class DownloadManager {
     }
 
     showError() {
-        const platformsGrid = document.querySelector('.platforms-grid');
+        const platformsGrid = document.getElementById('platformsGrid');
         if (platformsGrid) {
             platformsGrid.innerHTML = `
                 <div class="error-message glass-card">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <h3>加载失败</h3>
-                    <p>无法加载下载信息，请刷新页面重试。</p>
+                    <h3 data-i18n="download.error_title">加载失败</h3>
+                    <p data-i18n="download.error_desc">无法加载下载信息，请刷新页面重试。</p>
                     <button class="glass-btn primary" onclick="location.reload()">
-                        刷新页面
+                        <span data-i18n="download.refresh_btn">刷新页面</span>
                     </button>
                 </div>
             `;
