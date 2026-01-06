@@ -252,13 +252,13 @@ class LanguageManager {
             // 更新下拉框选中状态
             this.updateDropdownSelection(langCode);
 
-            // 显示成功消息
-            if (window.common) {
-                window.common.showToast(
-                    `${LANGUAGE_CONFIG.getLanguageName(langCode)} ${this.translate('language.changed')}`,
-                    'success'
-                );
-            }
+            // // 显示成功消息
+            // if (window.common) {
+            //     window.common.showToast(
+            //         `${LANGUAGE_CONFIG.getLanguageName(langCode)} ${this.translate('language.changed')}`,
+            //         'success'
+            //     );
+            // }
 
             console.log('Language changed successfully');
         } catch (error) {
