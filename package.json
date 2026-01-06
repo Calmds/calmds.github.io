@@ -1,0 +1,22 @@
+{
+    "name": "news-assistant-website",
+    "version": "1.0.0",
+    "description": "新闻助手官方网站 - 多语言支持",
+    "main": "index.html",
+    "scripts": {
+        "start": "live-server --port=3000",
+        "build": "echo 'Build process would go here'",
+        "test": "echo 'No tests specified'"
+    },
+    "keywords": [
+        "news",
+        "assistant",
+        "multilingual",
+        "website"
+    ],
+    "author": "新闻助手团队",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    }
+}

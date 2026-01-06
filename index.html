@@ -4,11 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新闻助手 - 智能新闻阅读与管理工具</title>
+    <title data-i18n="app_name">新闻助手 - 智能新闻阅读与管理工具</title>
+
+    <!-- 基础图标配置 -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+
+    <!-- SEO 优化 -->
+    <meta name="description" content="新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。">
+    <meta name="keywords" content="新闻助手,新闻阅读,新闻聚合,智能推荐,离线阅读,新闻管理">
+    <meta name="author" content="新闻助手团队">
+
+    <!-- CSS 文件 -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -18,18 +28,37 @@
             <nav class="navbar">
                 <a href="index.html" class="logo">
                     <i class="fas fa-newspaper"></i>
-                    新闻助手
+                    <span data-i18n="app_name">新闻助手</span>
                 </a>
 
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">首页</a></li>
-                    <li><a href="features.html">功能特性</a></li>
-                    <li><a href="download.html">下载</a></li>
-                    <li><a href="history.html">历史版本</a></li>
+                    <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
+                    <li><a href="features.html" data-i18n="nav.features">功能特性</a></li>
+                    <li><a href="download.html" data-i18n="nav.download">下载</a></li>
+                    <li><a href="history.html" data-i18n="nav.history">历史版本</a></li>
                 </ul>
 
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
+                <div class="nav-right">
+                    <!-- 语言选择器 -->
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">中文</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <div class="language-search">
+                                <input type="text" id="languageSearch" placeholder="搜索语言...">
+                            </div>
+                            <div class="language-list" id="languageList">
+                                <!-- 语言选项将通过JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -40,16 +69,176 @@
         <!-- 欢迎区域 -->
         <section class="hero">
             <div class="container">
-                <h1>智能新闻阅读与管理工具</h1>
-                <p>新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。</p>
+                <h1 data-i18n="home.title">智能新闻阅读与管理工具</h1>
+                <p data-i18n="home.description">
+                    新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。</p>
 
                 <div class="hero-buttons">
                     <a href="download.html" class="btn btn-primary">
-                        <i class="fas fa-download"></i> 免费下载
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="home.download_btn">免费下载</span>
                     </a>
                     <a href="features.html" class="btn btn-secondary">
-                        <i class="fas fa-info-circle"></i> 了解更多
+                        <i class="fas fa-info-circle"></i>
+                        <span data-i18n="home.learn_more_btn">了解更多</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 软件截图展示区域 -->
+        <section class="screenshots-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="home.screenshots_title">软件截图</h2>
+                    <p data-i18n="home.screenshots_subtitle">看看新闻助手的样子</p>
+                </div>
+
+                <div class="screenshots-container">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <div class="screenshot-image">
+                                <img src="assets/images/screenshots/screenshot1.png" alt="新闻助手主界面截图"
+                                    data-i18n="[alt]home.screenshot1_alt">
+                                <div class="screenshot-overlay">
+                                    <button class="view-btn" data-image="screenshot1.png">
+                                        <i class="fas fa-search-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h3 data-i18n="home.screenshot1_title">主界面</h3>
+                                <p data-i18n="home.screenshot1_desc">清晰简洁的新闻阅读界面</p>
+                            </div>
+                        </div>
+
+                        <div class="screenshot-item">
+                            <div class="screenshot-image">
+                                <img src="assets/images/screenshots/screenshot2.png" alt="新闻助手阅读模式截图"
+                                    data-i18n="[alt]home.screenshot2_alt">
+                                <div class="screenshot-overlay">
+                                    <button class="view-btn" data-image="screenshot2.png">
+                                        <i class="fas fa-search-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h3 data-i18n="home.screenshot2_title">阅读模式</h3>
+                                <p data-i18n="home.screenshot2_desc">纯净的阅读体验，无干扰</p>
+                            </div>
+                        </div>
+
+                        <div class="screenshot-item">
+                            <div class="screenshot-image">
+                                <img src="assets/images/screenshots/screenshot3.png" alt="新闻助手收藏管理截图"
+                                    data-i18n="[alt]home.screenshot3_alt">
+                                <div class="screenshot-overlay">
+                                    <button class="view-btn" data-image="screenshot3.png">
+                                        <i class="fas fa-search-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="screenshot-caption">
+                                <h3 data-i18n="home.screenshot3_title">收藏管理</h3>
+                                <p data-i18n="home.screenshot3_desc">轻松管理您喜欢的新闻</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 截图查看器模态框 -->
+                <div class="screenshot-viewer" id="screenshotViewer">
+                    <div class="viewer-content">
+                        <button class="close-viewer" id="closeViewer">&times;</button>
+                        <div class="viewer-image-container">
+                            <img id="viewerImage" src="" alt="">
+                        </div>
+                        <div class="viewer-controls">
+                            <button class="viewer-btn prev-btn" id="prevScreenshot">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="viewer-btn next-btn" id="nextScreenshot">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 视频介绍区域 -->
+        <section class="videos-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="home.videos_title">视频介绍</h2>
+                    <p data-i18n="home.videos_subtitle">观看新闻助手的功能演示</p>
+                </div>
+
+                <div class="videos-container">
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <div class="video-player">
+                                <video id="demoVideo" controls poster="assets/images/thumbnails/demo-thumbnail.jpg">
+                                    <source src="assets/videos/demo.mp4" type="video/mp4">
+                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
+                                </video>
+                                <div class="video-controls">
+                                    <button class="play-btn" id="playDemo">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3 data-i18n="home.demo_video_title">功能演示</h3>
+                                <p data-i18n="home.demo_video_desc">了解新闻助手的主要功能和工作流程</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 3:45</span>
+                                    <span><i class="far fa-calendar"></i> 2024-06-15</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="video-player">
+                                <video id="tutorialVideo" controls
+                                    poster="assets/images/thumbnails/tutorial-thumbnail.jpg">
+                                    <source src="assets/videos/tutorial.mp4" type="video/mp4">
+                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
+                                </video>
+                                <div class="video-controls">
+                                    <button class="play-btn" id="playTutorial">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3 data-i18n="home.tutorial_video_title">使用教程</h3>
+                                <p data-i18n="home.tutorial_video_desc">快速上手新闻助手</p>
+                                <div class="video-meta">
+                                    <span><i class="far fa-clock"></i> 5:20</span>
+                                    <span><i class="far fa-calendar"></i> 2024-06-10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 视频库模态框 -->
+                <div class="video-library" id="videoLibrary">
+                    <div class="library-content">
+                        <button class="close-library" id="closeLibrary">&times;</button>
+                        <h3 data-i18n="home.video_library_title">视频库</h3>
+                        <div class="library-grid" id="libraryGrid">
+                            <!-- 视频将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-videos">
+                    <button class="btn btn-secondary" id="viewMoreVideos">
+                        <i class="fas fa-video"></i>
+                        <span data-i18n="home.view_more_videos">查看更多视频</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -58,8 +247,8 @@
         <section class="preview-section">
             <div class="container">
                 <div class="section-title">
-                    <h2>核心功能预览</h2>
-                    <p>探索新闻助手的强大功能，提升您的新闻阅读体验</p>
+                    <h2 data-i18n="home.features_title">核心功能预览</h2>
+                    <p data-i18n="home.features_subtitle">探索新闻助手的强大功能，提升您的新闻阅读体验</p>
                 </div>
 
                 <div class="preview-grid">
@@ -67,27 +256,33 @@
                         <div class="preview-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3>智能推荐</h3>
-                        <p>基于AI算法的个性化新闻推荐，为您筛选最相关的内容。</p>
-                        <a href="features.html#smart-recommendation" class="preview-link">了解更多 →</a>
+                        <h3 data-i18n="home.feature1.title">智能推荐</h3>
+                        <p data-i18n="home.feature1.description">基于AI算法的个性化新闻推荐，为您筛选最相关的内容。</p>
+                        <a href="features.html#smart-recommendation" class="preview-link">
+                            <span data-i18n="home.learn_more">了解更多</span> →
+                        </a>
                     </div>
 
                     <div class="preview-card">
                         <div class="preview-icon">
                             <i class="fas fa-cloud-download-alt"></i>
                         </div>
-                        <h3>离线阅读</h3>
-                        <p>随时随地下载新闻，无需网络也能畅快阅读。</p>
-                        <a href="features.html#offline-reading" class="preview-link">了解更多 →</a>
+                        <h3 data-i18n="home.feature2.title">离线阅读</h3>
+                        <p data-i18n="home.feature2.description">随时随地下载新闻，无需网络也能畅快阅读。</p>
+                        <a href="features.html#offline-reading" class="preview-link">
+                            <span data-i18n="home.learn_more">了解更多</span> →
+                        </a>
                     </div>
 
                     <div class="preview-card">
                         <div class="preview-icon">
                             <i class="fas fa-sync-alt"></i>
                         </div>
-                        <h3>多端同步</h3>
-                        <p>手机、平板、电脑无缝同步，阅读进度不丢失。</p>
-                        <a href="features.html#multi-sync" class="preview-link">了解更多 →</a>
+                        <h3 data-i18n="home.feature3.title">多端同步</h3>
+                        <p data-i18n="home.feature3.description">手机、平板、电脑无缝同步，阅读进度不丢失。</p>
+                        <a href="features.html#multi-sync" class="preview-link">
+                            <span data-i18n="home.learn_more">了解更多</span> →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -98,14 +293,16 @@
             <div class="container">
                 <div class="guide-content">
                     <div class="guide-text">
-                        <h2>立即体验新闻助手</h2>
-                        <p>新闻助手现已支持Windows、macOS和Android平台，点击下方按钮获取最新版本。</p>
+                        <h2 data-i18n="home.download_section_title">立即体验新闻助手</h2>
+                        <p data-i18n="home.download_section_desc">新闻助手现已支持Windows、macOS和Android平台，点击下方按钮获取最新版本。</p>
                         <div class="guide-buttons">
                             <a href="download.html" class="btn btn-primary">
-                                <i class="fas fa-download"></i> 前往下载
+                                <i class="fas fa-download"></i>
+                                <span data-i18n="home.download_section_btn1">前往下载</span>
                             </a>
                             <a href="history.html" class="btn btn-secondary">
-                                <i class="fas fa-history"></i> 查看历史版本
+                                <i class="fas fa-history"></i>
+                                <span data-i18n="home.download_section_btn2">查看历史版本</span>
                             </a>
                         </div>
                     </div>
@@ -122,8 +319,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>新闻助手</h3>
-                    <p>智能新闻阅读与管理工具，让您随时随地掌握最新资讯。</p>
+                    <h3 data-i18n="app_name">新闻助手</h3>
+                    <p data-i18n="footer.app_description">智能新闻阅读与管理工具，让您随时随地掌握最新资讯。</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-weibo"></i></a>
                         <a href="#"><i class="fab fa-weixin"></i></a>
@@ -132,40 +329,41 @@
                 </div>
 
                 <div class="footer-column">
-                    <h3>快速链接</h3>
+                    <h3 data-i18n="footer.quick_links">快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="features.html">功能特性</a></li>
-                        <li><a href="download.html">下载</a></li>
-                        <li><a href="history.html">历史版本</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                        <li><a href="features.html" data-i18n="nav.features">功能特性</a></li>
+                        <li><a href="download.html" data-i18n="nav.download">下载</a></li>
+                        <li><a href="history.html" data-i18n="nav.history">历史版本</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h3>支持</h3>
+                    <h3 data-i18n="footer.support">支持</h3>
                     <ul class="footer-links">
-                        <li><a href="#">帮助文档</a></li>
-                        <li><a href="#">常见问题</a></li>
-                        <li><a href="#">用户协议</a></li>
-                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#" data-i18n="footer.help_docs">帮助文档</a></li>
+                        <li><a href="#" data-i18n="footer.faq">常见问题</a></li>
+                        <li><a href="#" data-i18n="footer.terms">用户协议</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">隐私政策</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h3>联系我们</h3>
-                    <p>如有问题或建议，请通过邮箱联系我们：</p>
+                    <h3 data-i18n="footer.contact">联系我们</h3>
+                    <p data-i18n="footer.contact_desc">如有问题或建议，请通过邮箱联系我们：</p>
                     <p class="contact-email">support@news-assistant.com</p>
                 </div>
             </div>
 
             <div class="copyright">
-                <p>&copy; 2024 新闻助手. 保留所有权利.</p>
+                <p data-i18n="footer.copyright">© 2024 新闻助手. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <!-- 引入JavaScript文件 -->
     <script src="js/common.js"></script>
+    <script src="js/language.js"></script>
     <script src="js/index.js"></script>
 </body>
 
