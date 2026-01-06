@@ -1,50 +1,81 @@
-// 等待DOM加载完成
-document.addEventListener('DOMContentLoaded', function () {
-    // 移动端菜单切换
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function () {
-            navLinks.classList.toggle('active');
-
-            // 切换菜单图标
-            const icon = this.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
+// 通用功能
+class Common {
+    constructor() {
+        this.init();
     }
 
-    // 关闭移动端菜单当点击菜单项时
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', function () {
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                if (mobileToggle) {
-                    const icon = mobileToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-    });
+    init() {
+        this.initMobileMenu();
+        this.initLanguageSelector();
+        this.initActiveNav();
+        this.initScrollAnimations();
+    }
 
-    // 检查当前页面并高亮对应的导航链接
-    function highlightCurrentPage() {
+    initMobileMenu() {
+        const toggleBtn = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (toggleBtn && navLinks) {
+            toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+
+            // 点击其他地方关闭菜单
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.mobile-toggle') &&
+                    !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        }
+    }
+
+    initLanguageSelector() {
+        const languageBtn = document.querySelector('.language-btn');
+        const dropdown = document.querySelector('.language-dropdown');
+        const searchInput = document.querySelector('#languageSearch');
+
+        if (languageBtn && dropdown) {
+            languageBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('show');
+            });
+
+            // 点击其他地方关闭下拉框
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.language-selector')) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // 搜索功能
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const items = dropdown.querySelectorAll('.language-item');
+
+                    items.forEach(item => {
+                        const text = item.textContent.toLowerCase();
+                        item.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+                    });
+                });
+            }
+
+            // 防止下拉框点击关闭
+            dropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+    }
+
+    initActiveNav() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-links a');
 
         navLinks.forEach(link => {
-            const linkHref = link.getAttribute('href');
-            if (linkHref === currentPage ||
-                (currentPage === '' && linkHref === 'index.html') ||
-                (currentPage === 'index.html' && linkHref === 'index.html')) {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage ||
+                (currentPage === '' && linkPage === 'index.html')) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -52,11 +83,108 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 调用高亮函数
-    highlightCurrentPage();
+    initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    // 页面加载时显示欢迎消息（可选）
-    setTimeout(function () {
-        console.log('新闻助手网站已加载完成！');
-    }, 1000);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 观察需要动画的元素
+        document.querySelectorAll('.fade-in-up, .animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    // 显示Toast通知
+    showToast(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.textContent = message;
+
+        toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: ${type === 'success' ? '#10b981' : '#ef4444'};
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 9999;
+            animation: slideIn 0.3s ease;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = 'slideOut 0.3s ease forwards';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+}
+
+// 图片占位符处理
+class ImagePlaceholder {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.placeholderData = {
+            screenshot1: {
+                color: '#4a6fa5',
+                text: '主界面'
+            },
+            screenshot2: {
+                color: '#6b5b95',
+                text: '阅读模式'
+            },
+            screenshot3: {
+                color: '#88b04b',
+                text: '收藏管理'
+            }
+        };
+    }
+
+    generatePlaceholderSVG(color, text) {
+        return `data:image/svg+xml;base64,${btoa(`
+            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="${color}"/>
+                <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" 
+                      text-anchor="middle" dy="0.3em">${text}</text>
+            </svg>
+        `)}`;
+    }
+
+    initPlaceholders() {
+        const images = document.querySelectorAll('img[data-placeholder]');
+
+        images.forEach(img => {
+            const placeholderId = img.getAttribute('data-placeholder');
+            const placeholder = this.placeholderData[placeholderId];
+
+            if (placeholder && !img.complete) {
+                img.onerror = () => {
+                    img.src = this.generatePlaceholderSVG(placeholder.color, placeholder.text);
+                    img.onerror = null;
+                };
+            }
+        });
+    }
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    window.common = new Common();
+    window.imagePlaceholder = new ImagePlaceholder();
+    imagePlaceholder.initPlaceholders();
 });

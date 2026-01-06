@@ -1,272 +1,256 @@
-// 历史版本页面特定脚本
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('历史版本页面加载完成');
-
-    // 加载版本数据
-    loadVersionData();
-
-    // 历史版本页面筛选功能
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const versionItems = document.querySelectorAll('.version-item');
-
-    if (filterButtons.length > 0 && versionItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // 移除所有按钮的active类
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // 为当前点击的按钮添加active类
-                this.classList.add('active');
-
-                const filter = this.getAttribute('data-filter');
-
-                // 筛选版本项目
-                versionItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'table-row';
-                    } else {
-                        const itemVersion = item.getAttribute('data-version');
-                        const itemPlatform = item.getAttribute('data-platform');
-
-                        if (filter === itemVersion || filter === itemPlatform ||
-                            (filter === 'major' && itemVersion === 'major') ||
-                            (filter === 'windows' && itemPlatform.includes('windows')) ||
-                            (filter === 'mac' && itemPlatform.includes('mac')) ||
-                            (filter === 'android' && itemPlatform.includes('android'))) {
-                            item.style.display = 'table-row';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
+// 历史版本页面功能
+class HistoryManager {
+    constructor() {
+        this.versionsData = null;
+        this.currentPage = 1;
+        this.itemsPerPage = 5;
+        this.init();
     }
 
-    // 下载链接点击处理
-    const downloadLinks = document.querySelectorAll('.download-link');
+    async init() {
+        try {
+            await this.loadVersionsData();
+            this.renderVersions();
+            this.setupEventListeners();
+        } catch (error) {
+            console.error('Failed to initialize history manager:', error);
+            this.showError();
+        }
+    }
 
-    downloadLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            if (this.getAttribute('href') === '#') {
-                e.preventDefault();
-
-                // 获取版本信息
-                const versionTag = this.closest('tr')?.querySelector('.version-tag');
-                const version = versionTag ? versionTag.textContent : '历史版本';
-
-                // 获取平台信息
-                let platform = '';
-                const icon = this.querySelector('i');
-                if (icon) {
-                    if (icon.classList.contains('fa-windows')) {
-                        platform = 'Windows';
-                    } else if (icon.classList.contains('fa-apple')) {
-                        platform = 'macOS';
-                    } else if (icon.classList.contains('fa-android')) {
-                        platform = 'Android';
-                    }
-                }
-
-                alert(`感谢您下载 ${platform} 的 ${version}！\n\n由于我们是一个演示网站，实际下载功能需要您自行实现。\n您可以在实际项目中添加真实的下载链接。`);
-            }
-        });
-    });
-
-    // 添加表格行悬停效果增强
-    versionItems.forEach(item => {
-        item.addEventListener('mouseenter', function () {
-            this.style.backgroundColor = '#f0f7ff';
-        });
-
-        item.addEventListener('mouseleave', function () {
-            this.style.backgroundColor = '';
-        });
-    });
-
-    // 添加版本说明卡片动画
-    const notes = document.querySelectorAll('.note');
-
-    const notesObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    notes.forEach((note, index) => {
-        note.style.opacity = '0';
-        note.style.transform = 'translateY(20px)';
-        note.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        note.style.transitionDelay = `${index * 0.1}s`;
-
-        notesObserver.observe(note);
-    });
-
-    // 加载版本数据的函数
-    async function loadVersionData() {
+    async loadVersionsData() {
         try {
             const response = await fetch('data/versions.json');
-            const data = await response.json();
+            if (!response.ok) throw new Error('Failed to load versions data');
 
-            // 更新历史版本表格
-            updateHistoryTable(data);
+            this.versionsData = await response.json();
         } catch (error) {
-            console.error('加载版本数据失败:', error);
-            // 使用默认数据
-            setupDefaultHistoryData();
+            console.error('Error loading versions:', error);
+            throw error;
         }
     }
 
-    // 更新历史版本表格
-    function updateHistoryTable(data) {
-        const tbody = document.querySelector('.history-table tbody');
-        if (!tbody) return;
+    renderVersions() {
+        const versionsList = document.querySelector('.versions-list');
+        if (!versionsList || !this.versionsData) return;
 
-        // 清空现有内容
-        tbody.innerHTML = '';
+        versionsList.innerHTML = '';
 
-        // 添加版本行（从第二个版本开始，因为第一个是最新版本）
-        data.versions.slice(1).forEach(version => {
-            const row = createVersionRow(version, data.platforms);
-            tbody.appendChild(row);
+        const startIndex = 0;
+        const endIndex = this.currentPage * this.itemsPerPage;
+        const versionsToShow = this.versionsData.versions.slice(startIndex, endIndex);
+
+        if (versionsToShow.length === 0) {
+            this.showEmptyState();
+            return;
+        }
+
+        versionsToShow.forEach((version, index) => {
+            const versionElement = this.createVersionElement(version, index);
+            versionsList.appendChild(versionElement);
         });
 
-        // 重新绑定事件
-        bindTableEvents();
+        this.updateLoadMoreButton();
     }
 
-    // 创建版本行
-    function createVersionRow(version, platforms) {
-        const tr = document.createElement('tr');
-        tr.className = 'version-item';
-        tr.setAttribute('data-version', version.version.includes('0') ? 'minor' : 'major');
-        tr.setAttribute('data-platform', 'all');
+    createVersionElement(version, index) {
+        const element = document.createElement('div');
+        element.className = 'version-item glass-card';
+        element.dataset.version = version.version;
 
-        // 版本号单元格
-        const versionTd = document.createElement('td');
-        versionTd.innerHTML = `
-            <span class="version-tag">v${version.version}</span>
-            ${version.downloads.windows ? '<span class="platform-tag windows">Windows</span>' : ''}
-            ${version.downloads.macos ? '<span class="platform-tag mac">macOS</span>' : ''}
-            ${version.downloads.android ? '<span class="platform-tag android">Android</span>' : ''}
+        element.innerHTML = `
+            <div class="version-header">
+                <div class="version-bullet ${version.latest ? 'latest' : ''}"></div>
+                <div class="version-info">
+                    <div class="version-title">
+                        <h3>${version.version}</h3>
+                        ${version.latest ? '<span class="version-badge latest">最新版本</span>' : ''}
+                    </div>
+                    <div class="version-date">${version.release_date}</div>
+                </div>
+                <button class="version-toggle">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            
+            <div class="version-content">
+                <div class="changelog-section">
+                    <h4>更新日志</h4>
+                    <ul class="changelog-list">
+                        ${version.changelog.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="downloads-section">
+                    <h4>下载链接</h4>
+                    <div class="downloads-grid">
+                        ${this.createDownloadLinks(version)}
+                    </div>
+                </div>
+            </div>
         `;
 
-        // 发布日期单元格
-        const dateTd = document.createElement('td');
-        dateTd.textContent = formatDate(version.release_date);
+        return element;
+    }
 
-        // 更新内容单元格
-        const updatesTd = document.createElement('td');
-        const updatesUl = document.createElement('ul');
-        updatesUl.className = 'version-updates';
+    createDownloadLinks(version) {
+        const platforms = this.versionsData.platforms;
+        const downloads = version.downloads;
 
-        version.changelog.slice(0, 3).forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            updatesUl.appendChild(li);
+        let linksHtml = '';
+
+        Object.keys(platforms).forEach(platformKey => {
+            const platform = platforms[platformKey];
+            const downloadInfo = downloads[platformKey];
+
+            if (!downloadInfo) return;
+
+            linksHtml += `
+                <div class="download-platform">
+                    <div class="platform-icon-small">
+                        <i class="${platform.icon}"></i>
+                    </div>
+                    <div class="platform-info-small">
+                        <h5>${platform.display_name}</h5>
+                        <p>${downloadInfo.size}</p>
+                    </div>
+                    <a href="assets/bin/${downloadInfo.filename}" 
+                       class="download-link"
+                       download="${downloadInfo.filename}">
+                        <span>下载</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            `;
         });
 
-        if (version.changelog.length > 3) {
-            const li = document.createElement('li');
-            li.textContent = `...等 ${version.changelog.length - 3} 项更新`;
-            li.style.color = 'var(--gray-color)';
-            li.style.fontStyle = 'italic';
-            updatesUl.appendChild(li);
-        }
-
-        updatesTd.appendChild(updatesUl);
-
-        // 下载链接单元格
-        const downloadTd = document.createElement('td');
-        const downloadActions = document.createElement('div');
-        downloadActions.className = 'download-actions';
-
-        // 添加各平台下载链接
-        if (version.downloads.windows) {
-            const windowsLink = createDownloadLink('windows', platforms.windows, version);
-            downloadActions.appendChild(windowsLink);
-        }
-
-        if (version.downloads.macos) {
-            const macLink = createDownloadLink('macos', platforms.macos, version);
-            downloadActions.appendChild(macLink);
-        }
-
-        if (version.downloads.android) {
-            const androidLink = createDownloadLink('android', platforms.android, version);
-            downloadActions.appendChild(androidLink);
-        }
-
-        downloadTd.appendChild(downloadActions);
-
-        // 组装行
-        tr.appendChild(versionTd);
-        tr.appendChild(dateTd);
-        tr.appendChild(updatesTd);
-        tr.appendChild(downloadTd);
-
-        return tr;
+        return linksHtml;
     }
 
-    // 创建下载链接
-    function createDownloadLink(platformKey, platformInfo, version) {
-        const link = document.createElement('a');
-        link.href = '#';
-        link.className = 'download-link';
-        link.innerHTML = `<i class="${platformInfo.icon}"></i> ${platformInfo.display_name}`;
+    setupEventListeners() {
+        // 版本折叠/展开
+        document.addEventListener('click', (e) => {
+            const toggleBtn = e.target.closest('.version-toggle');
+            if (toggleBtn) {
+                const versionItem = toggleBtn.closest('.version-item');
+                const content = versionItem.querySelector('.version-content');
+                const icon = toggleBtn.querySelector('i');
 
-        // 添加点击事件
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            alert(`感谢您下载 ${platformInfo.display_name} 的 v${version.version}！\n\n由于我们是一个演示网站，实际下载功能需要您自行实现。\n您可以在实际项目中添加真实的下载链接。`);
-        });
+                const isOpen = content.classList.contains('open');
 
-        return link;
-    }
+                // 关闭所有其他版本
+                document.querySelectorAll('.version-content.open').forEach(otherContent => {
+                    if (otherContent !== content) {
+                        otherContent.classList.remove('open');
+                        otherContent.closest('.version-item')
+                            .querySelector('.version-toggle i')
+                            .style.transform = 'rotate(0deg)';
+                    }
+                });
 
-    // 格式化日期
-    function formatDate(dateString) {
-        const date = new Date(dateString);
-        return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-    }
-
-    // 重新绑定表格事件
-    function bindTableEvents() {
-        // 下载链接点击处理
-        const downloadLinks = document.querySelectorAll('.download-link');
-        downloadLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') {
-                    e.preventDefault();
-
-                    const platform = this.textContent.trim().split(' ')[0];
-                    const version = this.closest('tr')?.querySelector('.version-tag')?.textContent || '历史版本';
-
-                    alert(`感谢您下载 ${platform} 的 ${version}！\n\n由于我们是一个演示网站，实际下载功能需要您自行实现。\n您可以在实际项目中添加真实的下载链接。`);
+                // 切换当前版本
+                if (isOpen) {
+                    content.classList.remove('open');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.add('open');
+                    icon.style.transform = 'rotate(180deg)';
                 }
-            });
+            }
         });
 
-        // 表格行悬停效果
-        const versionItems = document.querySelectorAll('.version-item');
-        versionItems.forEach(item => {
-            item.addEventListener('mouseenter', function () {
-                this.style.backgroundColor = '#f0f7ff';
-            });
+        // 下载链接点击统计
+        document.addEventListener('click', (e) => {
+            const downloadLink = e.target.closest('.download-link');
+            if (downloadLink) {
+                const filename = downloadLink.getAttribute('download');
+                const platform = downloadLink.closest('.download-platform')
+                    .querySelector('h5').textContent;
 
-            item.addEventListener('mouseleave', function () {
-                this.style.backgroundColor = '';
-            });
+                this.trackDownload(platform, filename);
+            }
         });
+
+        // 加载更多
+        const loadMoreBtn = document.querySelector('.load-more-btn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => this.loadMore());
+        }
     }
 
-    // 默认数据设置
-    function setupDefaultHistoryData() {
-        console.log('使用默认历史版本数据');
-        // 保持现有表格内容不变
+    loadMore() {
+        const loadMoreBtn = document.querySelector('.load-more-btn');
+        if (!loadMoreBtn) return;
+
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.innerHTML = '<span class="loading-spinner"></span>加载中...';
+
+        setTimeout(() => {
+            this.currentPage++;
+            this.renderVersions();
+
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.innerHTML = '<span>加载更多</span>';
+        }, 500);
     }
+
+    updateLoadMoreButton() {
+        const loadMoreBtn = document.querySelector('.load-more-btn');
+        if (!loadMoreBtn) return;
+
+        const totalItems = this.versionsData?.versions?.length || 0;
+        const loadedItems = Math.min(this.currentPage * this.itemsPerPage, totalItems);
+
+        if (loadedItems >= totalItems) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'inline-flex';
+        }
+    }
+
+    trackDownload(platform, filename) {
+        console.log(`Download tracked: ${platform} - ${filename}`);
+
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'download', {
+                'event_category': 'history_page',
+                'event_label': `${platform}_${filename}`,
+                'value': 1
+            });
+        }
+    }
+
+    showError() {
+        const versionsList = document.querySelector('.versions-list');
+        if (versionsList) {
+            versionsList.innerHTML = `
+                <div class="error-message glass-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>加载失败</h3>
+                    <p>无法加载版本信息，请刷新页面重试。</p>
+                    <button class="glass-btn primary" onclick="location.reload()">
+                        刷新页面
+                    </button>
+                </div>
+            `;
+        }
+    }
+
+    showEmptyState() {
+        const versionsList = document.querySelector('.versions-list');
+        if (versionsList) {
+            versionsList.innerHTML = `
+                <div class="empty-state glass-card">
+                    <i class="fas fa-inbox"></i>
+                    <h3>暂无版本信息</h3>
+                    <p>当前没有可用的版本记录。</p>
+                </div>
+            `;
+        }
+    }
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    window.historyManager = new HistoryManager();
 });

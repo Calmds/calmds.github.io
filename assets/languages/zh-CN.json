@@ -1,0 +1,20 @@
+{
+    "app_name": "新闻助手",
+    "nav": {
+        "home": "首页",
+        "features": "功能特性",
+        "download": "下载",
+        "history": "历史版本"
+    },
+    "home": {
+        "title": "智能新闻阅读与管理工具",
+        "description": "新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。",
+        "download_btn": "免费下载",
+        "learn_more_btn": "了解更多"
+    },
+    "language": {
+        "search_placeholder": "搜索语言...",
+        "changed": "语言已切换",
+        "change_failed": "语言切换失败"
+    }
+}

@@ -19,7 +19,8 @@
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间"
+                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 15000
                 },
                 "macos": {
                     "filename": "news-assistant-macos-2.5.0.dmg",
@@ -28,7 +29,8 @@
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间"
+                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 8000
                 },
                 "android": {
                     "filename": "news-assistant-android-2.5.0.apk",
@@ -38,7 +40,8 @@
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间"
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 25000
                 }
             }
         },
@@ -59,7 +62,8 @@
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间"
+                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 12000
                 },
                 "macos": {
                     "filename": "news-assistant-macos-2.4.3.dmg",
@@ -68,7 +72,8 @@
                         "x64",
                         "arm64"
                     ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间"
+                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间",
+                    "download_count": 6500
                 },
                 "android": {
                     "filename": "news-assistant-android-2.4.3.apk",
@@ -78,45 +83,8 @@
                         "armeabi-v7a",
                         "x86_64"
                     ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间"
-                }
-            }
-        },
-        {
-            "version": "2.4.0",
-            "release_date": "2024-04-01",
-            "latest": false,
-            "changelog": [
-                "新增新闻分类标签",
-                "优化用户界面设计",
-                "增加阅读时间统计",
-                "修复已知bug"
-            ],
-            "downloads": {
-                "windows": {
-                    "filename": "news-assistant-windows-2.4.0.exe",
-                    "size": "83.5 MB",
-                    "arch": [
-                        "x64"
-                    ],
-                    "requirements": "Windows 10/11, 4GB RAM, 2GB可用磁盘空间"
-                },
-                "macos": {
-                    "filename": "news-assistant-macos-2.4.0.dmg",
-                    "size": "90.8 MB",
-                    "arch": [
-                        "x64"
-                    ],
-                    "requirements": "macOS 10.14+, 4GB RAM, 2GB可用磁盘空间"
-                },
-                "android": {
-                    "filename": "news-assistant-android-2.4.0.apk",
-                    "size": "47.2 MB",
-                    "arch": [
-                        "arm64-v8a",
-                        "armeabi-v7a"
-                    ],
-                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间"
+                    "requirements": "Android 8.0+, 2GB RAM, 100MB可用存储空间",
+                    "download_count": 18000
                 }
             }
         }
@@ -125,55 +93,17 @@
         "windows": {
             "display_name": "Windows",
             "icon": "fab fa-windows",
-            "supported_arch": [
-                "x64",
-                "arm64",
-                "x86"
-            ],
-            "file_extension": ".exe"
+            "color": "#0078d7"
         },
         "macos": {
             "display_name": "macOS",
             "icon": "fab fa-apple",
-            "supported_arch": [
-                "x64",
-                "arm64"
-            ],
-            "file_extension": ".dmg"
+            "color": "#000000"
         },
         "android": {
             "display_name": "Android",
             "icon": "fab fa-android",
-            "supported_arch": [
-                "arm64-v8a",
-                "armeabi-v7a",
-                "x86_64"
-            ],
-            "file_extension": ".apk"
-        },
-        "linux": {
-            "display_name": "Linux",
-            "icon": "fab fa-linux",
-            "supported_arch": [
-                "x64",
-                "arm64",
-                "x86"
-            ],
-            "file_extension": ".AppImage"
-        },
-        "ios": {
-            "display_name": "iOS",
-            "icon": "fab fa-app-store-ios",
-            "supported_arch": [
-                "arm64"
-            ],
-            "file_extension": ".ipa"
+            "color": "#3ddc84"
         }
-    },
-    "metadata": {
-        "app_name": "新闻助手",
-        "current_latest_version": "2.5.0",
-        "last_updated": "2024-06-15",
-        "main_website": "https://calmds.github.io/"
     }
 }
