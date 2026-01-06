@@ -1,103 +1,89 @@
-// 语言配置
+// 语言配置 - 移除重复的name字段
 const LANGUAGE_CONFIG = {
     supportedLanguages: [
         {
             code: 'zh-CN',
             name: '简体中文',
             flag: 'cn.jpg',
-            dir: 'ltr',
-            nativeName: '简体中文'
+            dir: 'ltr'
         },
         {
             code: 'zh-MO',
             name: '繁體中文',
-            flag: 'macau.jpg',
-            dir: 'ltr',
-            nativeName: '繁體中文'
+            flag: 'cn.jpg',
+            dir: 'ltr'
         },
         {
             code: 'en',
             name: 'English',
             flag: 'en.jpg',
-            dir: 'ltr',
-            nativeName: 'English'
+            dir: 'ltr'
         },
         {
             code: 'ja',
             name: '日本語',
             flag: 'jp.jpg',
-            dir: 'ltr',
-            nativeName: '日本語'
+            dir: 'ltr'
         },
         {
             code: 'ko',
             name: '한국어',
             flag: 'ko.jpg',
-            dir: 'ltr',
-            nativeName: '한국어'
+            dir: 'ltr'
         },
         {
             code: 'ru',
             name: 'Русский',
             flag: 'ru.jpg',
-            dir: 'ltr',
-            nativeName: 'Русский'
+            dir: 'ltr'
         },
         {
             code: 'de',
             name: 'Deutsch',
             flag: 'de.jpg',
-            dir: 'ltr',
-            nativeName: 'Deutsch'
+            dir: 'ltr'
         },
         {
             code: 'ar',
             name: 'العربية',
             flag: 'ar.jpg',
-            dir: 'rtl',
-            nativeName: 'العربية'
+            dir: 'rtl'
         },
         {
             code: 'hi',
             name: 'हिन्दी',
             flag: 'in.jpg',
-            dir: 'ltr',
-            nativeName: 'हिन्दी'
+            dir: 'ltr'
         },
         {
             code: 'th',
             name: 'ไทย',
             flag: 'th.jpg',
-            dir: 'ltr',
-            nativeName: 'ไทย'
+            dir: 'ltr'
         },
         {
             code: 'vi',
             name: 'Tiếng Việt',
             flag: 'vi.jpg',
-            dir: 'ltr',
-            nativeName: 'Tiếng Việt'
+            dir: 'ltr'
         },
         {
             code: 'ms',
             name: 'Bahasa Melayu',
             flag: 'ms.jpg',
-            dir: 'ltr',
-            nativeName: 'Bahasa Melayu'
+            dir: 'ltr'
         },
         {
             code: 'mn',
             name: 'Монгол',
             flag: 'mongolia.jpg',
-            dir: 'ltr',
-            nativeName: 'Монгол'
+            dir: 'ltr'
         },
         {
             code: 'ur',
             name: 'اردو',
             flag: 'ur.jpg',
-            dir: 'rtl',
-            nativeName: 'اردو'
+            dir: 'rtl'
         }
     ],
 
@@ -106,11 +92,6 @@ const LANGUAGE_CONFIG = {
     getLanguageName(code) {
         const lang = this.supportedLanguages.find(l => l.code === code);
         return lang ? lang.name : code;
-    },
-
-    getNativeName(code) {
-        const lang = this.supportedLanguages.find(l => l.code === code);
-        return lang ? lang.nativeName : code;
     },
 
     getLanguageFlag(code) {

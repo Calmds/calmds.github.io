@@ -2,7 +2,7 @@
 class TranslationHelper {
     constructor() {
         this.fallbackTranslations = {
-            'zh': {
+            'zh-CN': {
                 'app_name': '新闻助手',
                 'nav.home': '首页',
                 'nav.features': '功能特性',
