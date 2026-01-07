@@ -81,6 +81,37 @@
             </div>
         </section>
 
+        <!-- 视频介绍区域 -->
+        <section class="videos-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="home.videos_title">视频介绍</h2>
+                    <p data-i18n="home.videos_subtitle">观看新闻助手的功能演示</p>
+                </div>
+
+                <div class="videos-container">
+                    <div class="video-grid">
+                        <div class="video-item glass-card">
+                            <div class="video-player">
+                                <video controls poster="assets/images/1.png" data-i18n-poster="home.demo_video_title">
+                                    <source src="assets/videos/usage.1.mp4" type="video/mp4">
+                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
+                                </video>
+                            </div>
+                        </div>
+
+                        <div class="video-item glass-card">
+                            <div class="video-player">
+                                <video controls poster="assets/images/3.png" data-i18n-poster="home.demo_video_title">
+                                    <source src="assets/videos/usage.2.mp4" type="video/mp4">
+                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
         <!-- 软件截图展示区域 -->
         <section class="screenshots-section">
             <div class="container">
@@ -90,70 +121,49 @@
                 </div>
 
                 <div class="screenshots-container">
-                    <div class="screenshot-grid">
-                        <div class="screenshot-item glass-card">
-                            <div class="screenshot-image">
-                                <img src="assets/images/screenshots/1.png" alt="时政新闻"
-                                    data-i18n-alt="home.screenshot1_title" data-placeholder="screenshot1">
-                                <div class="screenshot-overlay">
-                                    <button class="view-btn" data-image="1">
-                                        <i class="fas fa-search-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="screenshot-caption">
-                                <h3 data-i18n="home.screenshot1_title">时政新闻</h3>
-                                <p data-i18n="home.screenshot1_desc">清晰简洁的新闻阅读界面</p>
+                    <div class="screenshot-grid" id="screenshot-grid">
+                        <!-- <div class="screenshot-item glass-card">
+                        <div class="screenshot-image">
+                            <img src="assets/images/screenshots/2.png" alt="军事新闻" data-i18n-alt="home.screenshot2_title"
+                                data-placeholder="screenshot2">
+                            <div class="screenshot-overlay">
+                                <button class="view-btn" data-image="2">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
+                    </div> -->
 
-                        <div class="screenshot-item glass-card">
-                            <div class="screenshot-image">
-                                <img src="assets/images/screenshots/2.png" alt="军事新闻"
-                                    data-i18n-alt="home.screenshot2_title" data-placeholder="screenshot2">
-                                <div class="screenshot-overlay">
-                                    <button class="view-btn" data-image="2">
-                                        <i class="fas fa-search-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="screenshot-caption">
-                                <h3 data-i18n="home.screenshot2_title">军事新闻</h3>
-                                <p data-i18n="home.screenshot2_desc">纯净的阅读体验，无干扰</p>
+                        <!-- <div class="screenshot-item glass-card">
+                        <div class="screenshot-image">
+                            <img src="assets/images/screenshots/3.png" alt="社交媒体" data-i18n-alt="home.screenshot3_title"
+                                data-placeholder="screenshot3">
+                            <div class="screenshot-overlay">
+                                <button class="view-btn" data-image="3">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
-
-                        <div class="screenshot-item glass-card">
-                            <div class="screenshot-image">
-                                <img src="assets/images/screenshots/3.png" alt="社交媒体"
-                                    data-i18n-alt="home.screenshot3_title" data-placeholder="screenshot3">
-                                <div class="screenshot-overlay">
-                                    <button class="view-btn" data-image="3">
-                                        <i class="fas fa-search-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="screenshot-caption">
-                                <h3 data-i18n="home.screenshot3_title">社交媒体</h3>
-                                <p data-i18n="home.screenshot3_desc">轻松管理您喜欢的新闻</p>
+                        <div class="screenshot-caption">
+                            <h3 data-i18n="home.screenshot3_title">社交媒体</h3>
+                            <p data-i18n="home.screenshot3_desc">轻松管理您喜欢的新闻</p>
+                        </div>
+                    </div> 
+                    <div class="screenshot-item glass-card">
+                        <div class="screenshot-image">
+                            <img src="assets/images/screenshots/4.png" alt="金融新闻" data-i18n-alt="home.screenshot3_title"
+                                data-placeholder="screenshot3">
+                            <div class="screenshot-overlay">
+                                <button class="view-btn" data-image="3">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
-
-                        <div class="screenshot-item glass-card">
-                            <div class="screenshot-image">
-                                <img src="assets/images/screenshots/4.png" alt="金融新闻"
-                                    data-i18n-alt="home.screenshot3_title" data-placeholder="screenshot3">
-                                <div class="screenshot-overlay">
-                                    <button class="view-btn" data-image="3">
-                                        <i class="fas fa-search-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="screenshot-caption">
-                                <h3 data-i18n="home.screenshot3_title">金融新闻</h3>
-                                <p data-i18n="home.screenshot3_desc">轻松管理您喜欢的新闻</p>
-                            </div>
+                        <div class="screenshot-caption">
+                            <h3 data-i18n="home.screenshot3_title">金融新闻</h3>
+                            <p data-i18n="home.screenshot3_desc">轻松管理您喜欢的新闻</p>
                         </div>
+                    </div> -->
                     </div>
                 </div>
 
@@ -175,76 +185,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- 视频介绍区域 -->
-        <section class="videos-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-i18n="home.videos_title">视频介绍</h2>
-                    <p data-i18n="home.videos_subtitle">观看新闻助手的功能演示</p>
-                </div>
-
-                <div class="videos-container">
-                    <div class="video-grid">
-                        <div class="video-item glass-card">
-                            <div class="video-player">
-                                <video controls poster="assets/images/demo-thumbnail.jpg"
-                                    data-i18n-poster="home.demo_video_title">
-                                    <source src="assets/videos/demo.mp4" type="video/mp4">
-                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
-                                </video>
-                                <div class="video-controls">
-                                    <button class="play-btn" id="playDemo">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-info">
-                                <h3 data-i18n="home.demo_video_title">功能演示</h3>
-                                <p data-i18n="home.demo_video_desc">了解新闻助手的主要功能和工作流程</p>
-                                <div class="video-meta">
-                                    <span><i class="far fa-clock"></i> 3:45</span>
-                                    <span><i class="far fa-calendar"></i> 2024-06-15</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="video-item glass-card">
-                            <div class="video-player">
-                                <video controls poster="assets/images/tutorial-thumbnail.jpg"
-                                    data-i18n-poster="home.tutorial_video_title">
-                                    <source src="assets/videos/tutorial.mp4" type="video/mp4">
-                                    <p data-i18n="home.video_not_supported">您的浏览器不支持视频播放。</p>
-                                </video>
-                                <div class="video-controls">
-                                    <button class="play-btn" id="playTutorial">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-info">
-                                <h3 data-i18n="home.tutorial_video_title">使用教程</h3>
-                                <p data-i18n="home.tutorial_video_desc">快速上手新闻助手</p>
-                                <div class="video-meta">
-                                    <span><i class="far fa-clock"></i> 5:20</span>
-                                    <span><i class="far fa-calendar"></i> 2024-06-10</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="more-videos">
-                    <button class="btn glass-btn secondary" id="viewMoreVideos">
-                        <i class="fas fa-video"></i>
-                        <span data-i18n="home.view_more_videos">查看更多视频</span>
-                    </button>
-                </div>
             </div>
         </section>
-
-        <!-- 功能预览区域 -->
+        <!-- 
+        功能预览区域
         <section class="preview-section">
             <div class="container">
                 <div class="section-title">
@@ -287,9 +231,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <!-- 下载引导区域 -->
+        <!-- 下载引导区域
         <section class="download-guide">
             <div class="container">
                 <div class="guide-content">
@@ -312,7 +256,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- 页脚 -->
@@ -339,7 +283,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-column">
+                <!-- <div class="footer-column">
                     <h3 data-i18n="footer.support">支持</h3>
                     <ul class="footer-links">
                         <li><a href="#" data-i18n="footer.help_docs">帮助文档</a></li>
@@ -347,13 +291,13 @@
                         <li><a href="#" data-i18n="footer.terms">用户协议</a></li>
                         <li><a href="#" data-i18n="footer.privacy">隐私政策</a></li>
                     </ul>
-                </div>
+                </div> -->
 
-                <div class="footer-column">
+                <!-- <div class="footer-column">
                     <h3 data-i18n="footer.contact">联系我们</h3>
                     <p data-i18n="footer.contact_desc">如有问题或建议，请通过邮箱联系我们：</p>
                     <p class="contact-email">support@news-assistant.com</p>
-                </div>
+                </div> -->
             </div>
 
             <div class="copyright">
@@ -368,40 +312,6 @@
     <script src="js/language.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-
-    <script>
-        // 页面加载完成后初始化
-        document.addEventListener('DOMContentLoaded', function () {
-            // 图片占位符处理
-            const images = document.querySelectorAll('img[data-placeholder]');
-            images.forEach(img => {
-                img.onerror = function () {
-                    const placeholderId = this.getAttribute('data-placeholder');
-                    const colors = {
-                        'screenshot1': '#4a6fa5',
-                        'screenshot2': '#6b5b95',
-                        'screenshot3': '#88b04b'
-                    };
-                    const texts = {
-                        'screenshot1': '主界面',
-                        'screenshot2': '阅读模式',
-                        'screenshot3': '收藏管理'
-                    };
-
-                    if (colors[placeholderId] && texts[placeholderId]) {
-                        const svg = `data:image/svg+xml;base64,${btoa(`
-                            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="${colors[placeholderId]}"/>
-                                <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" 
-                                      text-anchor="middle" dy="0.3em">${texts[placeholderId]}</text>
-                            </svg>
-                        `)}`;
-                        this.src = svg;
-                    }
-                };
-            });
-        });
-    </script>
 </body>
 
 </html>

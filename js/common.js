@@ -121,56 +121,37 @@ class Common {
 // 图片占位符处理
 class ImagePlaceholder {
     constructor() {
-        this.init();
-    }
-
-    init() {
-        this.placeholderData = {
-            screenshot1: {
-                color: '#4a6fa5',
-                text: '主界面'
-            },
-            screenshot2: {
-                color: '#6b5b95',
-                text: '阅读模式'
-            },
-            screenshot3: {
-                color: '#88b04b',
-                text: '收藏管理'
-            }
-        };
     }
 
     generatePlaceholderSVG(color, text) {
         return `data:image/svg+xml;base64,${btoa(`
             <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100%" height="100%" fill="${color}"/>
-                <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" 
-                      text-anchor="middle" dy="0.3em">${text}</text>
+                <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" text-anchor="middle" dy="0.3em">${text}</text>
             </svg>
         `)}`;
     }
 
-    initPlaceholders() {
-        const images = document.querySelectorAll('img[data-placeholder]');
+    // initPlaceholders() {
+    //     const images = document.querySelectorAll('img[data-placeholder]');
 
-        images.forEach(img => {
-            const placeholderId = img.getAttribute('data-placeholder');
-            const placeholder = this.placeholderData[placeholderId];
+    //     images.forEach(img => {
+    //         const placeholderId = img.getAttribute('data-placeholder');
+    //         const placeholder = this.placeholderData[placeholderId];
 
-            if (placeholder && !img.complete) {
-                img.onerror = () => {
-                    img.src = this.generatePlaceholderSVG(placeholder.color, placeholder.text);
-                    img.onerror = null;
-                };
-            }
-        });
-    }
+    //         if (placeholder && !img.complete) {
+    //             img.onerror = () => {
+    //                 img.src = this.generatePlaceholderSVG(placeholder.color, placeholder.text);
+    //                 img.onerror = null;
+    //             };
+    //         }
+    //     });
+    // }
 }
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     window.common = new Common();
     window.imagePlaceholder = new ImagePlaceholder();
-    imagePlaceholder.initPlaceholders();
+    // imagePlaceholder.initPlaceholders();
 });

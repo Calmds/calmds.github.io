@@ -133,10 +133,19 @@
 
 /* 版本内容 */
 .version-content {
+    max-height: 0;
     overflow: hidden;
-    max-height: 100vh;
     padding: 0 2rem 2rem 4.5rem;
     transition: max-height 0.3s ease;
+}
+
+/* 使用:target伪类或:checked伪类实现展开 */
+.version-content:target {
+    max-height: 100vh;
+}
+
+.version-content:checked {
+    max-height: 100vh;
 }
 
 /* 加载占位符 */
