@@ -97,20 +97,21 @@ class Common {
         toast.textContent = message;
 
         toast.style.cssText = `
-            position: fixed;
             top: 20px;
             right: 20px;
-            background: white;
-            color: ${type === 'success' ? '#10b981' : '#ef4444'};
+            z-index: 9999;
+            position: fixed;
             padding: 1rem 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            z-index: 9999;
             animation: slideIn 0.3s ease;
+            color: ${type === 'success' ? '#10b981' : '#ef4444'};
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: rgba(97, 94, 94, 0.69);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         `;
 
         document.body.appendChild(toast);
-
         setTimeout(() => {
             toast.style.animation = 'slideOut 0.3s ease forwards';
             setTimeout(() => toast.remove(), 300);

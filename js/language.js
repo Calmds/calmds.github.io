@@ -116,7 +116,6 @@ class LanguageManager {
         // 更新页面
         this.updatePageLanguage();
         this.updateDropdownSelection(langCode);
-        console.log('Language force reload completed');
     }
 
     async changeLanguage(langCode) {
@@ -124,7 +123,6 @@ class LanguageManager {
 
         // 如果已经是当前语言，强制重新加载
         if (langCode === this.currentLang) {
-            console.log('Same language, forcing reload');
             await this.forceReloadLanguage(langCode);
             return;
         }
@@ -134,10 +132,10 @@ class LanguageManager {
             const dropdown = document.querySelector('.language-dropdown');
             if (dropdown) dropdown.classList.remove('show');
 
-            // 显示加载状态
-            if (window.common) {
-                window.common.showToast('切换语言中...', 'info');
-            }
+            // // 显示加载状态
+            // if (window.common) {
+            //     window.common.showToast('切换语言中...', 'info');
+            // }
 
             // 加载新语言
             await this.loadLanguage(langCode);
@@ -168,7 +166,6 @@ class LanguageManager {
 
     translate(key, params = {}) {
         if (!this.translations) {
-            console.warn('Translations not loaded yet for key:', key);
             return key;
         }
 
@@ -179,7 +176,6 @@ class LanguageManager {
             if (translation && typeof translation === 'object' && k in translation) {
                 translation = translation[k];
             } else {
-                console.warn(`Translation key not found: ${key}`);
                 return key;
             }
         }
@@ -196,8 +192,6 @@ class LanguageManager {
     }
 
     updatePageLanguage() {
-        console.log('Updating page language to:', this.currentLang);
-
         // 更新页面语言属性
         document.documentElement.lang = this.currentLang;
 
@@ -244,12 +238,9 @@ class LanguageManager {
             const translation = this.translate(key);
             element.alt = translation;
         });
-
-        console.log('Force translation completed');
     }
 
     translateAllElements() {
-        console.log('Translating all elements...');
 
         // 一次性获取所有需要翻译的元素
         const elements = document.querySelectorAll('[data-i18n]');
@@ -327,25 +318,20 @@ class LanguageManager {
             currentLangBtn.removeAttribute('data-i18n');
             const langName = LANGUAGE_CONFIG.getLanguageName(this.currentLang);
             currentLangBtn.textContent = langName;
-            console.log('Updated language button to:', langName);
         }
 
         if (currentLangFlag) {
             const flagPath = LANGUAGE_CONFIG.getLanguageFlag(this.currentLang);
             currentLangFlag.src = flagPath;
             currentLangFlag.alt = LANGUAGE_CONFIG.getLanguageName(this.currentLang);
-            console.log('Updated language flag to:', flagPath);
         }
     }
 
     setupLanguageSelector() {
         const languageList = document.getElementById('languageList');
         if (!languageList) {
-            console.warn('Language list element not found');
             return;
         }
-
-        console.log('Setting up language selector...');
 
         // 清空现有选项
         languageList.innerHTML = '';
@@ -404,8 +390,6 @@ class LanguageManager {
 
 // 初始化语言管理器
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('DOM loaded, initializing language manager...');
-
     // 确保只初始化一次
     if (!window.languageManager) {
         window.languageManager = new LanguageManager();
@@ -413,7 +397,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             await window.languageManager.init();
-            console.log('Language manager initialization completed successfully');
         } catch (error) {
             console.error('Failed to initialize language manager:', error);
         }
