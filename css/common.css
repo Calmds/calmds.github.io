@@ -208,6 +208,8 @@ header {
 /* 语言选择器 */
 .language-selector {
     position: relative;
+    display: inline-block;
+    margin-left: 15px;
 }
 
 .language-btn {

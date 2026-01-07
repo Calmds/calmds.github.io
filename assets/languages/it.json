@@ -1,0 +1,175 @@
+{
+    "app_name": "Assistente Notizie",
+    "nav": {
+        "home": "Home",
+        "features": "Caratteristiche",
+        "download": "Scarica",
+        "history": "Cronologia Versioni",
+        "language_chinese": "Cinese"
+    },
+    "home": {
+        "title": "Strumento Intelligente per la Lettura e Gestione delle Notizie",
+        "description": "Assistente Notizie è un'applicazione integrata di aggregazione di notizie e analisi intelligente che funziona completamente offline. Acquisisce contenuti in tempo reale da quattro settori principali: Notizie Generali (fonti includono TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox News, Global Times, Guancha, BBC, Qiushi, CCTV), Notizie Militari (The War Zone, Naval News, Guancha Militare), Notizie Finanziarie e Social Media (Weibo, X/Twitter, Reddit). Gli utenti possono iscriversi a specifici account di social media. Il software integra un motore AI locale (con modello Qwen preinstallato e supporto per l'aggiunta di modelli personalizzati da Hugging Face/ModelScope) per riassumere, analizzare, verificare (pianificato) e tradurre contenuti, e fornisce un'interfaccia di conversazione con il modello locale. Supporta la visualizzazione e i commenti sui post X e la lettura di lunghi articoli Weibo. Il software offre un'interfaccia multilingue e archivia tutti i dati localmente tramite SQLite, garantendo la privacy dell'utente. Il supporto pianificato include macOS (chip Intel/Apple Silicon), Windows, Linux, Android, iOS e HarmonyOS.",
+        "download_btn": "Scarica Gratuitamente",
+        "learn_more_btn": "Scopri di più",
+        "video_not_supported": "Il tuo browser non supporta la riproduzione video.",
+        "demo_video_title": "Dimostrazione delle Funzionalità",
+        "demo_video_desc": "Scopri le principali funzionalità e il flusso di lavoro di Assistente Notizie",
+        "tutorial_video_title": "Tutorial d'Uso",
+        "tutorial_video_desc": "Inizia rapidamente con Assistente Notizie",
+        "view_more_videos": "Visualizza Altri Video",
+        "features_title": "Anteprima delle Funzionalità Principali",
+        "features_subtitle": "Esplora le potenti funzionalità di Assistente Notizie e migliora la tua esperienza di lettura",
+        "feature1": {
+            "title": "Raccomandazioni Intelligenti",
+            "description": "Raccomandazioni personalizzate di notizie basate su algoritmi AI, filtrando i contenuti più rilevanti per te."
+        },
+        "feature2": {
+            "title": "Lettura Offline",
+            "description": "Scarica notizie ovunque, in qualsiasi momento, e leggile fluentemente anche senza internet."
+        },
+        "feature3": {
+            "title": "Sincronizzazione Multi-dispositivo",
+            "description": "Sincronizzazione perfetta tra telefono, tablet e computer, senza perdita del progresso di lettura."
+        },
+        "learn_more": "Scopri di più",
+        "download_section_title": "Prova Assistente Notizie Ora",
+        "download_section_desc": "Assistente Notizie supporta ora Windows, macOS e Android. Fai clic sul pulsante sottostante per ottenere l'ultima versione.",
+        "download_section_btn1": "Vai ai Download",
+        "download_section_btn2": "Visualizza Cronologia Versioni"
+    },
+    "features": {
+        "title": "Funzionalità Potenti, Esperienza Eccezionale",
+        "subtitle": "Assistente Notizie ti offre una soluzione completa per la lettura e gestione delle notizie",
+        "core_features_title": "Funzionalità Principali",
+        "core_features_subtitle": "Esplora le potenti funzionalità di Assistente Notizie",
+        "feature1": {
+            "title": "Raccomandazioni Intelligenti",
+            "description": "Raccomandazioni personalizzate di notizie basate su algoritmi AI, filtrando i contenuti più rilevanti per te. Ottimizza continuamente l'accuratezza delle raccomandazioni attraverso il machine learning, assicurando che tu veda solo contenuti di tuo interesse.",
+            "list_item1": "Algoritmo di raccomandazione personalizzato",
+            "list_item2": "Analisi degli interessi in tempo reale",
+            "list_item3": "Corrispondenza dei contenuti multidimensionale"
+        },
+        "feature2": {
+            "title": "Lettura Offline",
+            "description": "Scarica notizie ovunque, in qualsiasi momento, e leggile senza connessione internet. Gestione intelligente della cache, risparmio dati ed esperienza di lettura fluida.",
+            "list_item1": "Gestione intelligente della cache",
+            "list_item2": "Download e aggiornamento automatici",
+            "list_item3": "Multiple opzioni di download"
+        },
+        "feature3": {
+            "title": "Sincronizzazione Multi-dispositivo",
+            "description": "Sincronizzazione perfetta tra telefono, tablet e computer. Progresso di lettura e contenuti preferiti aggiornati in tempo reale, permettendoti di passare liberamente tra dispositivi.",
+            "list_item1": "Sincronizzazione multipiattaforma",
+            "list_item2": "Aggiornamento del progresso in tempo reale",
+            "list_item3": "Crittografia sicura dei dati"
+        },
+        "feature4": {
+            "title": "Modalità di Lettura Multiple",
+            "description": "Offre diverse modalità di lettura: diurna, notturna, protezione occhi e altro. Supporta carattere, dimensione e spaziatura personalizzabili per soddisfare le abitudini di lettura di diversi utenti.",
+            "list_item1": "Diversi temi",
+            "list_item2": "Impostazioni di lettura personalizzabili",
+            "list_item3": "Cambio automatico del tema"
+        },
+        "feature5": {
+            "title": "Filtraggio Intelligente",
+            "description": "Sistema robusto di filtraggio dei contenuti, supportando filtri per parole chiave, fonte, categoria e altri metodi, creando un ambiente di lettura pulito.",
+            "list_item1": "Regole di filtro personalizzabili",
+            "list_item2": "Filtraggio dei contenuti multidimensionale",
+            "list_item3": "Anteprima dell'effetto del filtro in tempo reale"
+        },
+        "feature6": {
+            "title": "Statistiche di Lettura",
+            "description": "Rapporti statistici dettagliati sulla lettura, aiutandoti a comprendere le tue abitudini, la distribuzione del tempo e le preferenze, per gestire meglio il tuo tempo di lettura.",
+            "list_item1": "Statistiche del tempo di lettura",
+            "list_item2": "Analisi delle preferenze di interesse",
+            "list_item3": "Rapporti di visualizzazione dei dati"
+        },
+        "technical_title": "Caratteristiche Tecniche",
+        "technical_subtitle": "Architettura tecnologica avanzata, prestazioni eccezionali",
+        "tech1": {
+            "title": "Alta Performance",
+            "description": "Adotta un'architettura tecnologica moderna, garantendo un funzionamento fluido e una risposta rapida dell'applicazione, fornendo una buona esperienza anche su dispositivi a basso rendimento.",
+            "stat1": "Stabilità",
+            "stat2": "Velocità di Caricamento"
+        },
+        "tech2": {
+            "title": "Sicurezza dei Dati",
+            "description": "Utilizza la tecnologia di crittografia end-to-end per garantire la sicurezza dei dati dell'utente. Tutti i dati sincronizzati sono crittografati, proteggendo la tua privacy.",
+            "stat1": "Standard di Crittografia",
+            "stat2": "Sicurezza dei Dati"
+        },
+        "tech3": {
+            "title": "Supporto Multi-piattaforma",
+            "description": "Supporta multiple piattaforme come Windows, macOS e Android. Utilizza uno stack tecnologico unificato per garantire un'esperienza utente coerente.",
+            "stat1": "Piattaforme Supportate",
+            "stat2": "Copertura Utenti"
+        }
+    },
+    "download": {
+        "title": "Scarica Assistente Notizie",
+        "subtitle": "Scegli la tua piattaforma e inizia a usare Assistente Notizie",
+        "latest_version": "Ultima Versione",
+        "choose_platform": "Scegli Piattaforma",
+        "choose_platform_desc": "Assistente Notizie supporta diversi sistemi operativi",
+        "system_requirements": "Requisiti di Sistema",
+        "installation_guide": "Guida all'Installazione",
+        "installation_guide_desc": "Segui i passaggi sottostanti per installare Assistente Notizie",
+        "step1_title": "Scarica il File di Installazione",
+        "step1_desc": "Clicca il pulsante di download corrispondente alla tua piattaforma sopra per ottenere il file di installazione",
+        "step2_title": "Esegui il Programma di Installazione",
+        "step2_desc": "Apri il file scaricato e segui le istruzioni per completare l'installazione",
+        "step3_title": "Avvia l'Applicazione",
+        "step3_desc": "Dopo l'installazione, avvia l'applicazione dal Menu Start o dalla cartella Applicazioni",
+        "step4_title": "Inizia a Usare",
+        "step4_desc": "Segui la guida per completare la configurazione iniziale e inizia a goderti Assistente Notizie",
+        "faq_title": "Domande Frequenti (FAQ)",
+        "faq_desc": "Problemi che possono sorgere durante il download e l'installazione",
+        "faq1_q": "Cosa fare se la velocità di download è lenta?",
+        "faq1_a": "Prova a cambiare l'ambiente di rete o usa uno strumento di download. Forniamo anche molteplici mirror di download.",
+        "faq2_q": "Il software di sicurezza blocca l'installazione?",
+        "faq2_a": "Aggiungi Assistente Notizie alla lista attendibile del tuo software di sicurezza o disabilitalo temporaneamente durante l'installazione.",
+        "faq3_q": "Come disinstallare Assistente Notizie?",
+        "faq3_a": "Su Windows, puoi disinstallare tramite \"Programmi e Funzionalità\" nel Pannello di Controllo. Su macOS, trascina semplicemente l'applicazione nel Cestino.",
+        "faq4_q": "Quali lingue sono supportate?",
+        "faq4_a": "Assistente Notizie supporta cinese semplificato, inglese, giapponese, coreano e varie altre lingue, che possono essere cambiate nelle impostazioni.",
+        "download_btn": "Scarica {version}",
+        "download_for": "Scarica Versione per {platform}",
+        "file_size": "Dimensione File",
+        "architecture": "Architettura Supportata",
+        "requirements": "Requisiti di Sistema",
+        "download_now": "Scarica Ora",
+        "release_notes": "Note di Versione"
+    },
+    "history": {
+        "title": "Cronologia Versioni",
+        "subtitle": "Visualizza il registro degli aggiornamenti delle versioni di Assistente Notizie",
+        "latest": "Ultima Versione",
+        "version": "Versione",
+        "release_date": "Data di Rilascio",
+        "changelog": "Registro delle Modifiche",
+        "downloads": "Link per il Download",
+        "no_versions": "Nessuna informazione sulle versioni storiche disponibile",
+        "loading": "Caricamento...",
+        "load_more": "Carica Altro",
+        "show_details": "Visualizza Dettagli",
+        "hide_details": "Nascondi Dettagli"
+    },
+    "footer": {
+        "app_description": "Strumento intelligente per la lettura e gestione delle notizie, permettendoti di tenerti aggiornato sulle ultime informazioni in qualsiasi momento e luogo.",
+        "quick_links": "Link Rapidi",
+        "support": "Supporto",
+        "help_docs": "Documentazione di Aiuto",
+        "faq": "Domande Frequenti",
+        "terms": "Termini di Utilizzo",
+        "privacy": "Politica sulla Privacy",
+        "contact": "Contattaci",
+        "contact_desc": "Se hai problemi o suggerimenti, contattaci via email:",
+        "copyright": "© 2024 Assistente Notizie. Tutti i diritti riservati."
+    },
+    "language": {
+        "search_placeholder": "Cerca lingua...",
+        "changed": "Lingua cambiata",
+        "change_failed": "Errore nel cambio lingua"
+    }
+}
