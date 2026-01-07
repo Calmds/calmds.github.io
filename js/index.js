@@ -1,35 +1,113 @@
 // 首页功能
 class HomePage {
     constructor() {
-        this.currentScreenshot = 1;
-        this.totalScreenshots = 3;
+        this.currentScreenshot = 0;  // 改为从0开始
+        this.totalScreenshots = 0;
+        this.screenshots = [];
         this.init();
     }
 
-    init() {
+    async init() {
+        await this.initScreenshots();  // 先初始化截图数据
         this.initScreenshotViewer();
         this.initVideoControls();
         this.initAnimations();
         this.initEventListeners();
     }
 
+    async initScreenshots() {
+        try {
+            const response = await fetch('data/screenshot.json');
+            if (!response.ok) throw new Error('Failed to load screenshot data');
+            this.screenshots = await response.json();
+            this.totalScreenshots = this.screenshots.length;
+
+            const screenshotGrid = document.getElementById('screenshot-grid');
+            screenshotGrid.innerHTML = '';  // 清空现有内容
+
+            const fragment = document.createDocumentFragment();
+            this.screenshots.forEach((link, index) => {
+                const div = document.createElement('div');
+                div.className = 'screenshot-item glass-card';
+                div.innerHTML = `
+                <div class="screenshot-image">
+                    <img src="${link}" data-index="${index}" loading="lazy" id="screenshot-${index}" alt="Screenshot ${index + 1}">
+                </div>`;
+                fragment.appendChild(div);
+            });
+
+            screenshotGrid.appendChild(fragment);
+        } catch (error) {
+            console.error('Error loading screenshots:', error);
+            // 显示错误信息
+            const screenshotGrid = document.getElementById('screenshot-grid');
+            if (screenshotGrid) {
+                screenshotGrid.innerHTML = `
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>无法加载截图数据</p>
+                    </div>
+                `;
+            }
+        }
+    }
+
     initScreenshotViewer() {
-        const viewButtons = document.querySelectorAll('.view-btn');
         const closeViewer = document.getElementById('closeViewer');
         const viewer = document.getElementById('screenshotViewer');
-        const viewerImage = document.getElementById('viewerImage');
         const prevBtn = document.getElementById('prevScreenshot');
         const nextBtn = document.getElementById('nextScreenshot');
+        const viewerImage = document.getElementById('viewerImage');
+        const currentIndicator = document.querySelector('.current-indicator');
 
-        // 点击查看大图
-        viewButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const imageNum = parseInt(e.currentTarget.dataset.image);
-                this.currentScreenshot = imageNum;
-                this.showScreenshot(imageNum);
+        // 更新指示器
+        const updateIndicator = () => {
+            if (currentIndicator) {
+                currentIndicator.textContent = `${this.currentScreenshot + 1} / ${this.totalScreenshots}`;
+            }
+        };
+
+        // 显示截图查看器
+        this.showScreenshot = (index) => {
+            if (index < 0 || index >= this.totalScreenshots) return;
+
+            this.currentScreenshot = index;
+            const imagePath = this.screenshots[index];
+
+            // 加载图片
+            const img = new Image();
+            img.onload = () => {
+                viewerImage.src = imagePath;
+                viewerImage.alt = `Screenshot ${index + 1}`;
+                updateIndicator();
+            };
+
+            img.onerror = () => {
+                // 如果图片加载失败，使用占位符
+                const svg = `data:image/svg+xml;base64,${btoa(`
+                    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#4a6fa5"/>
+                        <text x="50%" y="50%" font-family="Arial" font-size="30" fill="white" text-anchor="middle" dy="0.3em">Image ${index + 1}</text>
+                    </svg>
+                `)}`;
+                viewerImage.src = svg;
+                viewerImage.alt = `Placeholder for screenshot ${index + 1}`;
+                updateIndicator();
+            };
+            img.src = imagePath;
+        };
+
+        // 点击截图图片打开查看器
+        document.addEventListener('click', (e) => {
+            const screenshotImg = e.target.closest('#screenshot-grid img');
+            if (screenshotImg) {
+                const index = parseInt(screenshotImg.getAttribute('data-index'));
+                console.log("点击查看大图", index, this.screenshots[index]);
+                this.currentScreenshot = index;
+                this.showScreenshot(index);
                 viewer.classList.add('show');
                 document.body.style.overflow = 'hidden';
-            });
+            }
         });
 
         // 关闭查看器
@@ -46,14 +124,17 @@ class HomePage {
             }
         });
 
-        // 切换截图
-        prevBtn.addEventListener('click', () => {
-            this.currentScreenshot = this.currentScreenshot === 1 ? this.totalScreenshots : this.currentScreenshot - 1;
+        // 切换截图 - 上一张
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止事件冒泡
+            this.currentScreenshot = this.currentScreenshot === 0 ? this.totalScreenshots - 1 : this.currentScreenshot - 1;
             this.showScreenshot(this.currentScreenshot);
         });
 
-        nextBtn.addEventListener('click', () => {
-            this.currentScreenshot = this.currentScreenshot === this.totalScreenshots ? 1 : this.currentScreenshot + 1;
+        // 切换截图 - 下一张
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止事件冒泡
+            this.currentScreenshot = this.currentScreenshot === this.totalScreenshots - 1 ? 0 : this.currentScreenshot + 1;
             this.showScreenshot(this.currentScreenshot);
         });
 
@@ -67,42 +148,18 @@ class HomePage {
                     document.body.style.overflow = 'auto';
                     break;
                 case 'ArrowLeft':
-                    this.currentScreenshot = this.currentScreenshot === 1 ? this.totalScreenshots : this.currentScreenshot - 1;
+                    this.currentScreenshot = this.currentScreenshot === 0 ? this.totalScreenshots - 1 : this.currentScreenshot - 1;
                     this.showScreenshot(this.currentScreenshot);
                     break;
                 case 'ArrowRight':
-                    this.currentScreenshot = this.currentScreenshot === this.totalScreenshots ? 1 : this.currentScreenshot + 1;
+                    this.currentScreenshot = this.currentScreenshot === this.totalScreenshots - 1 ? 0 : this.currentScreenshot + 1;
                     this.showScreenshot(this.currentScreenshot);
                     break;
             }
         });
-    }
 
-    showScreenshot(imageNum) {
-        const viewerImage = document.getElementById('viewerImage');
-        const imagePath = `assets/images/screenshots/${imageNum}.png`;
-
-        // 加载图片
-        const img = new Image();
-        img.onload = () => {
-            viewerImage.src = imagePath;
-            viewerImage.alt = `screenshot-${imageNum} `;
-        };
-        img.onerror = () => {
-            // 如果图片加载失败，使用占位符
-            const colors = ['#4a6fa5', '#6b5b95', '#88b04b', '#b748dcff'];
-            const texts = ['时政新闻', '军事新闻', '社交媒体', '金融新闻'];
-            const svg = `data:image/svg+xml;base64,${btoa(`
-                <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="${colors[imageNum - 1]}"/>
-                    <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" 
-                          text-anchor="middle" dy="0.3em">${texts[imageNum - 1]}</text>
-                </svg>
-            `)}`;
-            viewerImage.src = svg;
-            viewerImage.alt = `Placeholder for screenshot ${imageNum}`;
-        };
-        img.src = imagePath;
+        // 初始更新指示器
+        updateIndicator();
     }
 
     initVideoControls() {
@@ -180,43 +237,24 @@ class HomePage {
         }
 
         // 图片加载错误处理
-        const images = document.querySelectorAll('img[data-placeholder]');
+        const images = document.querySelectorAll('img[data-index]');
         images.forEach(img => {
-            img.onerror = () => {
-                const placeholderId = img.getAttribute('data-placeholder');
-                this.showPlaceholderImage(img, placeholderId);
-            };
+            img.addEventListener('error', () => {
+                this.showPlaceholderImage(img);
+            });
         });
     }
 
-    showPlaceholderImage(img, placeholderId) {
-        const placeholderData = {
-            'screenshot1': {
-                color: '#4a6fa5',
-                text: '主界面'
-            },
-            'screenshot2': {
-                color: '#6b5b95',
-                text: '阅读模式'
-            },
-            'screenshot3': {
-                color: '#88b04b',
-                text: '收藏管理'
-            }
-        };
-
-        const data = placeholderData[placeholderId];
-        if (data) {
-            const svg = `data:image/svg+xml;base64,${btoa(`
-                <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="${data.color}"/>
-                    <text x="50%" y="50%" font-family="Arial" font-size="40" fill="white" 
-                          text-anchor="middle" dy="0.3em">${data.text}</text>
-                </svg>
-            `)}`;
-            img.src = svg;
-            img.onerror = null; // 防止无限循环
-        }
+    showPlaceholderImage(img) {
+        const index = img.getAttribute('data-index');
+        const svg = `data:image/svg+xml;base64,${btoa(`
+            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#4a6fa5"/>
+                <text x="50%" y="50%" font-family="Arial" font-size="30" fill="white" text-anchor="middle" dy="0.3em">Image ${parseInt(index) + 1}</text>
+            </svg>
+        `)}`;
+        img.src = svg;
+        img.onerror = null; // 防止无限循环
     }
 }
 
