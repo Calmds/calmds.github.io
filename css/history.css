@@ -133,9 +133,9 @@
 
 /* 版本内容 */
 .version-content {
-    max-height: 0;
     overflow: hidden;
-    padding: 0 2rem 0 4.5rem;
+    max-height: 100vh;
+    padding: 0 2rem 2rem 4.5rem;
     transition: max-height 0.3s ease;
 }
 
@@ -177,7 +177,7 @@
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
+    padding: 1.0rem;
 }
 
 .changelog-list li {
