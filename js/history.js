@@ -118,11 +118,10 @@ class HistoryManager {
                         <h5>${platform.display_name}</h5>
                         <p>${downloadInfo.size}</p>
                     </div>
-                    <a href="assets/bin/${downloadInfo.filename}" 
+                    <a href="https://github.com/Calmds/calmds.github.io/releases/tag/${downloadInfo.version}/${downloadInfo.filename}" 
                        class="download-link"
                        download="${downloadInfo.filename}"
                        data-i18n="history.download_link">
-                        <span>下载</span>
                         <i class="fas fa-download"></i>
                     </a>
                 </div>

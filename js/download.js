@@ -86,6 +86,7 @@ class DownloadManager {
             
             <div class="platform-actions">
                 <button class="glass-btn primary download-btn" 
+                        data-version="${downloadInfo.version}"
                         data-platform="${platform.display_name.toLowerCase()}"
                         data-filename="${downloadInfo.filename}">
                     <i class="fas fa-download"></i>

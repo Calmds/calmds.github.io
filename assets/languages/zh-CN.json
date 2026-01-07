@@ -148,7 +148,6 @@
         "file_size": "文件大小",
         "architecture": "支持架构",
         "requirements": "系统要求",
-        "download_count": "下载次数",
         "download_now": "立即下载",
         "release_notes": "更新日志"
     },
