@@ -118,10 +118,7 @@
     "footer": {
         "app_description": "지능형 뉴스 읽기 및 관리 도구, 언제 어디서나 최신 뉴스를 파악할 수 있도록 해줍니다.",
         "quick_links": "빠른 링크",
-        "support": "지원",
-        "help_docs": "도움말 문서",
-        "faq": "자주 묻는 질문",
-        "terms": "사용자 약관",
+        "privacy_commitment": "당신의 프라이버시, 우리의 약속: 데이터 주권은 전적으로 사용자에게 있습니다",
         "privacy": "개인정보 보호정책",
         "contact": "문의하기",
         "contact_desc": "질문이나 제안이 있으면 이메일로 문의해 주세요:",
