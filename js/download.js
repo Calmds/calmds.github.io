@@ -47,12 +47,12 @@ class DownloadManager {
 
             if (!downloadInfo) return;
 
-            const platformCard = this.createPlatformCard(platform, downloadInfo);
+            const platformCard = this.createPlatformCard(platform, downloadInfo, this.currentVersion);
             platformsGrid.appendChild(platformCard);
         });
     }
 
-    createPlatformCard(platform, downloadInfo) {
+    createPlatformCard(platform, downloadInfo, currentVersion) {
         const card = document.createElement('div');
         card.className = 'platform-card glass-card';
 
@@ -76,7 +76,7 @@ class DownloadManager {
                 </div>
                 <div class="detail-item">
                     <span class="detail-label" data-i18n="download.architecture">支持架构</span>
-                    <span class="detail-value">${downloadInfo.arch.join(', ')}</span>
+                    <span class="detail-value">${downloadInfo.architecture}</span>
                 </div>
                 <div class="detail-item">
                     <span class="detail-label" data-i18n="download.requirements">系统要求</span>
@@ -86,7 +86,7 @@ class DownloadManager {
             
             <div class="platform-actions">
                 <button class="glass-btn primary download-btn" 
-                        data-version="${downloadInfo.version}"
+                        data-version="${currentVersion.version}"
                         data-platform="${platform.display_name.toLowerCase()}"
                         data-filename="${downloadInfo.filename}">
                     <i class="fas fa-download"></i>
@@ -123,22 +123,20 @@ class DownloadManager {
         document.addEventListener('click', async (e) => {
             if (e.target.closest('.download-btn')) {
                 const btn = e.target.closest('.download-btn');
-                const platform = btn.dataset.platform;
+                const version = btn.dataset.version;
                 const filename = btn.dataset.filename;
 
-                await this.handleDownload(platform, filename);
+                await this.handleDownload(version, filename);
             }
         });
     }
 
     async handleDownload(version, filename) {
         try {
-            // GitHub Pages的下载路径
-            const downloadUrl = `https://github.com/Calmds/calmds.github.io/releases/tag/${version}/${filename}`;
-
             // 创建临时链接进行下载
             const link = document.createElement('a');
-            link.href = downloadUrl;
+            // link.href = `https://github.com/Calmds/calmds.github.io/releases/tag/${version}/${filename}`;
+            link.href = `https://github.com/Calmds/calmds.github.io/releases/download/${version}/${filename}`;
             link.download = filename;
             link.style.display = 'none';
 

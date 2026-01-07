@@ -16,46 +16,31 @@
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
                     "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "architecture": "x64"
                 },
                 "macos": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
                     "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "architecture": "x64"
                 },
                 "android": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
                     "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "architecture": "x64"
                 },
                 "ios": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
                     "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "architecture": "x64"
                 },
                 "HarmonyOS": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
                     "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "architecture": "x64"
                 }
             }
         },
@@ -69,50 +54,11 @@
                 "修复同步时的网络错误"
             ],
             "downloads": {
-                "windows": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
                 "macos": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
+                    "filename": "News-Assistant_0.0.2_x64.dmg",
                     "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
-                "android": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
-                "ios": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
-                "HarmonyOS": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
+                    "size": "11.1 MB",
+                    "architecture": "x64"
                 }
             }
         },
@@ -126,53 +72,11 @@
                 "修复同步时的网络错误"
             ],
             "downloads": {
-                "windows": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
                 "macos": {
                     "filename": "News-Assistant_0.0.1_x64.dmg",
                     "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
-                    "arch": [
-                        "x64",
-                        "arm64"
-                    ]
-                },
-                "android": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "Android 8.0+",
-                    "size": "47.8 MB",
-                    "arch": [
-                        "arm64-v8a",
-                        "armeabi-v7a",
-                        "x86_64"
-                    ]
-                },
-                "ios": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "Android 8.0+",
-                    "size": "47.8 MB",
-                    "arch": [
-                        "arm64-v8a",
-                        "armeabi-v7a",
-                        "x86_64"
-                    ]
-                },
-                "HarmonyOS": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "Android 8.0+",
-                    "size": "47.8 MB",
-                    "arch": [
-                        "arm64-v8a",
-                        "armeabi-v7a",
-                        "x86_64"
-                    ]
+                    "size": "9.9 MB",
+                    "architecture": "x64"
                 }
             }
         }
@@ -193,9 +97,9 @@
             "icon": "fab fa-android",
             "color": "#3ddc84"
         },
-        "harmonyoS": {
+        "harmonyos": {
             "display_name": "HarmonyOS",
-            "icon": "fab fa-android",
+            "icon": "fab fa-microchip",
             "color": "#3ddc15"
         },
         "ios": {
