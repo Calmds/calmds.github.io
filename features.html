@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/features.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="新闻助手 - 完全离线的智能新闻聚合与分析应用，本地AI处理，数据100%存储在您的设备中，保障绝对隐私安全">
 </head>
 
 <body>
@@ -33,8 +34,8 @@
                     <!-- 语言选择器 -->
                     <div class="language-selector">
                         <button class="language-btn glass-btn" id="languageBtn">
-                            <img src="assets/flags/cn.jpg" alt="中文" class="language-flag">
-                            <span id="currentLang">中文</span>
+                            <img src="assets/flags/en.jpg" alt="English" class="language-flag">
+                            <span id="currentLang">English</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="language-dropdown" id="languageDropdown">
@@ -42,10 +43,6 @@
                                 <!-- 语言选项将通过JavaScript动态生成 -->
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mobile-toggle">
-                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
             </nav>
@@ -58,7 +55,47 @@
             <div class="container">
                 <div class="hero-content fade-in">
                     <h1 class="text-gradient" data-i18n="features.title">强大功能，卓越体验</h1>
-                    <p data-i18n="features.subtitle">新闻助手为您提供全方位的新闻阅读与管理解决方案</p>
+                    <p data-i18n="features.subtitle">完全离线的智能新闻聚合与分析应用 · 数据100%存储在您的设备中 · 保障绝对隐私安全</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心优势亮点 -->
+        <section class="highlights">
+            <div class="container">
+                <div class="highlight-cards">
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-i18n="features.highlight1_title">完全离线运行</h3>
+                        <p data-i18n="features.highlight1_desc">无远程服务器，所有数据处理均在您的设备上完成，数据绝不离开您的电脑/手机</p>
+                        <div class="highlight-badge">隐私保障</div>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-i18n="features.highlight2_title">本地AI智能引擎</h3>
+                        <p data-i18n="features.highlight2_desc">内置千问模型，支持Hugging Face/ModelScope自定义AI模型，完全本地化AI处理</p>
+                        <div class="highlight-badge">智能分析</div>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 data-i18n="features.highlight3_title">本地数据存储</h3>
+                        <p data-i18n="features.highlight3_desc">SQLite本地数据库，所有新闻、订阅、分析结果都存储在您的设备中</p>
+                        <div class="highlight-badge">数据安全</div>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 data-i18n="features.highlight4_title">多语言AI处理</h3>
+                        <p data-i18n="features.highlight4_desc">支持15+种语言界面和AI内容处理，自动翻译、摘要、分析多语言新闻</p>
+                        <div class="highlight-badge">全球视野</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -67,105 +104,300 @@
         <section class="core-features">
             <div class="container">
                 <div class="section-title">
-                    <h2 data-i18n="features.core_features_title">核心功能</h2>
-                    <p data-i18n="features.core_features_subtitle">探索新闻助手的强大功能</p>
+                    <h2 data-i18n="features.core_features_title">四大核心功能板块</h2>
+                    <p data-i18n="features.core_features_subtitle">一体化新闻聚合与分析解决方案</p>
                 </div>
 
                 <div class="features-grid">
-                    <!-- 功能卡片 1 -->
-                    <div class="feature-card glass-card" id="smart-recommendation">
+                    <!-- 功能卡片 1：多源新闻聚合 -->
+                    <div class="feature-card glass-card" id="news-aggregation">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 data-i18n="features.news_aggregation_title">多源新闻聚合</h3>
+                        <p class="feature-tag" data-i18n="features.news_aggregation_tag">实时抓取 · 全面覆盖</p>
+                        <div data-i18n="features.news_aggregation_content">
+                            <strong>时政新闻：</strong>全球权威媒体实时更新<br>
+                            <span class="news-sources">
+                                <span class="source-badge">新华社</span>
+                                <span class="source-badge">美联社</span>
+                                <span class="source-badge">BBC</span>
+                                <span class="source-badge">塔斯社</span>
+                                <span class="source-badge">读卖新闻</span>
+                                <span class="source-badge">朝鲜日报</span>
+                                <span class="source-badge">越通社</span>
+                                <span class="source-badge">华盛顿邮报</span>
+                                <span class="source-badge">VOX</span>
+                                <span class="source-badge">福克斯新闻</span>
+                            </span>
+                        </div>
+                        <div data-i18n="features.news_aggregation_content">
+                            <strong>军事新闻：</strong>专业军事媒体<br>
+                            <span class="news-sources">
+                                <span class="source-badge">美国战区网站</span>
+                                <span class="source-badge">英国海军新闻网</span>
+                                <span class="source-badge">观察者网军事</span>
+                            </span>
+                        </div>
+                        <div data-i18n="features.news_aggregation_content">
+                            <strong>金融新闻：</strong>实时财经资讯<br>
+                            <strong>社交媒体：</strong>微博、X(Twitter)、Reddit
+                        </div>
+                    </div>
+
+                    <!-- 功能卡片 2：本地AI智能处理 -->
+                    <div class="feature-card glass-card" id="ai-processing">
                         <div class="feature-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3 data-i18n="features.feature1.title">智能推荐</h3>
-                        <p data-i18n="features.feature1.description">
-                            基于AI算法的个性化新闻推荐，为您筛选最相关的内容。通过机器学习不断优化推荐准确性，确保您看到的都是感兴趣的内容。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature1.list_item1">个性化推荐算法</li>
-                            <li data-i18n="features.feature1.list_item2">实时兴趣分析</li>
-                            <li data-i18n="features.feature1.list_item3">多维度内容匹配</li>
-                        </ul>
+                        <h3 data-i18n="features.ai_processing_title">本地AI智能处理</h3>
+                        <p class="feature-tag" data-i18n="features.ai_processing_tag">完全本地 · 模型可选</p>
+                        <div data-i18n="features.ai_processing_content">
+                            <strong>内置AI引擎：</strong><br>
+                            • 预置千问系列模型<br>
+                            • 支持按设备性能选择模型版本<br>
+                            • 完全本地运行，无需联网
+                        </div>
+                        <div data-i18n="features.ai_processing_content">
+                            <strong>扩展模型支持：</strong><br>
+                            • 支持Hugging Face模型<br>
+                            • 支持ModelScope模型<br>
+                            • 用户自定义模型导入
+                        </div>
+                        <div data-i18n="features.ai_processing_content">
+                            <strong>AI处理功能：</strong><br>
+                            • 智能内容摘要<br>
+                            • 多语言自动翻译<br>
+                            • 深度分析与洞察<br>
+                            • 事实核实（计划中）
+                        </div>
                     </div>
 
-                    <!-- 功能卡片 2 -->
-                    <div class="feature-card glass-card" id="offline-reading">
+                    <!-- 功能卡片 3：社交媒体智能监控 -->
+                    <div class="feature-card glass-card" id="social-media">
                         <div class="feature-icon">
-                            <i class="fas fa-cloud-download-alt"></i>
+                            <i class="fas fa-hashtag"></i>
                         </div>
-                        <h3 data-i18n="features.feature2.title">离线阅读</h3>
-                        <p data-i18n="features.feature2.description">
-                            随时随地下载新闻，无需网络也能畅快阅读。智能缓存管理，节省流量，提供无缝的阅读体验。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature2.list_item1">智能缓存管理</li>
-                            <li data-i18n="features.feature2.list_item2">自动下载更新</li>
-                            <li data-i18n="features.feature2.list_item3">多种下载选项</li>
-                        </ul>
+                        <h3 data-i18n="features.social_media_title">社交媒体智能监控</h3>
+                        <p class="feature-tag" data-i18n="features.social_media_tag">个性化订阅 · 智能抓取</p>
+                        <div data-i18n="features.social_media_content">
+                            <strong>平台支持：</strong><br>
+                            • 微博（支持长微博阅读）<br>
+                            • X/Twitter（支持评论互动）<br>
+                            • Reddit
+                        </div>
+                        <div data-i18n="features.social_media_content">
+                            <strong>个性化订阅：</strong><br>
+                            • 自定义关注微博用户<br>
+                            • 自定义关注X账号<br>
+                            • 实时抓取最新帖文<br>
+                            • 智能内容聚合
+                        </div>
+                        <div data-i18n="features.social_media_content">
+                            <strong>交互功能：</strong><br>
+                            • 查看X帖子评论区<br>
+                            • 在应用内评论X帖子<br>
+                            • 阅读完整长微博内容
+                        </div>
                     </div>
 
-                    <!-- 功能卡片 3 -->
-                    <div class="feature-card glass-card" id="multi-sync">
+                    <!-- 功能卡片 4：多语言与本地对话 -->
+                    <div class="feature-card glass-card" id="multilingual">
                         <div class="feature-icon">
-                            <i class="fas fa-sync-alt"></i>
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <h3 data-i18n="features.feature3.title">多端同步</h3>
-                        <p data-i18n="features.feature3.description">
-                            手机、平板、电脑无缝同步，阅读进度、收藏内容实时更新，让您在不同设备间自由切换。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature3.list_item1">跨平台同步</li>
-                            <li data-i18n="features.feature3.list_item2">实时进度更新</li>
-                            <li data-i18n="features.feature3.list_item3">安全数据加密</li>
-                        </ul>
+                        <h3 data-i18n="features.multilingual_title">多语言与AI对话</h3>
+                        <p class="feature-tag" data-i18n="features.multilingual_tag">全球语言 · 智能交互</p>
+                        <div data-i18n="features.multilingual_content">
+                            <strong>多语言支持：</strong><br>
+                            中文、英文、法文、德文、西班牙文、<br>
+                            越南文、韩文、日文、乌尔都文、印地文、<br>
+                            马来文、俄文、葡萄牙文、泰文、蒙古文
+                        </div>
+                        <div data-i18n="features.multilingual_content">
+                            <strong>智能翻译：</strong><br>
+                            • 自动检测内容语言<br>
+                            • 15+语言互译<br>
+                            • 保持原文语义准确性
+                        </div>
+                        <div data-i18n="features.multilingual_content">
+                            <strong>对话式AI界面：</strong><br>
+                            • 独立的AI聊天页面<br>
+                            • 与本地模型直接对话<br>
+                            • 获取新闻分析与解答<br>
+                            • 完全离线运行
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 本地数据处理流程 -->
+        <section class="data-flow">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="features.data_flow_title">本地数据处理流程</h2>
+                    <p data-i18n="features.data_flow_subtitle">数据从抓取到分析，全程在您的设备中完成</p>
+                </div>
+
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 data-i18n="features.flow_step1_title">数据抓取</h3>
+                            <p data-i18n="features.flow_step1_desc">实时从全球新闻源和社交媒体抓取内容，数据直接保存到本地SQLite数据库</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 data-i18n="features.flow_step2_title">本地存储</h3>
+                            <p data-i18n="features.flow_step2_desc">所有数据（新闻、帖子、分析结果）都存储在本地SQLite数据库中，绝不传输到云端</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 data-i18n="features.flow_step3_title">AI处理</h3>
+                            <p data-i18n="features.flow_step3_desc">本地AI引擎对内容进行摘要、翻译、分析，处理结果保存回本地数据库</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 data-i18n="features.flow_step4_title">用户交互</h3>
+                            <p data-i18n="features.flow_step4_desc">用户在本地界面查看、搜索、评论内容，所有操作记录在本地</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-security glass-card">
+                    <div class="security-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="security-content">
+                        <h3 data-i18n="features.data_security_title">数据安全保障</h3>
+                        <p><strong data-i18n="features.data_security_principle">核心原则：</strong><span
+                                data-i18n="features.data_security_principle">所有数据均在用户设备本地处理，无远程服务器，无云端数据传输</span></p>
+                        <p><strong data-i18n="features.data_security_storage">存储方式：</strong><span
+                                data-i18n="features.data_security_storage">SQLite本地数据库文件，可通过软件菜单直接访问和管理</span></p>
+                        <p><strong data-i18n="features.data_security_privacy">隐私承诺：</strong><span
+                                data-i18n="features.data_security_privacy">您的阅读历史、订阅偏好、分析结果等数据永远不会离开您的设备</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 平台与AI模型支持 -->
+        <section class="platform-ai">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="features.platform_ai_title">平台支持与AI模型</h2>
+                    <p data-i18n="features.platform_ai_subtitle">覆盖主流平台，支持多样化AI模型选择</p>
+                </div>
+
+                <div class="platform-ai-grid">
+                    <!-- 平台支持 -->
+                    <div class="platform-section glass-card">
+                        <h3><i class="fas fa-desktop"></i> <span data-i18n="features.platform_support_title">支持平台</span>
+                        </h3>
+                        <div class="platform-list">
+                            <div class="platform-item">
+                                <i class="fab fa-apple"></i>
+                                <div>
+                                    <strong>macOS</strong>
+                                    <p>Intel / Apple Silicon芯片</p>
+                                </div>
+                                <span class="status available">已支持</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fab fa-windows"></i>
+                                <div>
+                                    <strong>Windows</strong>
+                                    <p>Windows 10/11</p>
+                                </div>
+                                <span class="status available">已支持</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fab fa-android"></i>
+                                <div>
+                                    <strong>Android</strong>
+                                    <p>Android 8.0+</p>
+                                </div>
+                                <span class="status available">已支持</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fab fa-app-store-ios"></i>
+                                <div>
+                                    <strong>iOS</strong>
+                                    <p>iOS 13.0+</p>
+                                </div>
+                                <span class="status available">已支持</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fab fa-linux"></i>
+                                <div>
+                                    <strong>Linux</strong>
+                                    <p>Ubuntu/Debian</p>
+                                </div>
+                                <span class="status planned">计划中</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fas fa-microchip"></i>
+                                <div>
+                                    <strong>HarmonyOS</strong>
+                                    <p>鸿蒙系统(HarmonyOS)</p>
+                                </div>
+                                <span class="status planned">计划中</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 功能卡片 4 -->
-                    <div class="feature-card glass-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-eye"></i>
+                    <!-- AI模型支持 -->
+                    <div class="ai-model-section glass-card">
+                        <h3><i class="fas fa-robot"></i> <span data-i18n="features.ai_model_title">AI模型支持</span></h3>
+                        <div class="model-list">
+                            <div class="model-item">
+                                <div class="model-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div>
+                                    <strong data-i18n="features.builtin_model">内置模型</strong>
+                                    <p data-i18n="features.builtin_model_desc">预置千问系列模型，根据设备性能选择合适版本</p>
+                                </div>
+                            </div>
+                            <div class="model-item">
+                                <div class="model-icon">
+                                    <i class="fas fa-cloud-download-alt"></i>
+                                </div>
+                                <div>
+                                    <strong data-i18n="features.huggingface_model">Hugging Face</strong>
+                                    <p data-i18n="features.huggingface_model_desc">支持从Hugging Face平台下载和加载模型</p>
+                                </div>
+                            </div>
+                            <div class="model-item">
+                                <div class="model-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <strong data-i18n="features.modelscope_model">ModelScope</strong>
+                                    <p data-i18n="features.modelscope_model_desc">支持从ModelScope平台导入模型</p>
+                                </div>
+                            </div>
+                            <div class="model-item">
+                                <div class="model-icon">
+                                    <i class="fas fa-user-cog"></i>
+                                </div>
+                                <div>
+                                    <strong data-i18n="features.custom_model">自定义模型</strong>
+                                    <p data-i18n="features.custom_model_desc">支持用户添加本地自定义模型路径</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 data-i18n="features.feature4.title">多种阅读模式</h3>
-                        <p data-i18n="features.feature4.description">
-                            提供日间、夜间、护眼等多种阅读模式，支持自定义字体、字号和间距，满足不同用户的阅读习惯。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature4.list_item1">多种主题模式</li>
-                            <li data-i18n="features.feature4.list_item2">自定义阅读设置</li>
-                            <li data-i18n="features.feature4.list_item3">自动主题切换</li>
-                        </ul>
-                    </div>
-
-                    <!-- 功能卡片 5 -->
-                    <div class="feature-card glass-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-filter"></i>
+                        <div class="model-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span data-i18n="features.model_note">所有AI模型均运行在您的本地设备上，处理过程不依赖网络连接</span>
                         </div>
-                        <h3 data-i18n="features.feature5.title">智能过滤</h3>
-                        <p data-i18n="features.feature5.description">
-                            强大的内容过滤系统，支持关键词过滤、来源过滤、分类过滤等多种方式，打造纯净的阅读环境。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature5.list_item1">自定义过滤规则</li>
-                            <li data-i18n="features.feature5.list_item2">多维度内容筛选</li>
-                            <li data-i18n="features.feature5.list_item3">实时过滤效果预览</li>
-                        </ul>
-                    </div>
-
-                    <!-- 功能卡片 6 -->
-                    <div class="feature-card glass-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 data-i18n="features.feature6.title">阅读统计</h3>
-                        <p data-i18n="features.feature6.description">
-                            详细的阅读统计报告，了解您的阅读习惯、时间分布、兴趣偏好，帮助您更好地管理阅读时间。
-                        </p>
-                        <ul class="feature-list">
-                            <li data-i18n="features.feature6.list_item1">阅读时长统计</li>
-                            <li data-i18n="features.feature6.list_item2">兴趣偏好分析</li>
-                            <li data-i18n="features.feature6.list_item3">数据可视化报告</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -176,60 +408,75 @@
             <div class="container">
                 <div class="section-title">
                     <h2 data-i18n="features.technical_title">技术特点</h2>
-                    <p data-i18n="features.technical_subtitle">先进的技术架构，卓越的性能表现</p>
+                    <p data-i18n="features.technical_subtitle">专为隐私保护和本地化处理设计的技术架构</p>
                 </div>
 
                 <div class="tech-grid">
                     <div class="tech-item glass-card">
-                        <h3 data-i18n="features.tech1.title">高效性能</h3>
-                        <p data-i18n="features.tech1.description">
-                            采用现代化的技术架构，确保应用运行流畅，响应迅速，即使在低配设备上也能提供良好的使用体验。
-                        </p>
-                        <div class="tech-stats">
-                            <div class="stat">
-                                <span class="stat-value">99.9%</span>
-                                <span class="stat-label" data-i18n="features.tech1.stat1">稳定性</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">0.3s</span>
-                                <span class="stat-label" data-i18n="features.tech1.stat2">加载速度</span>
-                            </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 data-i18n="features.tech1_title">零云端架构</h3>
+                        <div data-i18n="features.tech1_desc">
+                            采用完全本地化架构，无远程服务器依赖：<br>
+                            • 所有数据处理在设备本地完成<br>
+                            • 无用户数据上传<br>
+                            • 无云端账户系统<br>
+                            • 网络仅用于内容抓取
                         </div>
                     </div>
 
                     <div class="tech-item glass-card">
-                        <h3 data-i18n="features.tech2.title">数据安全</h3>
-                        <p data-i18n="features.tech2.description">
-                            采用端到端加密技术，确保用户数据安全。所有同步数据均经过加密处理，保护您的隐私。
-                        </p>
-                        <div class="tech-stats">
-                            <div class="stat">
-                                <span class="stat-value">AES-256</span>
-                                <span class="stat-label" data-i18n="features.tech2.stat1">加密标准</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">100%</span>
-                                <span class="stat-label" data-i18n="features.tech2.stat2">数据安全</span>
-                            </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 data-i18n="features.tech2_title">本地数据管理</h3>
+                        <div data-i18n="features.tech2_desc">
+                            SQLite本地数据库系统：<br>
+                            • 所有数据存储在单一数据库文件<br>
+                            • 可通过软件菜单直接访问数据目录<br>
+                            • 支持数据备份和迁移<br>
+                            • 数据完全由用户控制
                         </div>
                     </div>
 
                     <div class="tech-item glass-card">
-                        <h3 data-i18n="features.tech3.title">跨平台支持</h3>
-                        <p data-i18n="features.tech3.description">
-                            支持 Windows、macOS、Android 等多平台，使用统一的技术栈确保一致的用户体验。
-                        </p>
-                        <div class="tech-stats">
-                            <div class="stat">
-                                <span class="stat-value">5+</span>
-                                <span class="stat-label" data-i18n="features.tech3.stat1">平台支持</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">1M+</span>
-                                <span class="stat-label" data-i18n="features.tech3.stat2">用户覆盖</span>
-                            </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 data-i18n="features.tech3_title">优化的AI性能</h3>
+                        <div data-i18n="features.tech3_desc">
+                            针对本地AI处理的优化：<br>
+                            • 支持按设备性能选择模型大小<br>
+                            • 智能缓存管理减少重复计算<br>
+                            • 支持硬件加速（GPU推理）<br>
+                            • 低内存占用设计
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA区域 -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <h2 data-i18n="features.cta_title">体验完全离线的智能新闻阅读</h2>
+                    <p data-i18n="features.cta_desc">立即下载新闻助手，在您的设备上享受安全、智能、高效的新闻聚合与分析体验</p>
+                    <div class="cta-buttons">
+                        <a href="download.html" class="btn-primary">
+                            <i class="fas fa-download"></i>
+                            <span data-i18n="features.cta_button_download">免费下载</span>
+                        </a>
+                        <a href="index.html" class="btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            <span data-i18n="features.cta_button_demo">查看演示</span>
+                        </a>
+                    </div>
+                    <p class="cta-note">
+                        <i class="fas fa-lock"></i>
+                        <span data-i18n="features.cta_note">郑重承诺：您的数据永远属于您自己，我们绝不收集任何用户信息</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -242,20 +489,20 @@
                 <div class="footer-column">
                     <h3 data-i18n="app_name">新闻助手</h3>
                     <p data-i18n="footer.app_description">智能新闻阅读与管理工具，让您随时随地掌握最新资讯。</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Weibo"><i class="fab fa-weibo"></i></a>
-                        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <div class="privacy-badges">
+                        <span class="badge"><i class="fas fa-lock"></i> 100% 离线</span>
+                        <span class="badge"><i class="fas fa-brain"></i> 本地 AI</span>
+                        <span class="badge"><i class="fas fa-database"></i> 本地存储</span>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3 data-i18n="footer.quick_links">快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
-                        <li><a href="features.html" data-i18n="nav.features">功能特性</a></li>
-                        <li><a href="download.html" data-i18n="nav.download">下载</a></li>
-                        <li><a href="history.html" data-i18n="nav.history">历史版本</a></li>
+                        <li><a href="#news-aggregation">多源新闻聚合</a></li>
+                        <li><a href="#ai-processing">本地AI处理</a></li>
+                        <li><a href="#social-media">社交媒体监控</a></li>
+                        <li><a href="#multilingual">多语言支持</a></li>
                     </ul>
                 </div>
 
@@ -271,13 +518,24 @@
 
                 <div class="footer-column">
                     <h3 data-i18n="footer.contact">联系我们</h3>
-                    <p data-i18n="footer.contact_desc">如有问题或建议，请通过邮箱联系我们：</p>
-                    <p class="contact-email">support@news-assistant.com</p>
+                    <p><strong>核心隐私承诺：</strong></p>
+                    <ul class="privacy-list">
+                        <li>无用户数据收集</li>
+                        <li>无云端数据传输</li>
+                        <li>所有数据存储在您的设备</li>
+                        <li>无第三方数据共享</li>
+                    </ul>
+                    <p class="contact-info" data-i18n="footer.contact_desc">
+                        如有问题或建议，请通过邮箱联系我们：<br>support@newsassistant.com</p>
                 </div>
             </div>
 
             <div class="copyright">
                 <p data-i18n="footer.copyright">© 2024 新闻助手. 保留所有权利.</p>
+                <p class="privacy-commitment">
+                    <i class="fas fa-user-shield"></i>
+                    您的隐私，我们的承诺：数据主权完全属于用户
+                </p>
             </div>
         </div>
     </footer>
@@ -292,10 +550,25 @@
     <script>
         // 页面加载动画
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.feature-card, .tech-item');
+            // 卡片动画
+            const cards = document.querySelectorAll('.feature-card, .tech-item, .highlight-card');
             cards.forEach((card, index) => {
                 card.style.animationDelay = `${index * 0.1}s`;
                 card.classList.add('fade-in');
+            });
+
+            // 流程步骤动画
+            const steps = document.querySelectorAll('.flow-step');
+            steps.forEach((step, index) => {
+                step.style.animationDelay = `${index * 0.2}s`;
+                step.classList.add('slide-up');
+            });
+
+            // 平台项目动画
+            const platformItems = document.querySelectorAll('.platform-item, .model-item');
+            platformItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('fade-in');
             });
         });
     </script>
