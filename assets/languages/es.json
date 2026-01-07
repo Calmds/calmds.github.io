@@ -118,10 +118,7 @@
     "footer": {
         "app_description": "Herramienta inteligente de lectura y gestión de noticias, que le permite mantenerse actualizado con las últimas noticias en cualquier momento y lugar.",
         "quick_links": "Enlaces Rápidos",
-        "support": "Soporte",
-        "help_docs": "Documentación de Ayuda",
-        "faq": "Preguntas Frecuentes",
-        "terms": "Acuerdo de Usuario",
+        "privacy_commitment": "Su privacidad, nuestro compromiso: La soberanía de los datos pertenece completamente al usuario",
         "privacy": "Política de Privacidad",
         "contact": "Contáctenos",
         "contact_desc": "Si tiene preguntas o sugerencias, por favor contáctenos por correo electrónico:",

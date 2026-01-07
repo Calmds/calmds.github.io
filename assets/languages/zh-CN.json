@@ -116,12 +116,9 @@
         "hide_details": "收起详情"
     },
     "footer": {
+        "privacy_commitment": "您的隐私，我们的承诺：数据主权完全属于用户",
         "app_description": "智能新闻阅读与管理工具，让您随时随地掌握最新资讯。",
         "quick_links": "快速链接",
-        "support": "支持",
-        "help_docs": "帮助文档",
-        "faq": "常见问题",
-        "terms": "用户协议",
         "privacy": "隐私政策",
         "contact": "联系我们",
         "contact_desc": "如有问题或建议，请通过邮箱联系我们：",

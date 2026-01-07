@@ -118,10 +118,7 @@
     "footer": {
         "app_description": "Intelligentes Werkzeug zum Lesen und Verwalten von Nachrichten, ermöglicht Ihnen den Zugriff auf die neuesten Nachrichten jederzeit und überall.",
         "quick_links": "Schnellzugriff",
-        "support": "Support",
-        "help_docs": "Hilfedokumentation",
-        "faq": "Häufige Fragen",
-        "terms": "Nutzungsvereinbarung",
+        "privacy_commitment": "Ihre Privatsphäre, unser Versprechen: Die volle Datenhoheit liegt beim Nutzer",
         "privacy": "Datenschutzrichtlinie",
         "contact": "Kontaktieren Sie uns",
         "contact_desc": "Bei Fragen oder Vorschlägen kontaktieren Sie uns bitte per E-Mail:",

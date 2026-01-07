@@ -118,11 +118,8 @@
     "footer": {
         "app_description": "Intelligent news reading and management tool, allowing you to stay updated with the latest news anytime, anywhere.",
         "quick_links": "Quick Links",
-        "support": "Support",
-        "help_docs": "Help Documentation",
-        "faq": "FAQ",
-        "terms": "User Agreement",
         "privacy": "Privacy Policy",
+        "privacy_commitment": "Your Privacy, Our Commitment: Complete Data Sovereignty Belongs to the User",
         "contact": "Contact Us",
         "contact_desc": "If you have questions or suggestions, please contact us via email:",
         "copyright": "© 2024 News Assistant. All rights reserved."

@@ -118,11 +118,8 @@
     "footer": {
         "app_description": "智能新聞閱讀與管理工具，讓您隨時隨地掌握最新資訊。",
         "quick_links": "快速連結",
-        "support": "支援",
-        "help_docs": "幫助文件",
-        "faq": "常見問題",
-        "terms": "用戶協議",
         "privacy": "私隱政策",
+        "privacy_commitment": "您的隱私，我們的承諾：數據主權完全屬於用戶",
         "contact": "聯絡我們",
         "contact_desc": "如有問題或建議，請透過郵箱聯絡我們：",
         "copyright": "© 2024 新聞助手. 保留所有權利."
