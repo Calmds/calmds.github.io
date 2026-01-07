@@ -131,10 +131,10 @@ class DownloadManager {
         });
     }
 
-    async handleDownload(platform, filename) {
+    async handleDownload(version, filename) {
         try {
             // GitHub Pages的下载路径
-            const downloadUrl = `assets/bin/${filename}`;
+            const downloadUrl = `https://github.com/Calmds/calmds.github.io/releases/tag/${version}/${filename}`;
 
             // 创建临时链接进行下载
             const link = document.createElement('a');
@@ -151,28 +151,11 @@ class DownloadManager {
                 window.common.showToast('开始下载，请稍候...', 'success');
             }
 
-            // 记录下载统计
-            this.trackDownload(platform, filename);
-
         } catch (error) {
             console.error('Download error:', error);
             if (window.common) {
                 window.common.showToast('下载失败，请稍后重试', 'error');
             }
-        }
-    }
-
-    trackDownload(platform, filename) {
-        // 这里可以集成统计代码
-        console.log(`Download tracked: ${platform} - ${filename}`);
-
-        // 示例：发送到Google Analytics
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'download', {
-                'event_category': platform,
-                'event_label': filename,
-                'value': 1
-            });
         }
     }
 
