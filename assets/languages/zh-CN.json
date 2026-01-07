@@ -9,44 +9,16 @@
     },
     "home": {
         "title": "智能新闻阅读与管理工具",
-        "description": "新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。",
+        "description": "新闻助手是一款集新闻聚合与智能分析于一体、完全离线运行的应用程序。它从四大板块实时抓取内容：时政新闻（来源包括俄塔社、卫星社、新华社、美联社、Politico、读卖新闻、朝鲜日报、越通社、华盛顿邮报、VOX、福克斯新闻、环球时报、观察者网、BBC、求是杂志、央视新闻等）、军事新闻（美国战区网站、英国海军新闻网、观察者网军事）、金融新闻以及社交媒体（微博、X/Twitter、Reddit）。用户可订阅特定社交媒体账号。软件集成本地AI引擎（预置千问模型，支持从Hugging Face/ModelScope添加自定义模型），可对内容进行总结、分析、核实（计划中）和翻译，并提供与本地模型的对话界面。支持查看并评论X帖子、阅读长微博。软件提供多语言界面，所有数据通过SQLite本地存储，保障用户隐私。计划支持平台包括macOS（Intel/Apple Silicon芯片）、Windows、Linux、Android、iOS和鸿蒙系统。",
         "download_btn": "免费下载",
         "learn_more_btn": "了解更多",
-        "screenshots_title": "软件截图",
-        "screenshots_subtitle": "看看新闻助手的样子",
-        "screenshot1_title": "主界面",
-        "screenshot1_desc": "清晰简洁的新闻阅读界面",
-        "screenshot2_title": "阅读模式",
-        "screenshot2_desc": "纯净的阅读体验，无干扰",
-        "screenshot3_title": "收藏管理",
-        "screenshot3_desc": "轻松管理您喜欢的新闻",
-        "videos_title": "视频介绍",
-        "videos_subtitle": "观看新闻助手的功能演示",
+        "screenshots_title": "Screenshots",
+        "screenshots_subtitle": "See what News Assistant looks like",
+        "videos_title": "Video Introduction",
+        "videos_subtitle": "Watch demos of News Assistant features",
         "video_not_supported": "您的浏览器不支持视频播放。",
-        "demo_video_title": "功能演示",
-        "demo_video_desc": "了解新闻助手的主要功能和工作流程",
-        "tutorial_video_title": "使用教程",
-        "tutorial_video_desc": "快速上手新闻助手",
-        "view_more_videos": "查看更多视频",
         "features_title": "核心功能预览",
-        "features_subtitle": "探索新闻助手的强大功能，提升您的新闻阅读体验",
-        "feature1": {
-            "title": "智能推荐",
-            "description": "基于AI算法的个性化新闻推荐，为您筛选最相关的内容。"
-        },
-        "feature2": {
-            "title": "离线阅读",
-            "description": "随时随地下载新闻，无需网络也能畅快阅读。"
-        },
-        "feature3": {
-            "title": "多端同步",
-            "description": "手机、平板、电脑无缝同步，阅读进度不丢失。"
-        },
-        "learn_more": "了解更多",
-        "download_section_title": "立即体验新闻助手",
-        "download_section_desc": "新闻助手现已支持Windows、macOS和Android平台，点击下方按钮获取最新版本。",
-        "download_section_btn1": "前往下载",
-        "download_section_btn2": "查看历史版本"
+        "learn_more": "了解更多"
     },
     "features": {
         "title": "强大功能，卓越体验",

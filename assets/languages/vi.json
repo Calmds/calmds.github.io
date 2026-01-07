@@ -8,7 +8,7 @@
     },
     "home": {
         "title": "Công cụ Đọc và Quản lý Tin tức Thông minh",
-        "description": "Trợ lý Tin tức là ứng dụng tổng hợp và đọc tin tức mạnh mẽ cung cấp đề xuất tin tức cá nhân hóa thông qua thuật toán thông minh. Hỗ trợ đọc ngoại tuyến, đánh dấu tin tức, đồng bộ hóa đa nền tảng và hơn thế nữa, giúp bạn luôn cập nhật mọi lúc mọi nơi.",
+        "description": "Ứng dụng Trợ lý Tin tức là một ứng dụng tổng hợp tin tức và phân tích thông minh toàn diện, hoạt động hoàn toàn ngoại tuyến. Nó thu thập nội dung thời gian thực từ bốn lĩnh vực chính: Tin tức tổng hợp (nguồn bao gồm TASS, Sputnik, Tân Hoa Xã, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox, Global Times, Guancha, BBC, Tạp chí Qiushi, CCTV), Tin tức quân sự (The War Zone, Naval News, Guancha Quân sự), Tin tức tài chính và Mạng xã hội (Weibo, X/Twitter, Reddit). Người dùng có thể đăng ký theo dõi các tài khoản mạng xã hội cụ thể. Ứng dụng có tích hợp công cụ AI cục bộ (với mô hình Qwen tích hợp sẵn và hỗ trợ thêm mô hình tùy chỉnh từ Hugging Face/ModelScope) để tóm tắt, phân tích, xác minh (dự kiến) và dịch nội dung. Bao gồm giao diện trò chuyện với mô hình cục bộ, hỗ trợ xem/bình luận bài đăng X và đọc bài viết dài trên Weibo. Với giao diện đa ngôn ngữ và lưu trữ tất cả dữ liệu cục bộ thông qua SQLite, nó đảm bảo quyền riêng tư của người dùng. Hỗ trợ dự kiến cho macOS (Intel/Apple Silicon), Windows, Linux, Android, iOS và HarmonyOS.",
         "download_btn": "Tải xuống Miễn phí",
         "learn_more_btn": "Tìm hiểu thêm",
         "screenshots_title": "Ảnh chụp màn hình",

@@ -8,7 +8,7 @@
     },
     "home": {
         "title": "Smart News Reading & Management Tool",
-        "description": "News Assistant is a powerful news aggregation and reading application that provides personalized news recommendations through intelligent algorithms. It supports offline reading, news bookmarking, multi-platform synchronization, and more, keeping you informed anytime, anywhere.",
+        "description": "News Assistant is a comprehensive news aggregation and intelligent analysis application that operates fully offline. It collects real-time content from four main sectors: General News (sources include TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox, Global Times, Guancha, BBC, Qiushi, CCTV), Military News (The War Zone, Naval News, Guancha Military), Financial News, and Social Media (Weibo, X/Twitter, Reddit). Users can subscribe to specific social media accounts. The app features a built-in local AI engine (with a pre-integrated Qwen model and support for adding custom models from Hugging Face/ModelScope) to summarize, analyze, verify (planned), and translate content. It includes a chat interface with the local model and supports viewing/commenting on X posts and reading long Weibo articles. With multilingual interface support and all data stored locally via SQLite, it ensures user privacy. Planned support includes macOS (Intel/Apple Silicon), Windows, Linux, Android, iOS, and HarmonyOS.",
         "download_btn": "Free Download",
         "learn_more_btn": "Learn More",
         "screenshots_title": "Screenshots",

@@ -1,7 +1,6 @@
 // 多语言支持
 class LanguageManager {
     constructor() {
-        console.log('Initializing LanguageManager...');
         this.currentLang = this.getInitialLanguage();
         this.translations = {};
         this.initialized = false;
@@ -11,14 +10,12 @@ class LanguageManager {
     getInitialLanguage() {
         // 检测用户语言偏好
         const detectedLang = LANGUAGE_CONFIG.detectUserLanguage();
-        console.log('Detected language:', detectedLang);
         return detectedLang;
     }
 
     async init() {
         if (this.initialized) return;
 
-        console.log('Starting language initialization...');
         try {
             // 加载当前语言的翻译文件
             await this.loadLanguage(this.currentLang);
@@ -28,13 +25,10 @@ class LanguageManager {
             this.updatePageLanguage();
             this.setupLanguageSelector();
 
-            console.log('Language initialization completed:', this.currentLang);
         } catch (error) {
-            console.error('Failed to initialize language:', error);
 
             // 如果当前语言加载失败，尝试加载英文
             if (this.currentLang !== 'en') {
-                console.log('Falling back to English...');
                 this.currentLang = 'en';
                 await this.init();
             }
@@ -42,16 +36,19 @@ class LanguageManager {
     }
 
     async loadLanguage(langCode) {
-        console.log('Loading language:', langCode);
-
         // 如果正在加载中，返回Promise
         if (this.loadingPromises[langCode]) {
-            console.log('Language already loading, returning promise');
             return this.loadingPromises[langCode];
         }
 
         const loadPromise = (async () => {
             try {
+                // 检查是否已经加载了相同的语言
+                if (this.currentLang === langCode && Object.keys(this.translations).length > 0) {
+                    console.log(`Language ${langCode} is already loaded, skipping`);
+                    return; // 已经加载，直接返回
+                }
+
                 const response = await fetch(`assets/languages/${langCode}.json`);
 
                 if (!response.ok) {
@@ -86,13 +83,87 @@ class LanguageManager {
             } catch (error) {
                 console.warn(`Failed to load language ${langCode}:`, error);
 
+                // 清除加载中的Promise
+                delete this.loadingPromises[langCode];
+
                 // 如果当前语言加载失败，抛出错误让上层处理
                 throw error;
             }
         })();
 
         this.loadingPromises[langCode] = loadPromise;
+
+        // 加载完成后从缓存中移除
+        loadPromise.finally(() => {
+            delete this.loadingPromises[langCode];
+        });
+
         return loadPromise;
+    }
+
+    // 强制重新加载语言的方法
+    async forceReloadLanguage(langCode) {
+        console.log('Force reloading language:', langCode);
+
+        // 清除缓存
+        if (this.loadingPromises[langCode]) {
+            delete this.loadingPromises[langCode];
+        }
+
+        // 重新加载
+        await this.loadLanguage(langCode);
+
+        // 更新页面
+        this.updatePageLanguage();
+        this.updateDropdownSelection(langCode);
+        console.log('Language force reload completed');
+    }
+
+    async changeLanguage(langCode) {
+        console.log('Changing language to:', langCode);
+
+        // 如果已经是当前语言，强制重新加载
+        if (langCode === this.currentLang) {
+            console.log('Same language, forcing reload');
+            await this.forceReloadLanguage(langCode);
+            return;
+        }
+
+        try {
+            // 关闭语言下拉框
+            const dropdown = document.querySelector('.language-dropdown');
+            if (dropdown) dropdown.classList.remove('show');
+
+            // 显示加载状态
+            if (window.common) {
+                window.common.showToast('切换语言中...', 'info');
+            }
+
+            // 加载新语言
+            await this.loadLanguage(langCode);
+
+            // 更新页面内容
+            this.updatePageLanguage();
+
+            // 更新下拉框选中状态
+            this.updateDropdownSelection(langCode);
+
+            // 显示成功消息（使用新语言）
+            if (window.common) {
+                const message = this.translate('language.changed');
+                window.common.showToast(`${LANGUAGE_CONFIG.getLanguageName(langCode)} ${message}`, 'success');
+            }
+
+            console.log('Language changed successfully to:', langCode);
+        } catch (error) {
+            console.error('Failed to change language:', error);
+            if (window.common) {
+                window.common.showToast(
+                    this.translate('language.change_failed'),
+                    'error'
+                );
+            }
+        }
     }
 
     translate(key, params = {}) {
@@ -139,11 +210,42 @@ class LanguageManager {
         // 立即更新语言选择器显示
         this.updateLanguageSelector();
 
-        // 翻译所有带有 data-i18n 属性的元素
-        this.translateAllElements();
+        // 强制更新所有可翻译元素
+        this.forceTranslateAllElements();
 
         // 更新页面标题
         this.updatePageTitle();
+    }
+
+    // 新增方法：强制翻译所有元素
+    forceTranslateAllElements() {
+        console.log('Force translating all elements...');
+
+        // 清除可能的缓存或状态
+        const elements = document.querySelectorAll('[data-i18n]');
+        console.log(`Found ${elements.length} elements to translate`);
+
+        elements.forEach(element => {
+            this.translateElement(element);
+        });
+
+        // 处理带有data-i18n-placeholder属性的输入框
+        const inputElements = document.querySelectorAll('[data-i18n-placeholder]');
+        inputElements.forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            const translation = this.translate(key);
+            element.placeholder = translation;
+        });
+
+        // 处理带有data-i18n-alt属性的图片
+        const imgElements = document.querySelectorAll('[data-i18n-alt]');
+        imgElements.forEach(element => {
+            const key = element.getAttribute('data-i18n-alt');
+            const translation = this.translate(key);
+            element.alt = translation;
+        });
+
+        console.log('Force translation completed');
     }
 
     translateAllElements() {
@@ -264,51 +366,6 @@ class LanguageManager {
         });
 
         console.log('Language selector setup completed');
-    }
-
-    async changeLanguage(langCode) {
-        console.log('Changing language to:', langCode);
-
-        if (langCode === this.currentLang) {
-            console.log('Same language, skipping');
-            return;
-        }
-
-        try {
-            // 关闭语言下拉框
-            const dropdown = document.querySelector('.language-dropdown');
-            if (dropdown) dropdown.classList.remove('show');
-
-            // 显示加载状态
-            if (window.common) {
-                window.common.showToast('切换语言中...', 'info');
-            }
-
-            // 加载新语言
-            await this.loadLanguage(langCode);
-
-            // 更新页面内容
-            this.updatePageLanguage();
-
-            // 更新下拉框选中状态
-            this.updateDropdownSelection(langCode);
-
-            // 显示成功消息（使用新语言）
-            if (window.common) {
-                const message = this.translate('language.changed');
-                window.common.showToast(`${LANGUAGE_CONFIG.getLanguageName(langCode)} ${message}`, 'success');
-            }
-
-            console.log('Language changed successfully to:', langCode);
-        } catch (error) {
-            console.error('Failed to change language:', error);
-            if (window.common) {
-                window.common.showToast(
-                    this.translate('language.change_failed'),
-                    'error'
-                );
-            }
-        }
     }
 
     updateDropdownSelection(langCode) {

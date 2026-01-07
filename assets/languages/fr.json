@@ -1,0 +1,175 @@
+{
+    "app_name": "Assistant d'Actualités",
+    "nav": {
+        "home": "Accueil",
+        "features": "Fonctionnalités",
+        "download": "Télécharger",
+        "history": "Historique des Versions",
+        "language_chinese": "Chinois"
+    },
+    "home": {
+        "title": "Outil Intelligent de Lecture et Gestion d'Actualités",
+        "description": "L'Assistant d'Actualités est une application intégrée d'agrégation d'actualités et d'analyse intelligente fonctionnant entièrement hors ligne. Il collecte du contenu en temps réel dans quatre secteurs principaux : Actualités Générales (sources incluant TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox News, Global Times, Guancha, BBC, Qiushi, CCTV), Actualités Militaires (The War Zone, Naval News, Guancha Militaire), Actualités Financières et Réseaux Sociaux (Weibo, X/Twitter, Reddit). Les utilisateurs peuvent s'abonner à des comptes spécifiques sur les réseaux sociaux. Le logiciel intègre un moteur d'IA local (avec un modèle Qwen préinstallé et la possibilité d'ajouter des modèles personnalisés depuis Hugging Face/ModelScope) pour résumer, analyser, vérifier (prévu) et traduire le contenu, et fournit une interface de conversation avec le modèle local. Il prend en charge la visualisation et les commentaires sur les publications X et la lecture d'articles Weibo longs. Le logiciel offre une interface multilingue et stocke toutes les données localement via SQLite, garantissant la vie privée de l'utilisateur. La prise en charge prévue inclut macOS (puces Intel/Apple Silicon), Windows, Linux, Android, iOS et HarmonyOS.",
+        "download_btn": "Télécharger Gratuitement",
+        "learn_more_btn": "En Savoir Plus",
+        "video_not_supported": "Votre navigateur ne prend pas en charge la lecture vidéo.",
+        "demo_video_title": "Démonstration des Fonctionnalités",
+        "demo_video_desc": "Découvrez les principales fonctionnalités et le flux de travail de l'Assistant d'Actualités",
+        "tutorial_video_title": "Tutoriel d'Utilisation",
+        "tutorial_video_desc": "Prenez rapidement en main l'Assistant d'Actualités",
+        "view_more_videos": "Voir Plus de Vidéos",
+        "features_title": "Aperçu des Fonctionnalités Principales",
+        "features_subtitle": "Explorez les fonctionnalités puissantes de l'Assistant d'Actualités et améliorez votre expérience de lecture",
+        "feature1": {
+            "title": "Recommandations Intelligentes",
+            "description": "Recommandations d'actualités personnalisées basées sur des algorithmes d'IA, filtrant le contenu le plus pertinent pour vous."
+        },
+        "feature2": {
+            "title": "Lecture Hors Ligne",
+            "description": "Téléchargez des actualités n'importe où, n'importe quand, et lisez-les fluidement même sans connexion Internet."
+        },
+        "feature3": {
+            "title": "Synchronisation Multi-appareils",
+            "description": "Synchronisation transparente entre téléphone, tablette et ordinateur, sans perte de progression de lecture."
+        },
+        "learn_more": "En Savoir Plus",
+        "download_section_title": "Essayez l'Assistant d'Actualités Dès Maintenant",
+        "download_section_desc": "L'Assistant d'Actualités prend désormais en charge Windows, macOS et Android. Cliquez sur le bouton ci-dessous pour obtenir la dernière version.",
+        "download_section_btn1": "Aller au Téléchargement",
+        "download_section_btn2": "Voir l'Historique des Versions"
+    },
+    "features": {
+        "title": "Fonctionnalités Puissantes, Expérience Exceptionnelle",
+        "subtitle": "L'Assistant d'Actualités vous offre une solution complète de lecture et de gestion d'actualités",
+        "core_features_title": "Fonctionnalités Principales",
+        "core_features_subtitle": "Explorez les fonctionnalités puissantes de l'Assistant d'Actualités",
+        "feature1": {
+            "title": "Recommandations Intelligentes",
+            "description": "Recommandations d'actualités personnalisées basées sur des algorithmes d'IA, filtrant le contenu le plus pertinent pour vous. Optimise continuellement la précision des recommandations grâce au machine learning, garantissant que vous ne voyez que du contenu qui vous intéresse.",
+            "list_item1": "Algorithme de recommandation personnalisé",
+            "list_item2": "Analyse des centres d'intérêt en temps réel",
+            "list_item3": "Correspondance de contenu multidimensionnelle"
+        },
+        "feature2": {
+            "title": "Lecture Hors Ligne",
+            "description": "Téléchargez des actualités n'importe où, n'importe quand, et lisez-les sans connexion Internet. Gestion intelligente du cache, économie de données et expérience de lecture fluide.",
+            "list_item1": "Gestion intelligente du cache",
+            "list_item2": "Téléchargement et mise à jour automatiques",
+            "list_item3": "Plusieurs options de téléchargement"
+        },
+        "feature3": {
+            "title": "Synchronisation Multi-appareils",
+            "description": "Synchronisation transparente entre téléphone, tablette et ordinateur. Progression de lecture et contenus favoris mis à jour en temps réel, vous permettant de basculer librement entre les appareils.",
+            "list_item1": "Synchronisation multiplateforme",
+            "list_item2": "Mise à jour de la progression en temps réel",
+            "list_item3": "Chiffrement sécurisé des données"
+        },
+        "feature4": {
+            "title": "Modes de Lecture Multiples",
+            "description": "Offre plusieurs modes de lecture : diurne, nocturne, protection des yeux, etc. Prend en charge la personnalisation de la police, de la taille et de l'espacement pour répondre aux habitudes de lecture des différents utilisateurs.",
+            "list_item1": "Plusieurs thèmes",
+            "list_item2": "Paramètres de lecture personnalisables",
+            "list_item3": "Changement automatique de thème"
+        },
+        "feature5": {
+            "title": "Filtrage Intelligent",
+            "description": "Système de filtrage de contenu robuste, prenant en charge le filtrage par mots-clés, source, catégorie et autres moyens, créant un environnement de lecture propre.",
+            "list_item1": "Règles de filtrage personnalisables",
+            "list_item2": "Filtrage de contenu multidimensionnel",
+            "list_item3": "Aperçu de l'effet du filtre en temps réel"
+        },
+        "feature6": {
+            "title": "Statistiques de Lecture",
+            "description": "Rapports statistiques détaillés sur la lecture, vous aidant à comprendre vos habitudes, la répartition du temps et vos préférences, pour mieux gérer votre temps de lecture.",
+            "list_item1": "Statistiques de durée de lecture",
+            "list_item2": "Analyse des préférences d'intérêt",
+            "list_item3": "Rapports de visualisation des données"
+        },
+        "technical_title": "Caractéristiques Techniques",
+        "technical_subtitle": "Architecture technologique avancée, performance exceptionnelle",
+        "tech1": {
+            "title": "Haute Performance",
+            "description": "Adopte une architecture technologique moderne, garantissant un fonctionnement fluide et une réponse rapide de l'application, offrant une bonne expérience même sur des appareils peu performants.",
+            "stat1": "Stabilité",
+            "stat2": "Vitesse de Chargement"
+        },
+        "tech2": {
+            "title": "Sécurité des Données",
+            "description": "Utilise la technologie de chiffrement de bout en bout pour garantir la sécurité des données utilisateur. Toutes les données synchronisées sont chiffrées, protégeant votre vie privée.",
+            "stat1": "Standard de Chiffrement",
+            "stat2": "Sécurité des Données"
+        },
+        "tech3": {
+            "title": "Support Multiplateforme",
+            "description": "Prend en charge plusieurs plates-formes comme Windows, macOS et Android. Utilise une pile technologique unifiée pour garantir une expérience utilisateur cohérente.",
+            "stat1": "Plates-formes Prises en Charge",
+            "stat2": "Couverture des Utilisateurs"
+        }
+    },
+    "download": {
+        "title": "Télécharger l'Assistant d'Actualités",
+        "subtitle": "Choisissez votre plateforme et commencez à utiliser l'Assistant d'Actualités",
+        "latest_version": "Dernière Version",
+        "choose_platform": "Choisir la Plateforme",
+        "choose_platform_desc": "L'Assistant d'Actualités prend en charge plusieurs systèmes d'exploitation",
+        "system_requirements": "Configuration Système Requise",
+        "installation_guide": "Guide d'Installation",
+        "installation_guide_desc": "Suivez les étapes ci-dessous pour installer l'Assistant d'Actualités",
+        "step1_title": "Téléchargez le Fichier d'Installation",
+        "step1_desc": "Cliquez sur le bouton de téléchargement correspondant à votre plateforme ci-dessus pour obtenir le fichier d'installation",
+        "step2_title": "Exécutez le Programme d'Installation",
+        "step2_desc": "Ouvrez le fichier téléchargé et suivez les instructions pour terminer l'installation",
+        "step3_title": "Lancez l'Application",
+        "step3_desc": "Après l'installation, lancez l'application depuis le Menu Démarrer ou le dossier Applications",
+        "step4_title": "Commencez à Utiliser",
+        "step4_desc": "Suivez le guide pour terminer la configuration initiale et commencez à profiter de l'Assistant d'Actualités",
+        "faq_title": "Questions Fréquemment Posées (FAQ)",
+        "faq_desc": "Problèmes pouvant survenir lors du téléchargement et de l'installation",
+        "faq1_q": "Que faire si la vitesse de téléchargement est lente ?",
+        "faq1_a": "Essayez de changer d'environnement réseau ou utilisez un outil de téléchargement. Nous fournissons également plusieurs miroirs de téléchargement.",
+        "faq2_q": "Le logiciel de sécurité bloque-t-il l'installation ?",
+        "faq2_a": "Ajoutez l'Assistant d'Actualités à la liste de confiance de votre logiciel de sécurité ou désactivez-le temporairement pendant l'installation.",
+        "faq3_q": "Comment désinstaller l'Assistant d'Actualités ?",
+        "faq3_a": "Sous Windows, vous pouvez désinstaller via \"Programmes et fonctionnalités\" dans le Panneau de configuration. Sur macOS, il suffit de déplacer l'application vers la Corbeille.",
+        "faq4_q": "Quelles langues sont prises en charge ?",
+        "faq4_a": "L'Assistant d'Actualités prend en charge le chinois simplifié, l'anglais, le japonais, le coréen et plusieurs autres langues, qui peuvent être modifiées dans les paramètres.",
+        "download_btn": "Télécharger {version}",
+        "download_for": "Télécharger la Version pour {platform}",
+        "file_size": "Taille du Fichier",
+        "architecture": "Architecture Supportée",
+        "requirements": "Configuration Système Requise",
+        "download_now": "Télécharger Maintenant",
+        "release_notes": "Notes de Version"
+    },
+    "history": {
+        "title": "Historique des Versions",
+        "subtitle": "Consultez le journal des mises à jour de version de l'Assistant d'Actualités",
+        "latest": "Dernière Version",
+        "version": "Version",
+        "release_date": "Date de Publication",
+        "changelog": "Journal des Changements",
+        "downloads": "Liens de Téléchargement",
+        "no_versions": "Aucune information sur les versions historiques disponible",
+        "loading": "Chargement...",
+        "load_more": "Charger Plus",
+        "show_details": "Voir les Détails",
+        "hide_details": "Masquer les Détails"
+    },
+    "footer": {
+        "app_description": "Outil intelligent de lecture et de gestion d'actualités, vous permettant de suivre les dernières informations à tout moment, n'importe où.",
+        "quick_links": "Liens Rapides",
+        "support": "Support",
+        "help_docs": "Documentation d'Aide",
+        "faq": "Questions Fréquentes",
+        "terms": "Conditions d'Utilisation",
+        "privacy": "Politique de Confidentialité",
+        "contact": "Nous Contacter",
+        "contact_desc": "Si vous avez des problèmes ou des suggestions, contactez-nous par e-mail :",
+        "copyright": "© 2024 Assistant d'Actualités. Tous droits réservés."
+    },
+    "language": {
+        "search_placeholder": "Rechercher une langue...",
+        "changed": "Langue modifiée",
+        "change_failed": "Échec du changement de langue"
+    }
+}

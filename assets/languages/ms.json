@@ -8,7 +8,7 @@
     },
     "home": {
         "title": "Alat Bacaan dan Pengurusan Berita Pintar",
-        "description": "Pembantu Berita ialah aplikasi agregasi dan bacaan berita berkuasa yang menyediakan cadangan berita peribadi melalui algoritma pintar. Menyokong bacaan luar talian, penanda buku berita, penyegerakan pelbagai platform dan banyak lagi, memastikan anda sentiasa dikemas kini pada bila-bila masa dan di mana sahaja.",
+        "description": "Pembantu Berita ialah aplikasi agregasi berita dan analisis pintar komprehensif yang beroperasi sepenuhnya di luar talian. Ia mengumpul kandungan masa nyata dari empat sektor utama: Berita Umum (sumber termasuk TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox, Global Times, Guancha, BBC, Qiushi, CCTV), Berita Ketenteraan (The War Zone, Naval News, Guancha Ketenteraan), Berita Kewangan dan Media Sosial (Weibo, X/Twitter, Reddit). Pengguna boleh melanggan akaun media sosial tertentu. Apl ini mempunyai enjin AI tempatan terbina dalam (dengan model Qwen praterap dan sokongan untuk menambah model tersuai dari Hugging Face/ModelScope) untuk merumuskan, menganalisis, mengesahkan (dirancang) dan menterjemah kandungan. Termasuk antara muka sembang dengan model tempatan dan menyokong paparan/komen siaran X serta membaca artikel Weibo panjang. Dengan sokongan antara muka pelbagai bahasa dan penyimpanan semua data secara tempatan melalui SQLite, ia memastikan privasi pengguna. Sokongan dirancang untuk macOS (Intel/Apple Silicon), Windows, Linux, Android, iOS dan HarmonyOS.",
         "download_btn": "Muat turun Percuma",
         "learn_more_btn": "Ketahui Lebih Lanjut",
         "screenshots_title": "Tangkapan Skrin",

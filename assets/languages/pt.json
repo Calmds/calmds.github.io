@@ -1,0 +1,175 @@
+{
+    "app_name": "Assistente de Notícias",
+    "nav": {
+        "home": "Início",
+        "features": "Funcionalidades",
+        "download": "Baixar",
+        "history": "Histórico de Versões",
+        "language_chinese": "Chinês"
+    },
+    "home": {
+        "title": "Ferramenta Inteligente de Leitura e Gestão de Notícias",
+        "description": "O Assistente de Notícias é um aplicativo integrado de agregação de notícias e análise inteligente que funciona completamente offline. Ele coleta conteúdo em tempo real de quatro setores principais: Notícias Gerais (fontes incluem TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox News, Global Times, Guancha, BBC, Qiushi, CCTV), Notícias Militares (The War Zone, Naval News, Guancha Militar), Notícias Financeiras e Mídias Sociais (Weibo, X/Twitter, Reddit). Os usuários podem se inscrever em contas específicas de mídia social. O software integra um mecanismo de IA local (com modelo Qwen pré-instalado e suporte para adicionar modelos personalizados do Hugging Face/ModelScope) para resumir, analisar, verificar (planejado) e traduzir conteúdo, além de fornecer uma interface de conversação com o modelo local. Suporta visualização e comentários em postagens do X e leitura de longos artigos do Weibo. O software oferece interface multilíngue e armazena todos os dados localmente via SQLite, garantindo a privacidade do usuário. O suporte planejado inclui macOS (chips Intel/Apple Silicon), Windows, Linux, Android, iOS e HarmonyOS.",
+        "download_btn": "Baixar Gratuitamente",
+        "learn_more_btn": "Saiba Mais",
+        "video_not_supported": "Seu navegador não suporta reprodução de vídeo.",
+        "demo_video_title": "Demonstração de Funcionalidades",
+        "demo_video_desc": "Conheça as principais funcionalidades e fluxo de trabalho do Assistente de Notícias",
+        "tutorial_video_title": "Tutorial de Uso",
+        "tutorial_video_desc": "Comece rapidamente com o Assistente de Notícias",
+        "view_more_videos": "Ver Mais Vídeos",
+        "features_title": "Prévia das Funcionalidades Principais",
+        "features_subtitle": "Explore os poderosos recursos do Assistente de Notícias e aprimore sua experiência de leitura",
+        "feature1": {
+            "title": "Recomendações Inteligentes",
+            "description": "Recomendações personalizadas de notícias baseadas em algoritmos de IA, filtrando o conteúdo mais relevante para você."
+        },
+        "feature2": {
+            "title": "Leitura Offline",
+            "description": "Baixe notícias a qualquer hora, em qualquer lugar, e leia fluentemente mesmo sem internet."
+        },
+        "feature3": {
+            "title": "Sincronização Multiplataforma",
+            "description": "Sincronização perfeita entre celular, tablet e computador, sem perda do progresso de leitura."
+        },
+        "learn_more": "Saiba Mais",
+        "download_section_title": "Experimente o Assistente de Notícias Agora",
+        "download_section_desc": "O Assistente de Notícias agora suporta Windows, macOS e Android. Clique no botão abaixo para obter a versão mais recente.",
+        "download_section_btn1": "Ir para Downloads",
+        "download_section_btn2": "Ver Histórico de Versões"
+    },
+    "features": {
+        "title": "Funcionalidades Poderosas, Experiência Excepcional",
+        "subtitle": "O Assistente de Notícias oferece uma solução abrangente para leitura e gestão de notícias",
+        "core_features_title": "Funcionalidades Principais",
+        "core_features_subtitle": "Explore os recursos poderosos do Assistente de Notícias",
+        "feature1": {
+            "title": "Recomendações Inteligentes",
+            "description": "Recomendações personalizadas de notícias baseadas em algoritmos de IA, filtrando o conteúdo mais relevante para você. Otimiza continuamente a precisão das recomendações por meio de aprendizado de máquina, garantindo que você veja apenas conteúdo do seu interesse.",
+            "list_item1": "Algoritmo de recomendação personalizado",
+            "list_item2": "Análise de interesses em tempo real",
+            "list_item3": "Correspondência de conteúdo multidimensional"
+        },
+        "feature2": {
+            "title": "Leitura Offline",
+            "description": "Baixe notícias a qualquer hora, em qualquer lugar, e leia fluentemente sem internet. Gerenciamento inteligente de cache, economia de dados e experiência de leitura perfeita.",
+            "list_item1": "Gerenciamento inteligente de cache",
+            "list_item2": "Download e atualização automáticos",
+            "list_item3": "Múltiplas opções de download"
+        },
+        "feature3": {
+            "title": "Sincronização Multiplataforma",
+            "description": "Sincronização perfeita entre celular, tablet e computador. Progresso de leitura e conteúdo favorito atualizados em tempo real, permitindo alternar livremente entre dispositivos.",
+            "list_item1": "Sincronização multiplataforma",
+            "list_item2": "Atualização de progresso em tempo real",
+            "list_item3": "Criptografia segura de dados"
+        },
+        "feature4": {
+            "title": "Múltiplos Modos de Leitura",
+            "description": "Oferece vários modos de leitura: diurno, noturno, proteção para os olhos, entre outros. Suporta fonte, tamanho e espaçamento personalizáveis para atender aos hábitos de leitura de diferentes usuários.",
+            "list_item1": "Vários temas",
+            "list_item2": "Configurações de leitura personalizáveis",
+            "list_item3": "Troca automática de tema"
+        },
+        "feature5": {
+            "title": "Filtragem Inteligente",
+            "description": "Sistema robusto de filtragem de conteúdo, suportando filtros por palavras-chave, fonte, categoria e outras formas, criando um ambiente de leitura limpo.",
+            "list_item1": "Regras de filtro personalizáveis",
+            "list_item2": "Filtragem de conteúdo multidimensional",
+            "list_item3": "Visualização do efeito de filtro em tempo real"
+        },
+        "feature6": {
+            "title": "Estatísticas de Leitura",
+            "description": "Relatórios estatísticos detalhados de leitura, ajudando você a entender seus hábitos, distribuição de tempo e preferências, auxiliando na melhor gestão do tempo de leitura.",
+            "list_item1": "Estatísticas de tempo de leitura",
+            "list_item2": "Análise de preferências de interesse",
+            "list_item3": "Relatórios de visualização de dados"
+        },
+        "technical_title": "Características Técnicas",
+        "technical_subtitle": "Arquitetura tecnológica avançada, desempenho excepcional",
+        "tech1": {
+            "title": "Alta Performance",
+            "description": "Adota uma arquitetura tecnológica moderna, garantindo operação suave e resposta rápida do aplicativo, proporcionando uma boa experiência mesmo em dispositivos de baixo desempenho.",
+            "stat1": "Estabilidade",
+            "stat2": "Velocidade de Carregamento"
+        },
+        "tech2": {
+            "title": "Segurança de Dados",
+            "description": "Utiliza tecnologia de criptografia de ponta a ponta para garantir a segurança dos dados do usuário. Todos os dados sincronizados são criptografados, protegendo sua privacidade.",
+            "stat1": "Padrão de Criptografia",
+            "stat2": "Segurança de Dados"
+        },
+        "tech3": {
+            "title": "Suporte Multiplataforma",
+            "description": "Suporta múltiplas plataformas como Windows, macOS e Android. Utiliza uma pilha tecnológica unificada para garantir uma experiência de usuário consistente.",
+            "stat1": "Plataformas Suportadas",
+            "stat2": "Cobertura de Usuários"
+        }
+    },
+    "download": {
+        "title": "Baixar Assistente de Notícias",
+        "subtitle": "Escolha sua plataforma e comece a usar o Assistente de Notícias",
+        "latest_version": "Última Versão",
+        "choose_platform": "Escolha a Plataforma",
+        "choose_platform_desc": "O Assistente de Notícias suporta vários sistemas operacionais",
+        "system_requirements": "Requisitos do Sistema",
+        "installation_guide": "Guia de Instalação",
+        "installation_guide_desc": "Siga os passos abaixo para instalar o Assistente de Notícias",
+        "step1_title": "Baixe o Arquivo de Instalação",
+        "step1_desc": "Clique no botão de download correspondente à sua plataforma acima para obter o arquivo de instalação",
+        "step2_title": "Execute o Instalador",
+        "step2_desc": "Abra o arquivo baixado e siga as instruções para concluir a instalação",
+        "step3_title": "Inicie o Aplicativo",
+        "step3_desc": "Após a instalação, inicie o aplicativo no Menu Iniciar ou na pasta de Aplicativos",
+        "step4_title": "Comece a Usar",
+        "step4_desc": "Siga o guia para completar a configuração inicial e comece a aproveitar o Assistente de Notícias",
+        "faq_title": "Perguntas Frequentes (FAQ)",
+        "faq_desc": "Problemas que podem surgir durante o download e instalação",
+        "faq1_q": "E se a velocidade de download estiver lenta?",
+        "faq1_a": "Tente mudar o ambiente de rede ou usar uma ferramenta de download. Também fornecemos múltiplos espelhos de download.",
+        "faq2_q": "O software de segurança está bloqueando a instalação?",
+        "faq2_a": "Adicione o Assistente de Notícias à lista de confiança do seu software de segurança ou desative-o temporariamente durante a instalação.",
+        "faq3_q": "Como desinstalar o Assistente de Notícias?",
+        "faq3_a": "No Windows, você pode desinstalar através de \"Programas e Recursos\" no Painel de Controle. No macOS, basta arrastar o aplicativo para a Lixeira.",
+        "faq4_q": "Quais idiomas são suportados?",
+        "faq4_a": "O Assistente de Notícias suporta Chinês Simplificado, Inglês, Japonês, Coreano e vários outros idiomas, que podem ser alternados nas configurações.",
+        "download_btn": "Baixar {version}",
+        "download_for": "Baixar Versão para {platform}",
+        "file_size": "Tamanho do Arquivo",
+        "architecture": "Arquitetura Suportada",
+        "requirements": "Requisitos do Sistema",
+        "download_now": "Baixar Agora",
+        "release_notes": "Notas de Versão"
+    },
+    "history": {
+        "title": "Histórico de Versões",
+        "subtitle": "Veja o registro de atualizações de versão do Assistente de Notícias",
+        "latest": "Última Versão",
+        "version": "Versão",
+        "release_date": "Data de Lançamento",
+        "changelog": "Registro de Mudanças",
+        "downloads": "Links para Download",
+        "no_versions": "Nenhuma informação de versões históricas disponível",
+        "loading": "Carregando...",
+        "load_more": "Carregar Mais",
+        "show_details": "Ver Detalhes",
+        "hide_details": "Recolher Detalhes"
+    },
+    "footer": {
+        "app_description": "Ferramenta inteligente de leitura e gestão de notícias, permitindo que você acompanhe as últimas informações a qualquer hora, em qualquer lugar.",
+        "quick_links": "Links Rápidos",
+        "support": "Suporte",
+        "help_docs": "Documentação de Ajuda",
+        "faq": "Perguntas Frequentes",
+        "terms": "Termos de Uso",
+        "privacy": "Política de Privacidade",
+        "contact": "Contate-nos",
+        "contact_desc": "Se tiver problemas ou sugestões, entre em contato conosco por e-mail:",
+        "copyright": "© 2024 Assistente de Notícias. Todos os direitos reservados."
+    },
+    "language": {
+        "search_placeholder": "Pesquisar idioma...",
+        "changed": "Idioma alterado",
+        "change_failed": "Falha ao alterar o idioma"
+    }
+}

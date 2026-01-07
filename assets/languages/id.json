@@ -1,0 +1,175 @@
+{
+    "app_name": "Asisten Berita",
+    "nav": {
+        "home": "Beranda",
+        "features": "Fitur",
+        "download": "Unduh",
+        "history": "Riwayat Versi",
+        "language_chinese": "Cina"
+    },
+    "home": {
+        "title": "Alat Baca dan Kelola Berita Cerdas",
+        "description": "Asisten Berita adalah aplikasi agregasi berita dan analisis cerdas terintegrasi yang beroperasi sepenuhnya offline. Ini mengumpulkan konten secara real-time dari empat sektor utama: Berita Umum (sumber termasuk TASS, Sputnik, Xinhua, AP, Politico, Yomiuri, Chosun, VNA, Washington Post, VOX, Fox News, Global Times, Guancha, BBC, Qiushi, CCTV), Berita Militer (The War Zone, Naval News, Guancha Militer), Berita Keuangan, dan Media Sosial (Weibo, X/Twitter, Reddit). Pengguna dapat berlangganan akun media sosial tertentu. Perangkat lunak ini mengintegrasikan mesin AI lokal (dengan model Qwen yang sudah terpasang dan dukungan untuk menambahkan model kustom dari Hugging Face/ModelScope) untuk meringkas, menganalisis, memverifikasi (direncanakan) dan menerjemahkan konten, serta menyediakan antarmuka percakapan dengan model lokal. Mendukung melihat dan mengomentari postingan X serta membaca artikel Weibo panjang. Perangkat lunak ini menawarkan antarmuka multibahasa dan menyimpan semua data secara lokal melalui SQLite, menjamin privasi pengguna. Dukungan yang direncanakan termasuk macOS (chip Intel/Apple Silicon), Windows, Linux, Android, iOS dan HarmonyOS.",
+        "download_btn": "Unduh Gratis",
+        "learn_more_btn": "Pelajari Lebih Lanjut",
+        "video_not_supported": "Browser Anda tidak mendukung pemutaran video.",
+        "demo_video_title": "Demonstrasi Fitur",
+        "demo_video_desc": "Pelajari fitur utama dan alur kerja Asisten Berita",
+        "tutorial_video_title": "Tutorial Penggunaan",
+        "tutorial_video_desc": "Mulai cepat dengan Asisten Berita",
+        "view_more_videos": "Lihat Lebih Banyak Video",
+        "features_title": "Pratinjau Fitur Inti",
+        "features_subtitle": "Jelajahi fitur kuat Asisten Berita dan tingkatkan pengalaman membaca berita Anda",
+        "feature1": {
+            "title": "Rekomendasi Cerdas",
+            "description": "Rekomendasi berita personal berbasis algoritma AI, menyaring konten yang paling relevan untuk Anda."
+        },
+        "feature2": {
+            "title": "Baca Offline",
+            "description": "Unduh berita kapan saja, di mana saja, dan baca dengan lancar tanpa internet."
+        },
+        "feature3": {
+            "title": "Sinkronisasi Multiperangkat",
+            "description": "Sinkronisasi mulus antara ponsel, tablet, dan komputer, tanpa kehilangan kemajuan membaca."
+        },
+        "learn_more": "Pelajari Lebih Lanjut",
+        "download_section_title": "Coba Asisten Berita Sekarang",
+        "download_section_desc": "Asisten Berita sekarang mendukung Windows, macOS, dan Android. Klik tombol di bawah untuk mendapatkan versi terbaru.",
+        "download_section_btn1": "Pergi ke Unduhan",
+        "download_section_btn2": "Lihat Riwayat Versi"
+    },
+    "features": {
+        "title": "Fitur Kuat, Pengalaman Luar Biasa",
+        "subtitle": "Asisten Berita menawarkan solusi lengkap untuk membaca dan mengelola berita",
+        "core_features_title": "Fitur Inti",
+        "core_features_subtitle": "Jelajahi fitur kuat Asisten Berita",
+        "feature1": {
+            "title": "Rekomendasi Cerdas",
+            "description": "Rekomendasi berita personal berbasis algoritma AI, menyaring konten yang paling relevan untuk Anda. Terus mengoptimalkan akurasi rekomendasi melalui pembelajaran mesin, memastikan Anda hanya melihat konten yang Anda minati.",
+            "list_item1": "Algoritma rekomendasi personal",
+            "list_item2": "Analisis minat real-time",
+            "list_item3": "Pencocokan konten multidimensi"
+        },
+        "feature2": {
+            "title": "Baca Offline",
+            "description": "Unduh berita kapan saja, di mana saja, dan baca tanpa koneksi internet. Manajemen cache cerdas, hemat data, dan pengalaman membaca yang lancar.",
+            "list_item1": "Manajemen cache cerdas",
+            "list_item2": "Unduh dan pembaruan otomatis",
+            "list_item3": "Berbagai pilihan unduhan"
+        },
+        "feature3": {
+            "title": "Sinkronisasi Multiperangkat",
+            "description": "Sinkronisasi mulus antara ponsel, tablet, dan komputer. Kemajuan membaca dan konten favorit diperbarui secara real-time, memungkinkan Anda beralih bebas antar perangkat.",
+            "list_item1": "Sinkronisasi lintas platform",
+            "list_item2": "Pembaruan kemajuan real-time",
+            "list_item3": "Enkripsi data aman"
+        },
+        "feature4": {
+            "title": "Berbagai Mode Membaca",
+            "description": "Menawarkan berbagai mode membaca: siang, malam, perlindungan mata, dan lainnya. Mendukung penyesuaian font, ukuran, dan spasi untuk memenuhi kebiasaan membaca pengguna yang berbeda.",
+            "list_item1": "Berbagai tema",
+            "list_item2": "Pengaturan membaca yang dapat disesuaikan",
+            "list_item3": "Pengalihan tema otomatis"
+        },
+        "feature5": {
+            "title": "Filter Cerdas",
+            "description": "Sistem penyaringan konten yang kuat, mendukung filter kata kunci, sumber, kategori, dan cara lain, menciptakan lingkungan membaca yang bersih.",
+            "list_item1": "Aturan filter yang dapat disesuaikan",
+            "list_item2": "Penyaringan konten multidimensi",
+            "list_item3": "Pratinjau efek filter real-time"
+        },
+        "feature6": {
+            "title": "Statistik Membaca",
+            "description": "Laporan statistik membaca yang rinci, membantu Anda memahami kebiasaan membaca, distribusi waktu, dan preferensi minat, untuk mengelola waktu membaca dengan lebih baik.",
+            "list_item1": "Statistik durasi membaca",
+            "list_item2": "Analisis preferensi minat",
+            "list_item3": "Laporan visualisasi data"
+        },
+        "technical_title": "Fitur Teknis",
+        "technical_subtitle": "Arsitektur teknologi canggih, kinerja luar biasa",
+        "tech1": {
+            "title": "Kinerja Efisien",
+            "description": "Mengadopsi arsitektur teknologi modern, memastikan aplikasi berjalan lancar, responsif cepat, memberikan pengalaman penggunaan yang baik bahkan di perangkat spek rendah.",
+            "stat1": "Stabilitas",
+            "stat2": "Kecepatan Memuat"
+        },
+        "tech2": {
+            "title": "Keamanan Data",
+            "description": "Menggunakan teknologi enkripsi end-to-end untuk memastikan keamanan data pengguna. Semua data yang disinkronkan dienkripsi, melindungi privasi Anda.",
+            "stat1": "Standar Enkripsi",
+            "stat2": "Keamanan Data"
+        },
+        "tech3": {
+            "title": "Dukungan Lintas Platform",
+            "description": "Mendukung berbagai platform seperti Windows, macOS, Android. Menggunakan tumpukan teknologi yang terpadu untuk memastikan pengalaman pengguna yang konsisten.",
+            "stat1": "Platform yang Didukung",
+            "stat2": "Cakupan Pengguna"
+        }
+    },
+    "download": {
+        "title": "Unduh Asisten Berita",
+        "subtitle": "Pilih platform Anda dan mulai gunakan Asisten Berita",
+        "latest_version": "Versi Terbaru",
+        "choose_platform": "Pilih Platform",
+        "choose_platform_desc": "Asisten Berita mendukung berbagai sistem operasi",
+        "system_requirements": "Persyaratan Sistem",
+        "installation_guide": "Panduan Instalasi",
+        "installation_guide_desc": "Ikuti langkah-langkah di bawah ini untuk menginstal Asisten Berita",
+        "step1_title": "Unduh File Instalasi",
+        "step1_desc": "Klik tombol unduh yang sesuai dengan platform Anda di atas untuk mendapatkan file instalasi",
+        "step2_title": "Jalankan Program Instalasi",
+        "step2_desc": "Buka file yang diunduh dan ikuti petunjuk untuk menyelesaikan instalasi",
+        "step3_title": "Mulai Aplikasi",
+        "step3_desc": "Setelah instalasi, mulai aplikasi dari Menu Mulai atau folder Aplikasi",
+        "step4_title": "Mulai Gunakan",
+        "step4_desc": "Ikuti panduan untuk menyelesaikan pengaturan awal dan mulai nikmati Asisten Berita",
+        "faq_title": "Pertanyaan Umum (FAQ)",
+        "faq_desc": "Masalah yang mungkin muncul selama proses unduh dan instalasi",
+        "faq1_q": "Apa yang harus dilakukan jika kecepatan unduh lambat?",
+        "faq1_a": "Cobalah ganti lingkungan jaringan atau gunakan alat unduh. Kami juga menyediakan beberapa mirror unduhan.",
+        "faq2_q": "Perangkat lunak keamanan memblokir instalasi?",
+        "faq2_a": "Tambahkan Asisten Berita ke daftar kepercayaan perangkat lunak keamanan Anda atau nonaktifkan sementara selama instalasi.",
+        "faq3_q": "Bagaimana cara mencopot Asisten Berita?",
+        "faq3_a": "Di sistem Windows, Anda dapat mencopot melalui \"Program dan Fitur\" di Panel Kontrol. Di macOS, cukup seret aplikasi ke Trash.",
+        "faq4_q": "Bahasa apa yang didukung?",
+        "faq4_a": "Asisten Berita mendukung bahasa Cina Sederhana, Inggris, Jepang, Korea, dan berbagai bahasa lainnya, dapat diubah di pengaturan.",
+        "download_btn": "Unduh {version}",
+        "download_for": "Unduh Versi untuk {platform}",
+        "file_size": "Ukuran File",
+        "architecture": "Arsitektur yang Didukung",
+        "requirements": "Persyaratan Sistem",
+        "download_now": "Unduh Sekarang",
+        "release_notes": "Catatan Rilis"
+    },
+    "history": {
+        "title": "Riwayat Versi",
+        "subtitle": "Lihat catatan pembaruan versi Asisten Berita",
+        "latest": "Versi Terbaru",
+        "version": "Versi",
+        "release_date": "Tanggal Rilis",
+        "changelog": "Catatan Perubahan",
+        "downloads": "Tautan Unduhan",
+        "no_versions": "Tidak ada informasi versi sejarah",
+        "loading": "Memuat...",
+        "load_more": "Muat Lebih Banyak",
+        "show_details": "Lihat Detail",
+        "hide_details": "Sembunyikan Detail"
+    },
+    "footer": {
+        "app_description": "Alat baca dan kelola berita cerdas, memungkinkan Anda mengikuti informasi terbaru kapan saja, di mana saja.",
+        "quick_links": "Tautan Cepat",
+        "support": "Dukungan",
+        "help_docs": "Dokumen Bantuan",
+        "faq": "Pertanyaan Umum",
+        "terms": "Perjanjian Pengguna",
+        "privacy": "Kebijakan Privasi",
+        "contact": "Hubungi Kami",
+        "contact_desc": "Jika ada masalah atau saran, hubungi kami melalui email:",
+        "copyright": "© 2024 Asisten Berita. Hak cipta dilindungi."
+    },
+    "language": {
+        "search_placeholder": "Cari bahasa...",
+        "changed": "Bahasa telah diubah",
+        "change_failed": "Gagal mengubah bahasa"
+    }
+}
