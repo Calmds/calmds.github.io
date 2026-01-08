@@ -13,15 +13,15 @@
             ],
             "downloads": {
                 "windows": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
+                    "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "requirements": "macOS 10.13+",
+                    "size": "10.8 MB",
                     "architecture": "x64"
                 },
                 "macos": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "91.5 MB",
+                    "filename": "News-Assistant_0.0.3_x64.dmg",
+                    "requirements": "macOS 10.13+",
+                    "size": "10.8 MB",
                     "architecture": "x64"
                 },
                 "android": {
