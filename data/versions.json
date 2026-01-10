@@ -12,13 +12,13 @@
                 "界面优化，提升用户体验"
             ],
             "downloads": {
-                "windows": {
+                "macos(Intel)": {
                     "filename": "News-Assistant_0.0.3_x64.dmg",
                     "requirements": "macOS 11.0+",
                     "size": "10.8 MB",
                     "architecture": "x64"
                 },
-                "macos": {
+                "macos(Apple Silicon)": {
                     "filename": "News-Assistant_0.0.3_aarch64.dmg",
                     "requirements": "macOS 11.0+",
                     "size": "10.1 MB",
