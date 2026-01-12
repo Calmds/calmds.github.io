@@ -18,13 +18,13 @@
                         "filename": "News-Assistant_0.0.3_aarch64.dmg",
                         "requirements": "macOS 11.0+",
                         "size": "272 MB",
-                        "architecture": "aarch64"
+                        "architecture": "Apple Silicon/aarch64"
                     },
                     {
                         "filename": "News-Assistant_0.0.3_x64.dmg",
                         "requirements": "macOS 11.0+",
                         "size": "10.8 MB",
-                        "architecture": "x64"
+                        "architecture": "intel/x64"
                     }
                 ],
                 "linux": [
