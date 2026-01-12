@@ -110,6 +110,7 @@ class HistoryManager {
         Object.keys(platforms).forEach(platformKey => {
             const platform = platforms[platformKey];
             const downloadInfos = downloads[platformKey];
+            console.log('HistoryManager: createDownloadLinks: ', downloadInfos);
 
             if (!downloadInfos) return;
             // href="https://github.com/Calmds/calmds.github.io/releases/tag/${version.version}/${downloadInfo.filename}"
