@@ -24,7 +24,7 @@
                         "filename": "News-Assistant_0.0.3_x64.dmg",
                         "requirements": "macOS 11.0+",
                         "size": "10.8 MB",
-                        "architecture": "intel/x64"
+                        "architecture": "Intel/x64"
                     }
                 ],
                 "linux": [
