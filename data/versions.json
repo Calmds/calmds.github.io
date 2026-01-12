@@ -30,15 +30,15 @@
                 "linux": [
                     {
                         "filename": "News-Assistant_0.0.3_arm64.deb",
-                        "requirements": "macOS 11.0+",
-                        "size": "282.3 MB",
-                        "architecture": "aarch64"
+                        "requirements": "debian/ubuntu",
+                        "size": "269.21 MB",
+                        "architecture": "deb/aarch64"
                     },
                     {
                         "filename": "News-Assistant_0.0.3_aarch64.AppImage",
-                        "requirements": "macOS 11.0+",
-                        "size": "282.3 MB",
-                        "architecture": "aarch64"
+                        "requirements": "debian/ubuntu",
+                        "size": "357.35 MB",
+                        "architecture": "AppImage/aarch64"
                     }
                 ]
             }
