@@ -43,12 +43,14 @@ class DownloadManager {
 
         Object.keys(platforms).forEach(platformKey => {
             const platform = platforms[platformKey];
-            const downloadInfo = downloads[platformKey];
+            const downloadInfos = downloads[platformKey];
 
-            if (!downloadInfo) return;
+            if (!downloadInfos) return;
 
-            const platformCard = this.createPlatformCard(platform, downloadInfo, this.currentVersion);
-            platformsGrid.appendChild(platformCard);
+            downloadInfos.forEach(downloadInfo => {
+                const platformCard = this.createPlatformCard(platform, downloadInfo, this.currentVersion);
+                platformsGrid.appendChild(platformCard);
+            });
         });
     }
 

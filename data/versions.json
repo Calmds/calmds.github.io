@@ -9,21 +9,38 @@
                 "优化新闻推荐算法，提高准确性30%",
                 "修复已知的同步问题，提升稳定性",
                 "新增新闻分享到社交媒体功能",
-                "界面优化，提升用户体验"
+                "界面优化，提升用户体验",
+                "内置高品质音乐库，支持在线播放。"
             ],
             "downloads": {
-                "macos_Intel": {
-                    "filename": "News-Assistant_0.0.3_x64.dmg",
-                    "requirements": "macOS 11.0+",
-                    "size": "10.8 MB",
-                    "architecture": "x64"
-                },
-                "macos_AppleSilicon": {
-                    "filename": "News-Assistant_0.0.3_aarch64.dmg",
-                    "requirements": "macOS 11.0+",
-                    "size": "10.1 MB",
-                    "architecture": "aarch64"
-                }
+                "mac": [
+                    {
+                        "filename": "News-Assistant_0.0.3_aarch64.dmg",
+                        "requirements": "macOS 11.0+",
+                        "size": "272 MB",
+                        "architecture": "aarch64"
+                    },
+                    {
+                        "filename": "News-Assistant_0.0.3_x64.dmg",
+                        "requirements": "macOS 11.0+",
+                        "size": "10.8 MB",
+                        "architecture": "x64"
+                    }
+                ],
+                "linux": [
+                    {
+                        "filename": "News-Assistant_0.0.3_arm64.deb",
+                        "requirements": "macOS 11.0+",
+                        "size": "282.3 MB",
+                        "architecture": "aarch64"
+                    },
+                    {
+                        "filename": "News-Assistant_0.0.3_aarch64.AppImage",
+                        "requirements": "macOS 11.0+",
+                        "size": "282.3 MB",
+                        "architecture": "aarch64"
+                    }
+                ]
             }
         },
         {
@@ -36,12 +53,14 @@
                 "修复同步时的网络错误"
             ],
             "downloads": {
-                "macos": {
-                    "filename": "News-Assistant_0.0.2_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "11.1 MB",
-                    "architecture": "x64"
-                }
+                "macos": [
+                    {
+                        "filename": "News-Assistant_0.0.2_x64.dmg",
+                        "requirements": "macOS 10.14+",
+                        "size": "11.1 MB",
+                        "architecture": "x64"
+                    }
+                ]
             }
         },
         {
@@ -54,12 +73,14 @@
                 "修复同步时的网络错误"
             ],
             "downloads": {
-                "macos": {
-                    "filename": "News-Assistant_0.0.1_x64.dmg",
-                    "requirements": "macOS 10.14+",
-                    "size": "9.9 MB",
-                    "architecture": "x64"
-                }
+                "macos": [
+                    {
+                        "filename": "News-Assistant_0.0.1_x64.dmg",
+                        "requirements": "macOS 10.14+",
+                        "size": "9.9 MB",
+                        "architecture": "x64"
+                    }
+                ]
             }
         }
     ],
