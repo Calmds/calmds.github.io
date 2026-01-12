@@ -47,7 +47,7 @@ class DownloadManager {
 
             if (!downloadInfos) return;
 
-            console.log('DownloadInfos for platform', platformKey, downloadInfos);
+            // console.log('DownloadInfos for platform', platformKey, downloadInfos);
             downloadInfos.forEach(downloadInfo => {
                 const platformCard = this.createPlatformCard(platform, downloadInfo, this.currentVersion);
                 platformsGrid.appendChild(platformCard);
