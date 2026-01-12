@@ -13,7 +13,7 @@
                 "内置高品质音乐库，支持在线播放。"
             ],
             "downloads": {
-                "mac": [
+                "macos": [
                     {
                         "filename": "News-Assistant_0.0.3_aarch64.dmg",
                         "requirements": "macOS 11.0+",
@@ -89,6 +89,11 @@
             "display_name": "Windows",
             "icon": "fab fa-windows",
             "color": "#0078d7"
+        },
+        "linux": {
+            "display_name": "Linux",
+            "icon": "fab fa-linux",
+            "color": "#122a66"
         },
         "macos": {
             "display_name": "macOS",
