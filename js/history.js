@@ -109,11 +109,12 @@ class HistoryManager {
 
         Object.keys(platforms).forEach(platformKey => {
             const platform = platforms[platformKey];
-            const downloadInfo = downloads[platformKey];
+            const downloadInfos = downloads[platformKey];
 
-            if (!downloadInfo) return;
+            if (!downloadInfos) return;
             // href="https://github.com/Calmds/calmds.github.io/releases/tag/${version.version}/${downloadInfo.filename}"
-            linksHtml += `
+            downloadInfos.forEach(downloadInfo => {
+                linksHtml += `
                 <div class="download-platform">
                     <div class="platform-icon-small">
                         <i class="${platform.icon}"></i>
@@ -131,6 +132,7 @@ class HistoryManager {
                     </a>
                 </div>
             `;
+            })
         });
 
         return linksHtml || '<p class="no-downloads" data-i18n="history.no_downloads">暂无下载链接</p>';
