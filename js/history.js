@@ -340,6 +340,8 @@ class HistoryManager {
             }
         }
 
+        sanitizedDiv.style.width = '200px';
+        sanitizedDiv.style = "width: 200px; height: 100px; object-fit: cover;";
         return sanitizedDiv.innerHTML;
     }
 
