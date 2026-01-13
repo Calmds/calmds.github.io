@@ -10,7 +10,7 @@
                 "修复已知的同步问题，提升稳定性",
                 "新增新闻分享到社交媒体功能",
                 "界面优化，提升用户体验",
-                "内置高品质音乐库，支持在线播放。<img loading='lazy' style='width: 200px; height: 100px; object-fit: cover;' sizes='(max-width: 480px) 120px, (max-width: 768px) 150px, 200px' srcset='/assets/images/music-card-small.png 120w, /assets/images/music-card-medium.png 150w, /assets/images/music-card.png 200w'>",
+                "内置高品质音乐库，支持在线播放。<img style='width: 200px; height: 100px; object-fit: cover;' sizes='(max-width: 480px) 120px, (max-width: 768px) 150px, 200px'>",
                 "支持播放清单，方便管理音乐 <img src='/assets/images/music-playlist.png' style='width: 200px; height: 100px; object-fit: cover;'>"
             ],
             "downloads": {
