@@ -362,12 +362,17 @@
 }
 
 .aspect-ratio-img {
-    top: 0;
-    left: 0;
     width: 200px;
     height: 200px;
     object-fit: cover;
-    position: absolute;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    /* 缩放中心点 */
 }
 
 /* 响应式设计 */
