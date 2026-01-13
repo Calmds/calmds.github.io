@@ -257,8 +257,7 @@ class HistoryManager {
             'a': ['href', 'target', 'rel', 'title', 'style'],
             'img': ['src', 'alt', 'title', 'width', 'height', 'style'],
             'b': [], 'strong': [], 'i': [], 'em': [], 'u': [],
-            'br': [], 'p': [], 'div': [], 'span': [],
-            'ul': [], 'ol': [], 'li': []
+            'br': [], 'p': [], 'div': [], 'span': []
         };
 
         // 安全 URL 检查
