@@ -254,8 +254,8 @@ class HistoryManager {
 
         // 定义允许的标签和属性
         const allowedTags = {
-            'a': ['href', 'target', 'rel', 'title'],
-            'img': ['src', 'alt', 'title', 'width', 'height'],
+            'a': ['href', 'target', 'rel', 'title', 'style'],
+            'img': ['src', 'alt', 'title', 'width', 'height', 'style'],
             'b': [], 'strong': [], 'i': [], 'em': [], 'u': [],
             'br': [], 'p': [], 'div': [], 'span': [],
             'ul': [], 'ol': [], 'li': []
@@ -340,8 +340,6 @@ class HistoryManager {
             }
         }
 
-        sanitizedDiv.style.width = '200px';
-        sanitizedDiv.style = "width: 200px; height: 100px; object-fit: cover;";
         return sanitizedDiv.innerHTML;
     }
 
