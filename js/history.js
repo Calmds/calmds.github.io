@@ -85,7 +85,7 @@ class HistoryManager {
                 <div class="changelog-section">
                     <h4><i class="fas fa-list-check"></i> <span data-i18n="history.changelog">更新日志</span></h4>
                     <ul class="changelog-list">
-                        ${version.changelog.map(item => `<li>${this.escapeHtml(item)}</li>`).join('')}
+                        ${version.changelog.map(item => `<li class="image-container">${this.escapeHtml(item)}</li>`).join('')}
                     </ul>
                 </div>
                 
