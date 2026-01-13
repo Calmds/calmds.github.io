@@ -85,7 +85,7 @@ class HistoryManager {
                 <div class="changelog-section">
                     <h4><i class="fas fa-list-check"></i> <span data-i18n="history.changelog">更新日志</span></h4>
                     <ul class="changelog-list">
-                        ${version.changelog.map(item => `<li class="image-container">${this.escapeHtml(item)}</li>`).join('')}
+                        ${version.changelog.map(item => `<li>${this.escapeHtml(item)}</li>`).join('')}
                     </ul>
                 </div>
                 
@@ -374,7 +374,32 @@ class HistoryManager {
     }
 }
 
+// function resizeImageProportionally() {
+//     const img = document.getElementById('dynamic-img');
+//     const container = img.parentElement;
+
+//     const containerWidth = container.clientWidth;
+//     const containerHeight = container.clientHeight;
+//     const imgNaturalWidth = img.naturalWidth;
+//     const imgNaturalHeight = img.naturalHeight;
+
+//     // 计算等比缩放的比例
+//     const widthRatio = containerWidth / imgNaturalWidth;
+//     const heightRatio = containerHeight / imgNaturalHeight;
+
+//     // 使用较小的比例以确保图片完全显示
+//     const scale = Math.min(widthRatio, heightRatio);
+
+//     // 应用缩放
+//     img.style.width = `${imgNaturalWidth * scale}px`;
+//     img.style.height = `${imgNaturalHeight * scale}px`;
+//     img.style.objectFit = 'contain';
+// }
+
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     window.historyManager = new HistoryManager();
+    // // 窗口大小改变时重新计算
+    // window.addEventListener('resize', resizeImageProportionally);
+    // window.addEventListener('load', resizeImageProportionally);
 });
