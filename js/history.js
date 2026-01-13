@@ -242,10 +242,105 @@ class HistoryManager {
         }
     }
 
+    // escapeHtml(text) {
+    //     const div = document.createElement('div');
+    //     div.textContent = text;
+    //     return div.innerHTML;
+    // }
     escapeHtml(text) {
+        // 创建一个临时 div 来解析 HTML
         const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
+        div.innerHTML = text;
+
+        // 定义允许的标签和属性
+        const allowedTags = {
+            'a': ['href', 'target', 'rel', 'title'],
+            'img': ['src', 'alt', 'title', 'width', 'height'],
+            'b': [], 'strong': [], 'i': [], 'em': [], 'u': [],
+            'br': [], 'p': [], 'div': [], 'span': [],
+            'ul': [], 'ol': [], 'li': []
+        };
+
+        // 安全 URL 检查
+        function isSafeUrl(url) {
+            if (!url) return false;
+            // 允许的协议
+            const allowedProtocols = ['http:', 'https:', 'mailto:', 'tel:', 'data:'];
+            try {
+                const parsed = new URL(url, window.location.href);
+                return allowedProtocols.includes(parsed.protocol);
+            } catch {
+                return false;
+            }
+        }
+
+        // 递归清理节点
+        function sanitizeNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                return node;
+            }
+
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                const tagName = node.tagName.toLowerCase();
+
+                // 如果不允许的标签，将其内容转为文本
+                if (!allowedTags[tagName]) {
+                    const text = document.createTextNode(node.outerHTML);
+                    return text;
+                }
+
+                // 创建新的元素
+                const newNode = document.createElement(tagName);
+
+                // 只复制允许的属性
+                const allowedAttrs = allowedTags[tagName];
+                for (const attr of node.attributes) {
+                    if (allowedAttrs.includes(attr.name)) {
+                        // 对 href 和 src 进行特别的安全检查
+                        if (attr.name === 'href' || attr.name === 'src') {
+                            if (isSafeUrl(attr.value)) {
+                                newNode.setAttribute(attr.name, attr.value);
+
+                                // 如果是外部链接，添加安全属性
+                                if (tagName === 'a' && attr.name === 'href' &&
+                                    (attr.value.startsWith('http://') || attr.value.startsWith('https://'))) {
+                                    newNode.setAttribute('target', '_blank');
+                                    newNode.setAttribute('rel', 'noopener noreferrer');
+                                }
+                            }
+                        } else {
+                            newNode.setAttribute(attr.name, attr.value);
+                        }
+                    }
+                }
+
+                // 递归清理子节点
+                while (node.firstChild) {
+                    const child = node.removeChild(node.firstChild);
+                    const sanitizedChild = sanitizeNode(child);
+                    if (sanitizedChild) {
+                        newNode.appendChild(sanitizedChild);
+                    }
+                }
+
+                return newNode;
+            }
+
+            // 其他节点类型（注释等）返回 null 忽略
+            return null;
+        }
+
+        // 清理 div 的所有子节点
+        const sanitizedDiv = document.createElement('div');
+        while (div.firstChild) {
+            const child = div.removeChild(div.firstChild);
+            const sanitizedChild = sanitizeNode(child);
+            if (sanitizedChild) {
+                sanitizedDiv.appendChild(sanitizedChild);
+            }
+        }
+
+        return sanitizedDiv.innerHTML;
     }
 
     showError() {
