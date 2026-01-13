@@ -28,7 +28,7 @@
                         "architecture": "Intel/x64"
                     }
                 ],
-                "linux": [
+                "windows": [
                     {
                         "filename": "News-Assistant_0.0.3_x64.exe",
                         "requirements": "Windows 10+",
@@ -42,7 +42,7 @@
                         "architecture": "Arm"
                     }
                 ],
-                "windows": [
+                "linux": [
                     {
                         "filename": "News-Assistant_0.0.3_arm64.deb",
                         "requirements": "debian/ubuntu",
