@@ -50,7 +50,8 @@ class HomePage {
             <div class="carousel-slide ${index === 0 ? 'active' : ''}">
                 <img src="${src}" alt="Screenshot ${index + 1}" 
                      onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSI0YTZmYTUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjMwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9IjAuM2VtIj5JbWFnZSAke2luZGV4KzF9PC90ZXh0Pjwvc3ZnPg=='"
-                     loading="${index === 0 ? 'eager' : 'lazy'}">
+                     loading="${index === 0 ? 'eager' : 'lazy'}"
+                     onload="this.parentElement.parentElement.style.minHeight = Math.max(this.parentElement.parentElement.offsetHeight, this.naturalHeight * (this.parentElement.parentElement.offsetWidth / this.naturalWidth)) + 'px'">
             </div>
         `).join('');
 
@@ -60,16 +61,6 @@ class HomePage {
                     data-index="${index}" 
                     aria-label="Go to slide ${index + 1}"></button>
         `).join('');
-
-        // 设置容器高度基于第一张图片
-        const firstImg = slidesContainer.querySelector('img');
-        if (firstImg && firstImg.complete) {
-            slidesContainer.style.minHeight = firstImg.offsetHeight + 'px';
-        } else if (firstImg) {
-            firstImg.addEventListener('load', () => {
-                slidesContainer.style.minHeight = firstImg.offsetHeight + 'px';
-            });
-        }
 
         // 启动自动轮播
         this.startAutoPlay();
