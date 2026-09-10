@@ -61,6 +61,16 @@ class HomePage {
                     aria-label="Go to slide ${index + 1}"></button>
         `).join('');
 
+        // 设置容器高度基于第一张图片
+        const firstImg = slidesContainer.querySelector('img');
+        if (firstImg && firstImg.complete) {
+            slidesContainer.style.minHeight = firstImg.offsetHeight + 'px';
+        } else if (firstImg) {
+            firstImg.addEventListener('load', () => {
+                slidesContainer.style.minHeight = firstImg.offsetHeight + 'px';
+            });
+        }
+
         // 启动自动轮播
         this.startAutoPlay();
     }
