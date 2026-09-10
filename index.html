@@ -63,10 +63,6 @@
 
                 <!-- 轮播相册容器 -->
                 <div class="carousel-container">
-                    <div class="screenshot-description glass-card">
-                        <p data-i18n="home.carousel_description">浏览新闻助手的精美界面，体验现代化设计与强大功能的完美结合</p>
-                    </div>
-                    
                     <div class="carousel-wrapper">
                         <button class="carousel-btn prev-btn" aria-label="Previous image">
                             <i class="fas fa-chevron-left"></i>
@@ -74,11 +70,17 @@
                         
                         <div class="carousel-slides" id="carousel-slides">
                             <!-- 轮播图片将通过 JavaScript 动态生成 -->
+                            <!-- 描述文字将作为覆盖层显示在图片上方 -->
                         </div>
                         
                         <button class="carousel-btn next-btn" aria-label="Next image">
                             <i class="fas fa-chevron-right"></i>
                         </button>
+                    </div>
+                    
+                    <!-- 描述文字移至轮播图下方 -->
+                    <div class="screenshot-description glass-card">
+                        <p data-i18n="home.carousel_description">浏览新闻助手的精美界面，体验现代化设计与强大功能的完美结合</p>
                     </div>
                     
                     <div class="carousel-indicators" id="carousel-indicators">

@@ -2,7 +2,8 @@
 
 /* 轮播相册样式 */
 .carousel-container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -18,6 +19,11 @@
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition-normal);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .screenshot-description p {
@@ -32,13 +38,12 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .carousel-slides {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    aspect-ratio: 16 / 10;
     overflow: hidden;
     border-radius: var(--radius-xl);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -62,8 +67,8 @@
 
 .carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     border-radius: var(--radius-xl);
 }
 
