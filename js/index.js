@@ -1,165 +1,48 @@
 // 首页功能
 class HomePage {
     constructor() {
-        this.currentScreenshot = 0;  // 改为从0开始
-        this.totalScreenshots = 0;
-        this.screenshots = [];
+        this.photoWall = null;
+        this.visitCounter = null;
         this.init();
     }
 
     async init() {
-        await this.initScreenshots();  // 先初始化截图数据
-        this.initScreenshotViewer();
+        await this.initPhotoWall();
+        await this.initVisitCounter();
         this.initVideoControls();
         this.initAnimations();
         this.initEventListeners();
     }
 
-    async initScreenshots() {
-        try {
-            const response = await fetch('data/screenshot.json');
-            if (!response.ok) throw new Error('Failed to load screenshot data');
-            this.screenshots = await response.json();
-            this.totalScreenshots = this.screenshots.length;
-
-            const screenshotGrid = document.getElementById('screenshot-grid');
-            screenshotGrid.innerHTML = '';  // 清空现有内容
-
-            const fragment = document.createDocumentFragment();
-            this.screenshots.forEach((link, index) => {
-                const div = document.createElement('div');
-                div.className = 'screenshot-item glass-card';
-                div.innerHTML = `
-                <div class="screenshot-image">
-                    <img src="${link}" data-index="${index}" loading="lazy" id="screenshot-${index}" alt="Screenshot ${index + 1}">
-                </div>`;
-                fragment.appendChild(div);
+    async initPhotoWall() {
+        if (typeof PhotoWallComponent !== 'undefined') {
+            this.photoWall = new PhotoWallComponent({
+                containerId: 'photo-wall-container',
+                dataFile: 'data/screenshot.json',
+                enableViewer: true
             });
-
-            screenshotGrid.appendChild(fragment);
-        } catch (error) {
-            console.error('Error loading screenshots:', error);
-            // 显示错误信息
-            const screenshotGrid = document.getElementById('screenshot-grid');
-            if (screenshotGrid) {
-                screenshotGrid.innerHTML = `
-                    <div class="error-message">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <p>无法加载截图数据</p>
-                    </div>
-                `;
-            }
+            await this.photoWall.init();
+        } else {
+            console.error('PhotoWallComponent not loaded');
         }
     }
 
-    initScreenshotViewer() {
-        const closeViewer = document.getElementById('closeViewer');
-        const viewer = document.getElementById('screenshotViewer');
-        const prevBtn = document.getElementById('prevScreenshot');
-        const nextBtn = document.getElementById('nextScreenshot');
-        const viewerImage = document.getElementById('viewerImage');
-        const currentIndicator = document.querySelector('.current-indicator');
-
-        // 更新指示器
-        const updateIndicator = () => {
-            if (currentIndicator) {
-                currentIndicator.textContent = `${this.currentScreenshot + 1} / ${this.totalScreenshots}`;
-            }
-        };
-
-        // 显示截图查看器
-        this.showScreenshot = (index) => {
-            if (index < 0 || index >= this.totalScreenshots) return;
-
-            this.currentScreenshot = index;
-            const imagePath = this.screenshots[index];
-
-            // 加载图片
-            const img = new Image();
-            img.onload = () => {
-                viewerImage.src = imagePath;
-                viewerImage.alt = `Screenshot ${index + 1}`;
-                updateIndicator();
-            };
-
-            img.onerror = () => {
-                // 如果图片加载失败，使用占位符
-                const svg = `data:image/svg+xml;base64,${btoa(`
-                    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="#4a6fa5"/>
-                        <text x="50%" y="50%" font-family="Arial" font-size="30" fill="white" text-anchor="middle" dy="0.3em">Image ${index + 1}</text>
-                    </svg>
-                `)}`;
-                viewerImage.src = svg;
-                viewerImage.alt = `Placeholder for screenshot ${index + 1}`;
-                updateIndicator();
-            };
-            img.src = imagePath;
-        };
-
-        // 点击截图图片打开查看器
-        document.addEventListener('click', (e) => {
-            const screenshotImg = e.target.closest('#screenshot-grid img');
-            if (screenshotImg) {
-                const index = parseInt(screenshotImg.getAttribute('data-index'));
-                console.log("点击查看大图", index, this.screenshots[index]);
-                this.currentScreenshot = index;
-                this.showScreenshot(index);
-                viewer.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        // 关闭查看器
-        closeViewer.addEventListener('click', () => {
-            viewer.classList.remove('show');
-            document.body.style.overflow = 'auto';
-        });
-
-        // 点击背景关闭
-        viewer.addEventListener('click', (e) => {
-            if (e.target === viewer) {
-                viewer.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // 切换截图 - 上一张
-        prevBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // 防止事件冒泡
-            this.currentScreenshot = this.currentScreenshot === 0 ? this.totalScreenshots - 1 : this.currentScreenshot - 1;
-            this.showScreenshot(this.currentScreenshot);
-        });
-
-        // 切换截图 - 下一张
-        nextBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // 防止事件冒泡
-            this.currentScreenshot = this.currentScreenshot === this.totalScreenshots - 1 ? 0 : this.currentScreenshot + 1;
-            this.showScreenshot(this.currentScreenshot);
-        });
-
-        // 键盘导航
-        document.addEventListener('keydown', (e) => {
-            if (!viewer.classList.contains('show')) return;
-
-            switch (e.key) {
-                case 'Escape':
-                    viewer.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                    break;
-                case 'ArrowLeft':
-                    this.currentScreenshot = this.currentScreenshot === 0 ? this.totalScreenshots - 1 : this.currentScreenshot - 1;
-                    this.showScreenshot(this.currentScreenshot);
-                    break;
-                case 'ArrowRight':
-                    this.currentScreenshot = this.currentScreenshot === this.totalScreenshots - 1 ? 0 : this.currentScreenshot + 1;
-                    this.showScreenshot(this.currentScreenshot);
-                    break;
-            }
-        });
-
-        // 初始更新指示器
-        updateIndicator();
+    async initVisitCounter() {
+        if (typeof VisitCounterComponent !== 'undefined') {
+            this.visitCounter = new VisitCounterComponent({
+                containerId: 'visit-counter-container',
+                dataFile: 'data/visits/count.json',
+                autoIncrement: true,
+                showDetails: true
+            });
+            
+            // 尝试从 localStorage 恢复数据（用于静态页面）
+            const restored = this.visitCounter.restoreFromLocalStorage();
+            
+            await this.visitCounter.init();
+        } else {
+            console.error('VisitCounterComponent not loaded');
+        }
     }
 
     initVideoControls() {
