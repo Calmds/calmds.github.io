@@ -61,9 +61,28 @@
                     <p data-i18n="home.screenshots_subtitle">查看新闻助手界面效果</p>
                 </div>
 
-                <div class="screenshots-container">
-                    <div class="screenshot-grid" id="photo-wall-container">
-                        <!-- 照片墙将通过 PhotoWallComponent 动态生成 -->
+                <!-- 轮播相册容器 -->
+                <div class="carousel-container">
+                    <div class="screenshot-description glass-card">
+                        <p data-i18n="home.carousel_description">浏览新闻助手的精美界面，体验现代化设计与强大功能的完美结合</p>
+                    </div>
+                    
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev-btn" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="carousel-slides" id="carousel-slides">
+                            <!-- 轮播图片将通过 JavaScript 动态生成 -->
+                        </div>
+                        
+                        <button class="carousel-btn next-btn" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <!-- 指示器将通过 JavaScript 动态生成 -->
                     </div>
                 </div>
             </div>
@@ -120,14 +139,7 @@
                 </div>
         </section>
 
-        <!-- 访问统计区域 -->
-        <section class="visit-section">
-            <div class="container">
-                <div class="visit-counter-container" id="visit-counter-container">
-                    <!-- 访问统计计数器将通过 VisitCounterComponent 动态生成 -->
-                </div>
-            </div>
-        </section>
+        <!-- 访问统计区域已移除 -->
     </main>
 
     <!-- 页脚 -->
@@ -180,8 +192,6 @@
     <script src="js/translations.js"></script>
     <script src="js/language.js"></script>
     <script src="js/common.js"></script>
-    <script src="components/photo-wall.js"></script>
-    <script src="components/visit-counter.js"></script>
     <script src="js/index.js"></script>
 </body>
 
