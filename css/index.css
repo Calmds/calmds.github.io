@@ -1,6 +1,6 @@
 /* 首页特定样式 */
 
-/* 轮播相册样式 */
+/* 轮播相册样式 - DeepSeek 深色风格 */
 .carousel-container {
     width: 100%;
     max-width: 100%;
@@ -24,7 +24,8 @@
     min-height: 60vh;
     overflow: hidden;
     border-radius: var(--radius-xl);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+    border: 1px solid var(--border-light);
 }
 
 .carousel-slide {
@@ -49,7 +50,7 @@
     object-fit: contain;
     display: block;
     border-radius: var(--radius-xl);
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(135deg, #0a0a0f, #12121a);
 }
 
 /* 描述文字覆盖层 - 定位在轮播图上层的下面 */
@@ -65,17 +66,18 @@
 }
 
 .screenshot-description {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-xl);
     padding: 1.5rem 2rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-accent);
     transition: var(--transition-normal);
     max-width: 800px;
     pointer-events: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.1);
 }
 
 .screenshot-description p {
@@ -88,9 +90,9 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(99, 102, 241, 0.15);
     backdrop-filter: blur(10px);
-    border: none;
+    border: 1px solid var(--border-accent);
     color: var(--text-primary);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,7 +100,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(99, 102, 241, 0.1);
     opacity: 0;
     transform: scale(0.8);
 }
@@ -108,10 +110,11 @@
 }
 
 .carousel-btn:hover {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
     transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4), var(--shadow-glow);
+    border-color: var(--primary-light);
 }
 
 .carousel-btn:hover i {
@@ -145,8 +148,8 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
+    background: rgba(99, 102, 241, 0.3);
+    border: 1px solid var(--border-accent);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0;
@@ -156,21 +159,24 @@
     background: var(--primary);
     width: 30px;
     border-radius: 5px;
+    box-shadow: 0 0 15px var(--primary), 0 0 30px rgba(99, 102, 241, 0.4);
+    border-color: var(--primary-light);
 }
 
 .carousel-indicator:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(99, 102, 241, 0.6);
+    transform: scale(1.2);
 }
 
-/* 占位图样式 */
+/* 占位图样式 - DeepSeek 深色风格 */
 .carousel-slide img.placeholder {
-    background: linear-gradient(135deg, #4a6fa5, #6b8dc4);
+    background: linear-gradient(135deg, #1a1a2e, #2d2d44);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Hero 区域调整 */
+/* Hero 区域调整 - DeepSeek 深色风格 */
 .hero {
     padding: 8rem 0 5rem;
     text-align: center;
@@ -185,23 +191,25 @@
     transform: translateX(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     z-index: -1;
     animation: pulse 4s ease-in-out infinite;
+    filter: blur(60px);
 }
 
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), var(--primary-light), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
     letter-spacing: -0.02em;
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 0 80px rgba(99, 102, 241, 0.3);
 }
 
 .hero p {
@@ -240,207 +248,10 @@
 
 /* 照片墙样式已移除，替换为轮播相册 */
 
-/* 截图项增强 */
-.screenshot-item {
-    overflow: hidden;
-    background: var(--bg-glass);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-xl);
-    transition: var(--transition-normal);
-    position: relative;
-}
-
-.screenshot-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), transparent);
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-    z-index: 1;
-}
-
-.screenshot-item:hover::before {
-    opacity: 1;
-}
-
-.screenshot-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
-}
-
-.screenshot-image {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-}
-
-.screenshot-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.screenshot-item:hover .screenshot-image img {
-    transform: scale(1.1);
-}
-
-.screenshot-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition-normal);
-    z-index: 2;
-}
-
-.screenshot-item:hover .screenshot-overlay {
-    opacity: 1;
-}
-
-.view-btn {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: white;
-    border: none;
-    color: var(--primary);
-    cursor: pointer;
-    transition: var(--transition-bounce);
-    position: relative;
-    overflow: hidden;
-}
-
-.view-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: var(--transition-bounce);
-}
-
-.view-btn:hover::before {
-    width: 100px;
-    height: 100px;
-}
-
-.view-btn:hover {
-    background: var(--primary);
-    color: white;
-    transform: scale(1.2) rotate(15deg);
-    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-}
-
-.screenshot-caption {
-    padding: 1.5rem;
-}
-
-.screenshot-caption h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.screenshot-caption p {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-}
-
-/* 截图查看器 */
-.screenshot-viewer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(20px);
-    z-index: 2000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.screenshot-viewer.show {
-    display: flex;
-}
-
-.viewer-content {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-}
-
-.close-viewer {
-    position: absolute;
-    top: -2.5rem;
-    right: 0;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.close-viewer:hover {
-    color: var(--primary);
-}
-
-.viewer-image-container img {
-    max-width: 100%;
-    max-height: 80vh;
-    border-radius: var(--radius-lg);
-}
-
-.viewer-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.viewer-btn {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.viewer-btn:hover {
-    background: white;
-    transform: scale(1.1);
-}
-
-/* 视频区域 */
+/* 视频区域 - DeepSeek 深色风格 */
 .videos-section {
     padding: 4rem 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(18, 18, 26, 0.5);
 }
 
 .video-grid {
@@ -450,14 +261,15 @@
     margin-top: 3rem;
 }
 
-/* 视频项增强 */
+/* 视频项增强 - DeepSeek 深色风格 */
 .video-item {
-    background: var(--bg-glass);
+    background: var(--bg-card);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     overflow: hidden;
     transition: var(--transition-normal);
     position: relative;
+    border: 1px solid var(--border-light);
 }
 
 .video-item::before {
@@ -478,12 +290,12 @@
 
 .video-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2), var(--shadow-glow);
+    border-color: var(--border-accent);
 }
 
 .video-player {
     position: relative;
-    /* height: 250px; */
     background: #000;
     overflow: hidden;
 }
