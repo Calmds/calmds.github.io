@@ -53,12 +53,28 @@
     </header>
 
     <main>
+        <!-- 应用截图相册区域 - 移至最上方 -->
+        <section class="screenshots-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-i18n="home.screenshots_title">应用截图</h2>
+                    <p data-i18n="home.screenshots_subtitle">查看新闻助手界面效果</p>
+                </div>
+
+                <div class="screenshots-container">
+                    <div class="screenshot-grid" id="photo-wall-container">
+                        <!-- 照片墙将通过 PhotoWallComponent 动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 欢迎区域 -->
         <section class="hero">
             <div class="container">
                 <h1 data-i18n="home.title">智能新闻阅读与管理工具</h1>
                 <p data-i18n="home.description">
-                    新闻助手是一款功能强大的新闻聚合与阅读应用，通过智能算法为您推荐个性化新闻内容，支持离线阅读、新闻收藏、多平台同步等功能，让您随时随地掌握最新资讯。</p>
+                    新闻助手是一款完全离线的智能新闻聚合与分析应用，数据 100% 存储在您的设备中。实时聚合全球权威媒体：时政新闻（俄塔社、新华社、美联社、BBC 等）、军事新闻、金融资讯及社交媒体（微博、X/Twitter、Reddit）。内建本地 AI 引擎（预置千问模型，支持 Hugging Face/ModelScope 自定义模型），提供智能摘要、多语言翻译、深度分析和事实核查功能。支持订阅特定社交账号，查看并评论 X 帖子，阅读长微博。所有数据通过 SQLite 本地存储，保障绝对隐私安全。支持平台：macOS、Windows、Linux、Android、iOS、鸿蒙系统。</p>
 
                 <div class="hero-buttons">
                     <a href="download.html" class="btn glass-btn primary">
@@ -78,7 +94,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2 data-i18n="home.videos_title">视频介绍</h2>
-                    <p data-i18n="home.videos_subtitle">观看新闻助手的功能演示</p>
+                    <p data-i18n="home.videos_subtitle">观看新闻助手功能演示</p>
                 </div>
 
                 <div class="videos-container">
@@ -102,22 +118,6 @@
                         </div>
                     </div>
                 </div>
-        </section>
-
-        <!-- 软件截图展示区域 -->
-        <section class="screenshots-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-i18n="home.screenshots_title">软件截图</h2>
-                    <p data-i18n="home.screenshots_subtitle">看看新闻助手的样子</p>
-                </div>
-
-                <div class="screenshots-container">
-                    <div class="screenshot-grid" id="photo-wall-container">
-                        <!-- 照片墙将通过 PhotoWallComponent 动态生成 -->
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- 访问统计区域 -->
