@@ -27,6 +27,7 @@
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* 基础重置 */
@@ -95,11 +96,30 @@ body::after {
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-glass);
     transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
 }
 
 .glass-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl), var(--shadow-glass);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15), var(--shadow-glass);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.glass-card:hover::after {
+    opacity: 1;
 }
 
 /* 玻璃按钮 */
@@ -119,12 +139,33 @@ body::after {
     gap: 0.5rem;
     cursor: pointer;
     transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: var(--transition-normal);
+}
+
+.glass-btn:hover::before {
+    left: 100%;
 }
 
 .glass-btn:hover {
     background: rgba(255, 255, 255, 0.95);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+}
+
+.glass-btn:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .glass-btn.primary {
@@ -135,6 +176,18 @@ body::after {
 
 .glass-btn.primary:hover {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.glass-btn.secondary {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    color: white;
+    border: none;
+}
+
+.glass-btn.secondary:hover {
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary));
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
 }
 
 /* 导航栏 */
@@ -177,6 +230,7 @@ header {
     list-style: none;
 }
 
+/* 导航链接增强 */
 .nav-links a {
     text-decoration: none;
     color: var(--text-secondary);
@@ -185,12 +239,31 @@ header {
     border-radius: var(--radius-md);
     transition: var(--transition-fast);
     position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-bounce);
+    z-index: -1;
+}
+
+.nav-links a:hover::before,
+.nav-links a.active::before {
+    transform: translateX(-50%) scale(1);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary);
-    background: rgba(99, 102, 241, 0.1);
 }
 
 .nav-links a.active::after {
@@ -203,9 +276,10 @@ header {
     height: 0.5rem;
     background: var(--primary);
     border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
 }
 
-/* 语言选择器 */
+/* 语言选择器增强 */
 .language-selector {
     position: relative;
     display: inline-block;
@@ -223,10 +297,32 @@ header {
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.language-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width var(--transition-bounce), height var(--transition-bounce);
+}
+
+.language-btn:hover::before {
+    width: 200px;
+    height: 200px;
 }
 
 .language-btn:hover {
     background: rgba(255, 255, 255, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
 .language-flag {
@@ -234,6 +330,11 @@ header {
     height: 1rem;
     border-radius: 2px;
     object-fit: cover;
+    transition: transform var(--transition-fast);
+}
+
+.language-btn:hover .language-flag {
+    transform: scale(1.1);
 }
 
 .language-dropdown {
@@ -290,15 +391,38 @@ header {
     border-radius: var(--radius-md);
     transition: var(--transition-fast);
     font-size: 0.875rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.language-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--primary);
+    transform: scaleY(0);
+    transition: transform var(--transition-bounce);
+}
+
+.language-item:hover::before {
+    transform: scaleY(1);
 }
 
 .language-item:hover {
     background: rgba(99, 102, 241, 0.1);
+    transform: translateX(4px);
 }
 
 .language-item.active {
     background: rgba(99, 102, 241, 0.2);
     color: var(--primary);
+}
+
+.language-item.active::before {
+    transform: scaleY(1);
 }
 
 .language-item .language-name {
@@ -360,6 +484,7 @@ footer {
     margin-top: 1.5rem;
 }
 
+/* 社交图标增强 */
 .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -370,13 +495,36 @@ footer {
     backdrop-filter: blur(10px);
     border-radius: 50%;
     color: var(--text-primary);
-    transition: var(--transition-fast);
+    transition: var(--transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+.social-icons a i {
+    position: relative;
+    z-index: 1;
 }
 
 .social-icons a:hover {
-    background: var(--primary);
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
 .contact-email {
@@ -411,7 +559,7 @@ footer {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -421,7 +569,7 @@ footer {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes float {
@@ -432,12 +580,55 @@ footer {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
 }
 
 .float {
     animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(99, 102, 241, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.2);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
 }
 
 /* 响应式设计 */
