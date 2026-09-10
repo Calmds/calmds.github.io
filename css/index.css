@@ -8,30 +8,6 @@
     position: relative;
 }
 
-.screenshot-description {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: var(--radius-xl);
-    padding: 1.5rem 2rem;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition-normal);
-    max-width: 800px;
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-}
-
-.screenshot-description p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
 .carousel-wrapper {
     position: relative;
     display: flex;
@@ -44,6 +20,8 @@
 .carousel-slides {
     position: relative;
     width: 100%;
+    /* 关键：设置最小高度确保轮播图可见 */
+    min-height: 400px;
     overflow: hidden;
     border-radius: var(--radius-xl);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -70,6 +48,12 @@
     height: auto;
     display: block;
     border-radius: var(--radius-xl);
+}
+
+.screenshot-description p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* 描述文字覆盖层 - 定位在轮播图上层的下面 */
