@@ -2,7 +2,8 @@
 
 /* 轮播相册样式 */
 .carousel-container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -13,11 +14,16 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-xl);
     padding: 1.5rem 2rem;
-    margin-bottom: 1.5rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition-normal);
+    max-width: 800px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
 }
 
 .screenshot-description p {
@@ -32,13 +38,12 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .carousel-slides {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    aspect-ratio: 16 / 10;
     overflow: hidden;
     border-radius: var(--radius-xl);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -62,9 +67,35 @@
 
 .carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     border-radius: var(--radius-xl);
+}
+
+/* 描述文字覆盖层 - 定位在轮播图上层的下面 */
+.description-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 100%;
+    max-width: 800px;
+    pointer-events: none;
+}
+
+.screenshot-description {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    max-width: 800px;
+    pointer-events: auto;
 }
 
 .carousel-btn {
